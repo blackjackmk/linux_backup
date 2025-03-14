@@ -1,0 +1,25 @@
+#Black Box (Flathub)
+flatpak install flathub com.raggesilver.BlackBox
+#Telegram (Flatpak)
+flatpak install flathub org.telegram.desktop
+#Rnote (Flatpak)
+flatpak install flathub com.github.flxzt.rnote
+#Bottles (Flatpak)
+flatpak install flathub com.usebottles.bottles
+#Flatseal (Flatpak)
+flatpak install flathub com.github.tchx84.Flatseal
+#WiVRn (Flatpak)
+flatpak install flathub io.github.wivrn.wivrn
+#OnlyOffice (Flatpak)
+
+#Native packages
+-Chrome
+-VS Code
+-Git
+-Steam
+-Unity
+-Immersed (AppImage)
+-Bleachbit
+-Gnome Tweaks
+
+

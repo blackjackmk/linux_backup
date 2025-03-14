@@ -1,0 +1,14 @@
+#seamless booting GRUB
+$ sudo nano /etc/default/grub
+GRUB_TIMEOUT=0
+GRUB_CMDLINE_LINUX_DEFAULT="rhgb quiet splash loglevel=0
+$ sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+#wifi disabling
+$ sudo touch /etc/NetworkManager/conf.d/wifi-powersave-off.conf
+[connection]
+wifi.powersave = 2
+$ systemctl restart NetworkManager
+# video codecs
+$ sudo dnf swap ffmpeg-free ffmpeg --allowerasing
+# HardwareAcceleration
+sudo dnf install intel-media-driver
