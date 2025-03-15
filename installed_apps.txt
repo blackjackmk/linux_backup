@@ -11,6 +11,8 @@ flatpak install flathub com.github.tchx84.Flatseal
 #WiVRn (Flatpak)
 flatpak install flathub io.github.wivrn.wivrn
 #OnlyOffice (Flatpak)
+flatpak install flathub org.onlyoffice.desktopeditors
+
 
 #Native packages
 -Chrome
