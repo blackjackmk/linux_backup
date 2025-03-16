@@ -6,10 +6,9 @@ echo "2) Fix WiFi Dropping on Battery"
 echo "3) Install Video Codecs"
 echo "4) Enable Hardware Acceleration"
 echo "5) Add RPM Fusion Repositories"
-echo "6) Install Custom Terminal (Starship)"
-echo "7) Load Config and Font"
-echo "8) Exit"
-read -p "Enter your choice (1-8): " choice
+echo "6) Custom shell (zsh + Starship + plugins)"
+echo "7) Exit"
+read -p "Enter your choice (1-7): " choice
 
 case $choice in
     1)
@@ -37,21 +36,25 @@ case $choice in
         sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
         ;;
     6)
-        echo "Installing Starship terminal prompt..."
-        curl -sS https://starship.rs/install.sh | sh
-        echo 'eval "$(starship init bash)"' >> ~/.bashrc
-        source ~/.bashrc
+        echo "Customizing shell terminal"
+        sudo dnf install -y zsh
+        chsh -s $(which zsh)
+        mkdir -p ~/.config/zsh/plugins
+        git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/plugins/zsh-autosuggestions
+        git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.config/zsh/plugins/zsh-syntax-highlighting
+        curl -sS https://starship.rs/install.sh | sh -s -- -y
+        echo 'eval "$(starship init zsh)"' >> ~/.zshrc
+        echo 'source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc
+        echo 'source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >> ~/.zshrc
+        echo 'autoload -Uz compinit && compinit' >> ~/.zshrc
+        source ~/.zshrc
+        [ -f ./starship.toml ] && mv ./starship.toml ~/.config/starship.toml
+        mkdir -p ~/.local/share/fonts/Hack
+        [ -f ./HackNerdFontMono-Regular.ttf ] && mv ./HackNerdFontMono-Regular.ttf ~/.local/share/fonts/Hack/
+        fc-cache -fv
+        exec zsh
         ;;
     7)
-        echo "Loading Starship config and font..."
-        mkdir -p ~/.config
-        mv ./starship.toml ~/.config/starship.toml
-        mkdir -p ~/.local/share/fonts/Hack
-        mv ./HackNerdFontMono-Regular.ttf ~/.local/share/fonts/Hack/HackNerdFontMono-Regular.ttf
-        fc-cache -fv
-        exec bash
-        ;;
-    8)
         echo "Exiting..."
         exit 0
         ;;
