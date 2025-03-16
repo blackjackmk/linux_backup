@@ -37,22 +37,15 @@ case $choice in
         ;;
     6)
         echo "Customizing shell terminal"
-        sudo dnf install -y zsh
-        chsh -s $(which zsh)
-        mkdir -p ~/.config/zsh/plugins
-        git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/plugins/zsh-autosuggestions
-        git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.config/zsh/plugins/zsh-syntax-highlighting
-        curl -sS https://starship.rs/install.sh | sh -s -- -y
-        echo 'eval "$(starship init zsh)"' >> ~/.zshrc
-        echo 'source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc
-        echo 'source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >> ~/.zshrc
-        echo 'autoload -Uz compinit && compinit' >> ~/.zshrc
-        source ~/.zshrc
+        echo "Installing Starship terminal prompt..."
+        curl -sS https://starship.rs/install.sh | sh
+        echo 'eval "$(starship init bash)"' >> ~/.bashrc
+        source ~/.bashrc
         [ -f ./starship.toml ] && mv ./starship.toml ~/.config/starship.toml
         mkdir -p ~/.local/share/fonts/Hack
         [ -f ./HackNerdFontMono-Regular.ttf ] && mv ./HackNerdFontMono-Regular.ttf ~/.local/share/fonts/Hack/
         fc-cache -fv
-        exec zsh
+        exec bash
         ;;
     7)
         echo "Exiting..."
