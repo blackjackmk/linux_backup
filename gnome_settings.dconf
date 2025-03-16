@@ -28,6 +28,18 @@ window-height=768
 window-maximized=false
 window-width=1024
 
+[com/raggesilver/BlackBox]
+context-aware-header-bar=false
+font='Hack Nerd Font Mono 12'
+opacity=uint32 80
+pretty=false
+show-headerbar=true
+show-menu-button=true
+style-preference=uint32 2
+theme-bold-is-bright=false
+theme-dark='Japanesque'
+working-directory-mode=uint32 1
+
 [com/ubuntu/update-notifier]
 release-check-time=uint32 1721228799
 
@@ -56,8 +68,12 @@ show-properties=false
 
 [org/gnome/Ptyxis]
 default-profile-uuid='ae5f2b756e59cd8d1e73161467ce0570'
+enable-a11y=false
 profile-uuids=['ae5f2b756e59cd8d1e73161467ce0570']
-window-size=(uint32 80, uint32 24)
+window-size=(uint32 107, uint32 25)
+
+[org/gnome/Ptyxis/Profiles/ae5f2b756e59cd8d1e73161467ce0570]
+palette='dracula'
 
 [org/gnome/Snapshot]
 is-maximized=false
@@ -65,11 +81,13 @@ window-height=640
 window-width=800
 
 [org/gnome/TextEditor]
-last-save-directory='file:///home/maksym/Studia/In%C5%BC.%20oprogramowania/Lab10'
+indent-style='space'
+last-save-directory='file:///home/maksym/Documents'
 restore-session=false
 right-margin-position=uint32 85
 show-line-numbers=true
-style-scheme='Adwaita-dark'
+style-scheme='classic-dark'
+tab-width=uint32 4
 
 [org/gnome/Totem]
 active-plugins=['screenshot', 'variable-rate', 'movie-properties', 'skipto', 'vimeo', 'open-directory', 'mpris', 'screensaver', 'autoload-subtitles', 'rotation', 'recent', 'apple-trailers', 'save-file']
@@ -132,7 +150,7 @@ size=(870, 690)
 state=87168
 
 [org/gnome/control-center]
-last-panel='keyboard'
+last-panel='background'
 window-state=(1080, 439, true)
 
 [org/gnome/deja-dup]
@@ -146,7 +164,7 @@ mag-factor=2.0
 folder-children=['Utilities', 'YaST', '9b1e35dc-4556-4bf4-add9-330ec6e0a33c', '4858fc33-b0f3-43f2-86ab-418bb2d5791c', 'f87c6576-27c9-4a2a-94ce-d71a737281f2', 'de2fc5e5-3e7d-4aa1-b0df-93b87a3cd29f', '07146db7-d795-4cf8-a995-f00d17227eec', '12eb39dc-d1ed-4036-a8d4-54094a6c9823']
 
 [org/gnome/desktop/app-folders/folders/07146db7-d795-4cf8-a995-f00d17227eec]
-apps=['steam.desktop', 'Euro Truck Simulator 2.desktop', 'UBOAT.desktop', 'World of Warships.desktop', 'Rebel Cops.desktop', 'Proton Experimental.desktop', 'Steam Linux Runtime 3.0 (sniper).desktop', 'Factorio Demo.desktop', 'com.ffa.qloader.desktop', 'io.github.wivrn.wivrn.desktop']
+apps=['steam.desktop', 'Euro Truck Simulator 2.desktop', 'UBOAT.desktop', 'World of Warships.desktop', 'Rebel Cops.desktop', 'Proton Experimental.desktop', 'Steam Linux Runtime 3.0 (sniper).desktop', 'Factorio Demo.desktop', 'com.ffa.qloader.desktop', 'io.github.wivrn.wivrn.desktop', 'Immersed.desktop']
 name='Games'
 
 [org/gnome/desktop/app-folders/folders/12eb39dc-d1ed-4036-a8d4-54094a6c9823]
@@ -195,7 +213,7 @@ name='Utilities'
 translate=false
 
 [org/gnome/desktop/app-folders/folders/de2fc5e5-3e7d-4aa1-b0df-93b87a3cd29f]
-apps=['code.desktop', 'unityhub.desktop', 'com.google.AndroidStudio.desktop', 'sqlitebrowser.desktop', 'git-gui.desktop', 'com.usebottles.bottles.desktop']
+apps=['code.desktop', 'unityhub.desktop', 'com.google.AndroidStudio.desktop', 'sqlitebrowser.desktop', 'git-gui.desktop', 'com.usebottles.bottles.desktop', 'virt-manager.desktop']
 name='Programming'
 
 [org/gnome/desktop/app-folders/folders/f87c6576-27c9-4a2a-94ce-d71a737281f2]
@@ -228,6 +246,7 @@ sources=[('xkb', 'pl'), ('xkb', 'ua+winkeys')]
 xkb-options=@as []
 
 [org/gnome/desktop/interface]
+accent-color='blue'
 color-scheme='prefer-dark'
 enable-hot-corners=false
 gtk-key-theme='Default'
@@ -493,7 +512,7 @@ state=43908
 
 [org/gnome/gnome-system-monitor]
 cpu-stacked-area-chart=false
-current-tab='resources'
+current-tab='processes'
 maximized=false
 network-total-in-bits=false
 show-dependencies=false
@@ -510,7 +529,7 @@ col-6-width=0
 col-26-visible=false
 col-26-width=0
 columns-order=[0, 1, 2, 3, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 7]
-sort-col=0
+sort-col=15
 sort-order=0
 
 [org/gnome/gthumb/browser]
@@ -645,7 +664,7 @@ last-folder-path='/home/maksym/Downloads'
 last-folder-path='/home/maksym/.local/share/Steam'
 
 [org/gnome/portal/filechooser/google-chrome]
-last-folder-path='/home/maksym/Studia/Równolegle/Lab1'
+last-folder-path='/home/maksym/Documents'
 
 [org/gnome/portal/filechooser/io.github.seadve.Kooha]
 last-folder-path='/home/maksym/Pictures/Records'
@@ -734,11 +753,11 @@ enabled-connections=@as []
 enabled-connections=@as []
 
 [org/gnome/shell]
-app-picker-layout=[{'org.telegram.desktop.desktop': <{'position': <0>}>, 'org.gnome.Calculator.desktop': <{'position': <1>}>, 'org.gnome.TextEditor.desktop': <{'position': <2>}>, 'org.gnome.Software.desktop': <{'position': <3>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <4>}>, 'org.gnome.Settings.desktop': <{'position': <5>}>, 'org.onlyoffice.desktopeditors.desktop': <{'position': <6>}>, '4858fc33-b0f3-43f2-86ab-418bb2d5791c': <{'position': <7>}>, 'Utilities': <{'position': <8>}>, '12eb39dc-d1ed-4036-a8d4-54094a6c9823': <{'position': <9>}>, 'de2fc5e5-3e7d-4aa1-b0df-93b87a3cd29f': <{'position': <10>}>, '07146db7-d795-4cf8-a995-f00d17227eec': <{'position': <11>}>}]
+app-picker-layout=[{'org.telegram.desktop.desktop': <{'position': <0>}>, 'org.gnome.Calculator.desktop': <{'position': <1>}>, 'org.gnome.TextEditor.desktop': <{'position': <2>}>, 'org.gnome.Software.desktop': <{'position': <3>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <4>}>, 'org.gnome.Settings.desktop': <{'position': <5>}>, 'org.onlyoffice.desktopeditors.desktop': <{'position': <6>}>, 'Utilities': <{'position': <7>}>, '12eb39dc-d1ed-4036-a8d4-54094a6c9823': <{'position': <8>}>, 'de2fc5e5-3e7d-4aa1-b0df-93b87a3cd29f': <{'position': <9>}>, '07146db7-d795-4cf8-a995-f00d17227eec': <{'position': <10>}>}]
 command-history=['whoami', 'terminal', 'ls', 'gnome-control-center', 'gsettings']
 disabled-extensions=['zorin-desktop-icons@zorinos.com', 'zorin-window-move-effect@zorinos.com', 'zorin-magic-lamp-effect@zorinos.com']
 enabled-extensions=['drive-menu@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'x11gestures@joseexposito.github.io', 'zorin-appindicator@zorinos.com', 'zorin-menu@zorinos.com', 'zorin-printers@zorinos.com', 'zorin-taskbar@zorinos.com']
-favorite-apps=['google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Ptyxis.desktop']
+favorite-apps=['google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'com.raggesilver.BlackBox.desktop']
 last-selected-power-profile='power-saver'
 welcome-dialog-last-shown-version='46.3.1'
 
@@ -807,9 +826,9 @@ locations=[<(uint32 2, <('Szczecin', 'EPSC', true, [(0.93200582056497183, 0.2551
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1741869796
+check-timestamp=int64 1742118411
 first-run=false
-flatpak-purge-timestamp=int64 1741879642
+flatpak-purge-timestamp=int64 1742084243
 install-timestamp=int64 1741731542
 packagekit-historical-updates-timestamp=uint64 1741731542
 security-timestamp=int64 1724313017214187
@@ -822,7 +841,7 @@ show-extensions-notice=false
 [org/gtk/gtk4/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=false
+show-hidden=true
 show-size-column=true
 show-type-column=true
 sidebar-width=140
@@ -850,6 +869,18 @@ sort-order='ascending'
 type-format='category'
 window-position=(276, 104)
 window-size=(1096, 808)
+
+[org/virt-manager/virt-manager]
+manager-window-height=550
+manager-window-width=550
+
+[org/virt-manager/virt-manager/connections]
+autoconnect=['qemu:///system']
+uris=['qemu:///system']
+
+[org/virt-manager/virt-manager/vmlist-fields]
+disk-usage=false
+network-traffic=false
 
 [system/locale]
 region='en_GB.UTF-8'
