@@ -26,7 +26,6 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 # Install Flatpak Apps
 FLATPAK_APPS=(
-    "com.raggesilver.BlackBox"
     "org.telegram.desktop"
     "com.github.flxzt.rnote"
     "com.usebottles.bottles"
@@ -42,6 +41,7 @@ done
 
 # Install Native Packages
 NATIVE_APPS=(
+    "blackbox-terminal"
     "git"
     "steam"
     "bleachbit"
