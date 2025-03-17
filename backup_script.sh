@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #gnome settings
-cd ~/Documents
-dconf dump / > gnome_settings.dconf
+dconf dump / > ./gnome_settings.dconf
 # restore: dconf load -f / < gnome_settings.dconf
 # terminal custom
-cp ~/.config/starship.toml ~/Documents/starship.toml
-cp ~/.local/share/fonts/Hack/HackNerdFontMono-Regular.ttf ~/Documents/HackNerdFontMono-Regular.ttf
+cp ~/.config/starship.toml ./starship.toml
+cp ~/.local/share/fonts/Hack/HackNerdFontMono-Regular.ttf ./HackNerdFontMono-Regular.ttf
+cp ~/.bashrc ./bashrc
 
 

@@ -37,14 +37,9 @@ case $choice in
         ;;
     6)
         echo "Customizing shell terminal..."
-        echo 'bind "set show-all-if-ambiguous on"' >> ~/.bashrc
-        echo 'bind "TAB:menu-complete"'>> ~/.bashrc
         sudo dnf install tldr bat exa -y
-        echo 'alias man="tldr"' >> ~/.bashrc
-        echo 'alias cat="bat --paging=never"' >> ~/.bashrc
-        echo 'alias ls="exa --icons --group-directories-first"' >> ~/.bashrc
         curl -sS https://starship.rs/install.sh | sh
-        echo 'eval "$(starship init bash)"' >> ~/.bashrc
+        [ -f ./.bashrc ] && mv ./.bashrc ~/.bashrc
         source ~/.bashrc
         mkdir -p ~/.config
         [ -f ./starship.toml ] && mv ./starship.toml ~/.config/starship.toml
