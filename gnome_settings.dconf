@@ -30,14 +30,18 @@ window-width=1024
 
 [com/raggesilver/BlackBox]
 context-aware-header-bar=false
-font='Hack Nerd Font Mono 12'
+custom-shell-command=''
+floating-controls=false
+font='Hack Nerd Font Mono 14'
 opacity=uint32 80
-pretty=false
+pretty=true
 show-headerbar=true
 show-menu-button=true
 style-preference=uint32 2
 theme-bold-is-bright=false
 theme-dark='Japanesque'
+use-custom-command=false
+was-maximized=false
 working-directory-mode=uint32 1
 
 [com/ubuntu/update-notifier]
@@ -85,9 +89,12 @@ indent-style='space'
 last-save-directory='file:///home/maksym/Documents'
 restore-session=false
 right-margin-position=uint32 85
+show-grid=false
 show-line-numbers=true
-style-scheme='classic-dark'
+style-scheme='Adwaita-dark'
+style-variant='dark'
 tab-width=uint32 4
+use-system-font=false
 
 [org/gnome/Totem]
 active-plugins=['screenshot', 'variable-rate', 'movie-properties', 'skipto', 'vimeo', 'open-directory', 'mpris', 'screensaver', 'autoload-subtitles', 'rotation', 'recent', 'apple-trailers', 'save-file']
@@ -196,7 +203,7 @@ name='X-Pardus-Apps.directory'
 translate=true
 
 [org/gnome/desktop/app-folders/folders/Utilities]
-apps=['com.github.tchx84.Flatseal.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.DiskUtility.desktop', 'org.bleachbit.BleachBit.desktop', 'yelp.desktop']
+apps=['com.github.tchx84.Flatseal.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.DiskUtility.desktop', 'org.bleachbit.BleachBit.desktop', 'yelp.desktop', 'remote-viewer.desktop']
 categories=['X-GNOME-Utilities']
 excluded-apps=['org.gnome.Evince.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.Characters.desktop', 'org.freedesktop.GnomeAbrt.desktop']
 name='X-GNOME-Utilities.directory'
@@ -512,7 +519,7 @@ state=43908
 
 [org/gnome/gnome-system-monitor]
 cpu-stacked-area-chart=false
-current-tab='processes'
+current-tab='resources'
 maximized=false
 network-total-in-bits=false
 show-dependencies=false
@@ -639,7 +646,7 @@ show-image-thumbnails='always'
 [org/gnome/nautilus/window-state]
 initial-size=(890, 550)
 initial-size-file-chooser=(890, 550)
-maximized=true
+maximized=false
 start-with-sidebar=true
 
 [org/gnome/photos]
@@ -664,7 +671,7 @@ last-folder-path='/home/maksym/Downloads'
 last-folder-path='/home/maksym/.local/share/Steam'
 
 [org/gnome/portal/filechooser/google-chrome]
-last-folder-path='/home/maksym/Documents'
+last-folder-path='/home/maksym/Studia/WWW/Lab2'
 
 [org/gnome/portal/filechooser/io.github.seadve.Kooha]
 last-folder-path='/home/maksym/Pictures/Records'
@@ -826,9 +833,9 @@ locations=[<(uint32 2, <('Szczecin', 'EPSC', true, [(0.93200582056497183, 0.2551
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1742118411
+check-timestamp=int64 1742198350
 first-run=false
-flatpak-purge-timestamp=int64 1742084243
+flatpak-purge-timestamp=int64 1742205526
 install-timestamp=int64 1741731542
 packagekit-historical-updates-timestamp=uint64 1741731542
 security-timestamp=int64 1724313017214187
@@ -859,7 +866,7 @@ selected-color=(true, 0.66666666666666663, 1.0, 0.76470588235294112, 1.0)
 [org/gtk/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=false
+show-hidden=true
 show-size-column=true
 show-type-column=true
 sidebar-width=209
@@ -871,12 +878,12 @@ window-position=(276, 104)
 window-size=(1096, 808)
 
 [org/virt-manager/virt-manager]
-manager-window-height=550
-manager-window-width=550
+manager-window-height=961
+manager-window-width=1648
 
 [org/virt-manager/virt-manager/connections]
-autoconnect=['qemu:///system']
-uris=['qemu:///system']
+autoconnect=@as []
+uris=@as []
 
 [org/virt-manager/virt-manager/vmlist-fields]
 disk-usage=false

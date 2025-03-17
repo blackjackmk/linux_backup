@@ -1,24 +1,21 @@
 format = """
 $username\
-[](fg:#1a5fb4 bg:#3584e4)\
 $directory\
-[](fg:#3584e4 bg:#99c1f1)\
 $git_branch\
 $git_status\
-[](fg:#99c1f1)\
 $python\
 $character"""
 
 [username]
-style_user = 'fg:white bg:#1a5fb4 bold'
-style_root = 'fg:red bg:#1a5fb4 bold'
-format = '[$user:]($style)'
+style_user = 'fg:#ca9ee6 bold'
+style_root = 'fg:#e78284 bold'
+format = '[$user]($style)'
 disabled = false
 show_always = true
 
 [directory]
-style = "fg:white bg:#3584e4"
-format = "[ $path ]($style)"
+style = "fg:#8caaee bold"
+format = " in [$path]($style)"
 truncation_length = 8
 truncation_symbol = "…/"
 
@@ -28,24 +25,29 @@ truncation_symbol = "…/"
 "Pictures" = "Pictures "
 
 [python]
-symbol = " 🐍"
-format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+symbol = " "
+style = "fg:#e5c890"
+format = ' \[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
 
 [git_branch]
 symbol = ""
-style = "fg:#5e5c64 bg:#99c1f1"
-format = '[ $symbol $branch ]($style)'
+style = "fg:#a6da95 bold"
+format = ' on[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#99c1f1"
+style = "fg:#ea999c"
 format = "[$all_status$ahead_behind]($style)"
-conflicted = "🏳"
+conflicted = "=${count}"
 ahead = "⇡${count}"
 behind = "⇣${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-untracked = "🆕${count}"
-stashed = "📦"
-modified = "📝${count}"
-staged = "✅${count}"
-renamed = "➡️${count}"
-deleted = "🗑️ ${count}"
+untracked = "?${count}"
+stashed = "\\$${count}"
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»${count}"
+deleted = "✘${count}"
+
+[character]
+success_symbol = "[❯](#babbf1)"
+error_symbol = "[❯](#e78284)"

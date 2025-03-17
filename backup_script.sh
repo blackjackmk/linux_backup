@@ -6,6 +6,6 @@ dconf dump / > ./gnome_settings.dconf
 # terminal custom
 cp ~/.config/starship.toml ./starship.toml
 cp ~/.local/share/fonts/Hack/HackNerdFontMono-Regular.ttf ./HackNerdFontMono-Regular.ttf
-cp ~/.bashrc ./bashrc
+cp ~/.bashrc ./.bashrc
 
 
