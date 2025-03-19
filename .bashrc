@@ -26,8 +26,6 @@ alias cat="bat --paging=never"
 
 # Replace `ls` with `exa`
 alias ls="exa --icons --group-directories-first"
-alias ll="exa -l --icons --group-directories-first"
-alias la="exa -la --icons --group-directories-first"
 
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then

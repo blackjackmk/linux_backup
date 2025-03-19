@@ -6,7 +6,7 @@ echo "2) Fix WiFi Dropping on Battery"
 echo "3) Install Video Codecs"
 echo "4) Enable Hardware Acceleration"
 echo "5) Add RPM Fusion Repositories"
-echo "6) Custom shell (zsh + Starship + plugins)"
+echo "6) Custom terminal"
 echo "7) Exit"
 read -p "Enter your choice (1-7): " choice
 
@@ -40,13 +40,12 @@ case $choice in
         sudo dnf install tldr bat exa -y
         curl -sS https://starship.rs/install.sh | sh
         [ -f ./.bashrc ] && mv ./.bashrc ~/.bashrc
-        source ~/.bashrc
         mkdir -p ~/.config
         [ -f ./starship.toml ] && mv ./starship.toml ~/.config/starship.toml
         mkdir -p ~/.local/share/fonts/Hack
         [ -f ./HackNerdFontMono-Regular.ttf ] && mv ./HackNerdFontMono-Regular.ttf ~/.local/share/fonts/Hack/
         fc-cache -fv
-        exec bash
+        source ~/.bashrc
         ;;
     7)
         echo "Exiting..."
