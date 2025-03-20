@@ -45,7 +45,7 @@ dconf dump /system/locale/ >> ./gnome_settings.dconf
 
 # terminal custom
 cp ~/.config/starship.toml ./starship.toml
-cp ~/.local/share/fonts/Hack/*.ttf ./HackNerdFontMono-Regular.ttf
+cp -r ~/.local/share/fonts ./fonts
 cp ~/.bashrc ./.bashrc
 
 
