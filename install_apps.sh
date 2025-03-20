@@ -36,6 +36,7 @@ FLATPAK_APPS=(
     "com.raggesilver.BlackBox"
     "com.unity.UnityHub"
     "com.google.Chrome"
+    "com.visualstudio.code"
 )
 
 echo "🔹 Installing Flatpak apps..."
@@ -47,16 +48,16 @@ done
 NATIVE_APPS=(
     "bleachbit"
     "gnome-tweaks"
+    "fastfetch"
+    "tldr"
+    "bat"
+    "eza"
 )
 
 echo "🔹 Installing native packages..."
 for package in "${NATIVE_APPS[@]}"; do
     $INSTALL_CMD $package
 done
-
-# Install VS Code
-echo "🖥 Installing VS Code..."
-flatpak run com.google.Chrome "https://code.visualstudio.com/"
 
 # Install Immersed (AppImage)
 echo "🕶 Setting up Immersed AppImage..."
