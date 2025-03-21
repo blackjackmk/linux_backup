@@ -41,9 +41,4 @@ dconf dump /org/gnome/shell/keybindings/ >> ./gnome_settings.dconf
 dconf dump /org/gnome/tweaks/ >> ./gnome_settings.dconf
 dconf dump /system/locale/ >> ./gnome_settings.dconf
 
-# terminal custom
-cp ~/.config/starship.toml ./starship.toml
-cp -r ~/.local/share/fonts ./fonts
-cp ~/.bashrc ./.bashrc
-
 
