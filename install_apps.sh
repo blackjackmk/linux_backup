@@ -24,7 +24,6 @@ fi
 # Add Flathub repository
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# Install Flatpak Apps
 FLATPAK_APPS=(
     "org.telegram.desktop"
     "com.github.flxzt.rnote"
@@ -36,7 +35,6 @@ FLATPAK_APPS=(
     "com.raggesilver.BlackBox"
     "com.unity.UnityHub"
     "com.google.Chrome"
-    "com.visualstudio.code"
 )
 
 echo "🔹 Installing Flatpak apps..."
@@ -59,7 +57,9 @@ for package in "${NATIVE_APPS[@]}"; do
     $INSTALL_CMD $package
 done
 
-# Install Immersed (AppImage)
+echo "Install VS Code manually..."
+flatpak run com.google.Chrome "https://code.visualstudio.com/Download"
+
 echo "🕶 Setting up Immersed AppImage..."
 flatpak run com.google.Chrome "https://immersed.com/"
 
