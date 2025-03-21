@@ -6,15 +6,19 @@ $git_status\
 $python\
 $character"""
 
+# Sets user-defined palette
+# Palettes must be defined _after_ this line
+palette = "catppuccin_macchiato"
+
 [username]
-style_user = 'fg:#ca9ee6 bold'
-style_root = 'fg:#e78284 bold'
+style_user = 'fg:mauve bold'
+style_root = 'fg:red bold'
 format = '[$user]($style)'
 disabled = false
 show_always = true
 
 [directory]
-style = "fg:#8caaee bold"
+style = "fg:blue bold"
 format = " in [$path]($style)"
 truncation_length = 8
 truncation_symbol = "…/"
@@ -26,16 +30,16 @@ truncation_symbol = "…/"
 
 [python]
 symbol = " "
-style = "fg:#e5c890"
+style = "fg:yellow"
 format = ' \[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
 
 [git_branch]
 symbol = ""
-style = "fg:#a6da95 bold"
+style = "fg:green bold"
 format = ' on[ $symbol $branch ]($style)'
 
 [git_status]
-style = "fg:#ea999c"
+style = "fg:maroon"
 format = "[$all_status$ahead_behind]($style)"
 conflicted = "=${count}"
 ahead = "⇡${count}"
@@ -49,5 +53,33 @@ renamed = "»${count}"
 deleted = "✘${count}"
 
 [character]
-success_symbol = "[❯](#babbf1)"
-error_symbol = "[❯](#e78284)"
+success_symbol = "[❯](lavender)"
+error_symbol = "[❯](red)"
+
+[palettes.catppuccin_frappe]
+mauve = "#ca9ee6"
+red = "#e78284"
+maroon = "#ea999c"
+yellow = "#e5c890"
+green = "#a6d189"
+blue = "#8caaee"
+lavender = "#babbf1"
+
+[palettes.catppuccin_macchiato]
+mauve = "#c6a0f6"
+red = "#ed8796"
+maroon = "#ee99a0"
+yellow = "#eed49f"
+green = "#a6da95"
+blue = "#8aadf4"
+lavender = "#b7bdf8"
+
+[palettes.catppuccin_mocha]
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+blue = "#89b4fa"
+lavender = "#b4befe"
+

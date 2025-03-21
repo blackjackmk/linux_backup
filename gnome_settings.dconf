@@ -228,9 +228,9 @@ show-headerbar=true
 show-menu-button=true
 style-preference=uint32 2
 theme-bold-is-bright=false
-theme-dark='Japanesque'
+theme-dark='Catppuccin Macchiato'
 use-custom-command=false
-was-maximized=false
+was-maximized=true
 window-width=uint32 1266
 working-directory-mode=uint32 1
 
@@ -296,13 +296,16 @@ toggle-tiled-left=@as []
 toggle-tiled-right=@as []
 
 [org/gnome/TextEditor]
-indent-style='space'
+custom-font='Hack Nerd Font Mono 12'
+highlight-current-line=false
+indent-style='tab'
 last-save-directory='file:///home/maksym/Documents'
 restore-session=false
 right-margin-position=uint32 85
 show-grid=false
 show-line-numbers=true
-style-scheme='Adwaita-dark'
+show-map=false
+style-scheme='catppuccin_macchiato'
 style-variant='dark'
 tab-width=uint32 4
 use-system-font=false
@@ -483,8 +486,20 @@ root='file:///'
 tree-view=true
 virtual-root='file:///home/blackjack'
 
+[org/gnome/gedit/preferences/editor]
+scheme='catppuccin'
+
 [org/gnome/gedit/preferences/ui]
 show-tabs-mode='auto'
+
+[org/gnome/gnome-system-monitor]
+current-tab='processes'
+show-dependencies=false
+show-whose-processes='user'
+
+[org/gnome/gnome-system-monitor/proctree]
+col-26-visible=false
+col-26-width=0
 
 [org/gnome/login-screen]
 enable-fingerprint-authentication=true
@@ -505,7 +520,7 @@ toggle-tiled-right=@as []
 restore-shortcuts=@as []
 
 [org/gnome/nautilus/icon-view]
-default-zoom-level='extra-large'
+default-zoom-level='large'
 
 [org/gnome/nautilus/preferences]
 default-folder-viewer='icon-view'
@@ -517,6 +532,7 @@ show-image-thumbnails='always'
 
 [org/gnome/nautilus/window-state]
 initial-size=(890, 550)
+maximized=true
 
 [org/gnome/power-manager]
 info-history-type='charge'
@@ -630,7 +646,16 @@ update-notification-timestamp=int64 1742575824
 show-extensions-notice=false
 
 [org/gtk/gtk4/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
 show-hidden=false
+sidebar-width=140
+sort-column='name'
+sort-directories-first=true
+sort-order='ascending'
+type-format='category'
+view-type='list'
+window-size=(857, 372)
 
 [org/gtk/settings/file-chooser]
 date-format='regular'
