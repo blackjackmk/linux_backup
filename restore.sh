@@ -13,8 +13,10 @@ source ~/.bashrc
 #wallpaper
 [ -f ./rr4.jpg ] && ln -s ./rr4.jpg $HOME/Pictures/rr4.jpg
 
-#loading others themes, colors, fonts, configs
-gsettings set org.gnome.mutter center-new-windows true
+#catpuchin text editor
+ln -sf ./themes/catppuccin-macchiato.xml /usr/share/gnome-text-editor/styles/catpuccin.xml
+#catpuchin blackbox
+ln -sf ./themes/catppuccin-macchiato.json ~/.local/share/blackbox/schemes/catpuccin.json
 
 
 #loading  gnome settings

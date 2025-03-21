@@ -1,4 +1,5 @@
-#Netinst iso install with GNOME DE and systemd-boot
+#seamless systemd-boot
+
 #seamless GRUB boot
 sudo apt install plymouth plymouth-themes
 sudo plymouth-set-default-theme -R bgrt
@@ -7,5 +8,6 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_backlight=vendor loglevel=0"
 sudo update-grub
 #change sources
 sudo nano /etc/apt/sources.list
-# main contrib non-free non-free-firmware
+>> main contrib non-free non-free-firmware
+#Remove bloat (libre and firefox)
 

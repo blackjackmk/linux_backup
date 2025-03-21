@@ -23,9 +23,11 @@ alias man="tldr"
 
 # Replace `cat` with `bat`
 alias cat="bat --paging=never"
+export BAT_THEME="ansi"
 
 # Replace `ls` with `exa`
-alias ls="exa --icons --group-directories-first"
+alias ls="eza --icons --group-directories-first"
+
 
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
