@@ -16,6 +16,8 @@ export PATH
 
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
 
 #Aliases
 # Replace `man` with `tldr`
