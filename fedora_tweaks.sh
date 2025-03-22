@@ -14,6 +14,7 @@ case $choice in
         echo "Applying seamless boot tweaks..."
         sudo sed -i 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' /etc/default/grub
         sudo sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT=\"rhgb quiet splash loglevel=0\"/' /etc/default/grub
+        sudo grub2-editenv - set menu_auto_hide=1
         sudo grub2-mkconfig -o /boot/grub2/grub.cfg
         ;;
     2)

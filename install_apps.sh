@@ -12,8 +12,6 @@ else
     exit 1
 fi
 
-echo "📦 Installing required software using $PKG_MANAGER..."
-
 if [ "$PKG_MANAGER" = "dnf" ]; then
     sudo dnf install -y flatpak
 elif [ "$PKG_MANAGER" = "apt" ]; then
