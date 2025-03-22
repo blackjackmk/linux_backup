@@ -49,6 +49,7 @@ NATIVE_APPS=(
     "bat"
     "eza"
     "bash-completion"
+    "fzf"
 )
 
 echo "🔹 Installing native packages..."
