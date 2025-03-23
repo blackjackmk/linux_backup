@@ -24,20 +24,6 @@ unset rc
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
-export HISTCONTROL=ignoreboth   # Ignore duplicates and commands starting with spaces
-export HISTIGNORE="ls:cd:clear:history:exit"  # Ignore common commands
-
-# Set up fzf key bindings and fuzzy completion
-eval "$(fzf --bash)"
-
-export FZF_DEFAULT_OPTS="--height 40% --layout reverse"
-
-# Preview file content using bat
-export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers --line-range=:500 {}' --preview-window '~3'"
-export FZF_ALT_C_OPTS="--walker-skip .git,venv,target --preview 'eza --color=always --tree --icons --group-directories-first {}'"
-
-alias gl="git log --oneline | fzf --preview 'git show --color=always {1}'"
-
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
@@ -53,3 +39,21 @@ alias ls="eza --icons --group-directories-first"
 
 #Starship
 eval "$(starship init bash)"
+
+# HSTR configuration - add this to ~/.bashrc
+export HSTR_CONFIG=hicolor,promt-bottom,hide-help
+shopt -s histappend              # append new history items to .bash_history
+export HISTCONTROL=ignoreboth:erasedups # ignore duplicates 
+export HISTIGNORE="ls:cd:clear:history:exit"  # Ignore common commands
+export HISTFILESIZE=10000        # increase history file size (default is 500)
+export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
+# ensure synchronization between bash memory and history file
+export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
+function hstrnotiocsti {
+    { READLINE_LINE="$( { </dev/tty hstr ${READLINE_LINE}; } 2>&1 1>&3 3>&- )"; } 3>&1;
+    READLINE_POINT=${#READLINE_LINE}
+}
+# if this is interactive shell, then bind hstr to Ctrl-r (for Vi mode check doc)
+if [[ $- =~ .*i.* ]]; then bind -x '"\C-r": "hstrnotiocsti"'; fi
+export HSTR_TIOCSTI=n
+
