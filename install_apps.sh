@@ -64,6 +64,9 @@ curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh 
 echo "Install Starship"
 curl -sS https://starship.rs/install.sh | sh
 
+echo "Install yazi file manager"
+flatpak run com.google.Chrome "https://yazi-rs.github.io/docs/installation"
+
 echo "Install VS Code manually..."
 flatpak run com.google.Chrome "https://code.visualstudio.com/Download"
 
