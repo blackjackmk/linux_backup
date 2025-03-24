@@ -4,9 +4,9 @@
 SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
 
 # terminal
-[ -f "$SCRIPT_DIR/.bashrc" ] && ln -srf "$SCRIPT_DIR/dotfiles/.bashrc" "$HOME/.bashrc"
+[ -f "$SCRIPT_DIR/dotfiles/.bashrc" ] && ln -srf "$SCRIPT_DIR/dotfiles/.bashrc" "$HOME/.bashrc"
 mkdir -p ~/.config
-[ -f "$SCRIPT_DIR/starship.toml" ] && ln -sf "$SCRIPT_DIR/dotfiles/starship.toml" "$HOME/.config/starship.toml"
+[ -f "$SCRIPT_DIR/dotfiles/starship.toml" ] && ln -sf "$SCRIPT_DIR/dotfiles/starship.toml" "$HOME/.config/starship.toml"
 mkdir -p ~/.local/share
 ln -s "$SCRIPT_DIR/fonts/" "$HOME/.local/share/fonts"
 fc-cache -fv
@@ -22,3 +22,6 @@ ln -sf "$SCRIPT_DIR/themes/catppuccin-macchiato.json" "$HOME/.local/share/blackb
 
 # loading gnome settings
 dconf load -f / < "$SCRIPT_DIR/gnome_settings.dconf"
+
+#micro config
+ln -sf "$SCRIPT_DIR/dotfiles/micro/" "$HOME/.config/micro"
