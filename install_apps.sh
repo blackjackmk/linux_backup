@@ -58,6 +58,12 @@ for package in "${NATIVE_APPS[@]}"; do
     $INSTALL_CMD $package
 done
 
+echo "Install Zoxide"
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+
+echo "Install Starship"
+curl -sS https://starship.rs/install.sh | sh
+
 echo "Install VS Code manually..."
 flatpak run com.google.Chrome "https://code.visualstudio.com/Download"
 

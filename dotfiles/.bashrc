@@ -1,3 +1,4 @@
+
 # .bashrc
 
 # Source global definitions
@@ -36,15 +37,17 @@ export BAT_THEME="ansi"
 
 # Replace `ls` with `eza`
 alias ls="eza --icons --group-directories-first"
-
+alias la="eza -la --icons --group-directories-first"
+alias ll="eza -l --icons --group-directories-first"
+alias lt="eza -T --icons --group-directories-first"
 #Starship
 eval "$(starship init bash)"
 
 # HSTR configuration - add this to ~/.bashrc
 export HSTR_CONFIG=hicolor,promt-bottom,hide-help
 shopt -s histappend              # append new history items to .bash_history
-export HISTCONTROL=ignoreboth:erasedups # ignore duplicates 
-export HISTIGNORE="ls:cd:clear:history:exit"  # Ignore common commands
+export HISTCONTROL=ignoreboth:erasedups:ignorespace # ignore duplicates 
+export HISTIGNORE="ls:la:ll:lt:cd:clear:history:exit"  # Ignore common commands
 export HISTFILESIZE=10000        # increase history file size (default is 500)
 export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
 # ensure synchronization between bash memory and history file
@@ -57,3 +60,5 @@ function hstrnotiocsti {
 if [[ $- =~ .*i.* ]]; then bind -x '"\C-r": "hstrnotiocsti"'; fi
 export HSTR_TIOCSTI=n
 
+#Zoxide
+eval "$(zoxide init --cmd cd bash)"

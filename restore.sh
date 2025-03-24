@@ -4,7 +4,6 @@
 SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
 
 # terminal
-curl -sS https://starship.rs/install.sh | sh
 [ -f "$SCRIPT_DIR/.bashrc" ] && ln -srf "$SCRIPT_DIR/dotfiles/.bashrc" "$HOME/.bashrc"
 mkdir -p ~/.config
 [ -f "$SCRIPT_DIR/starship.toml" ] && ln -sf "$SCRIPT_DIR/dotfiles/starship.toml" "$HOME/.config/starship.toml"
