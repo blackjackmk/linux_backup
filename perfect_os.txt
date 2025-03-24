@@ -1,5 +1,5 @@
 Base system: Debian Trixie
-WM:
+WM: Weston | Labwc | Wayfire | Sway
 	floating/stacking with Wayland
 	touchpad gest support
 	workspaces as in gnome
@@ -13,8 +13,8 @@ Bar: waybar
 	batery level
 App launcher: rofi
 Lock screen:
-System monitor: ytop | conky
-File managers: yazi | superfile
+System monitor: bottom
+File managers: yazi
 Shell: bash
 Promts: Starship
 Text editor: micro
@@ -22,3 +22,5 @@ Terminal: blackbox | allacritty | kitty
 Color scheme: catppuccin | kanagawa
 Font: Hack Nerd Mono
 Icons:
+Browser: chromebased
+IDE: vscodium

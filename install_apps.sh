@@ -51,6 +51,7 @@ NATIVE_APPS=(
     "bash-completion"
     "hstr"
     "micro"
+	"fd-find"
 )
 
 echo "🔹 Installing native packages..."
@@ -74,4 +75,3 @@ echo "🕶 Setting up Immersed AppImage..."
 flatpak run com.google.Chrome "https://immersed.com/"
 
 echo "✅ Installation complete!"
-
