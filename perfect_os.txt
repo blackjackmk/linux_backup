@@ -1,0 +1,24 @@
+Base system: Debian Trixie
+WM:
+	floating/stacking with Wayland
+	touchpad gest support
+	workspaces as in gnome
+Bar: waybar
+	active workspace
+	date and time
+	system resource info
+	input method
+	network icon
+	volume icon
+	batery level
+App launcher: rofi
+Lock screen:
+System monitor: ytop | conky
+File managers: yazi | superfile
+Shell: bash
+Promts: Starship
+Text editor: micro
+Terminal: blackbox | allacritty | kitty
+Color scheme: catppuccin | kanagawa
+Font: Hack Nerd Mono
+Icons:
