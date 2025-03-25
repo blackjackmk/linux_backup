@@ -1,5 +1,5 @@
 Base system: Debian Trixie
-WM: Weston | Labwc | Wayfire | Sway
+WM: Labwc | Wayfire
 	floating/stacking with Wayland
 	touchpad gest support
 	workspaces as in gnome
