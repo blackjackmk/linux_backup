@@ -1,5 +1,5 @@
 #!/bin/bash
-# ~/linux_backup/link.sh
+# ~/.backup/linker.sh
 
 DOTFILES_DIR="$HOME/.backup/dotfiles"
 TARGET_DIR="$HOME"
@@ -16,3 +16,6 @@ find "$DOTFILES_DIR" -type f | while read -r file; do
     # Create symlink (force overwrite)
     ln -sfv "$file" "$target_file"
 done
+
+fc-cache -fv
+source "$HOME/.bashrc"
