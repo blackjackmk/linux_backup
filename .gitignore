@@ -1,2 +1,3 @@
 #micro history
-micro/buffer/
+dotfiles/.config/micro/buffers/
+dotfiles/.config/micro/backups/
