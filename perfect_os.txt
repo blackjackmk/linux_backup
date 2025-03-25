@@ -1,5 +1,5 @@
 Base system: Debian Trixie
-WM: Labwc | Wayfire
+WM: Labwc
 	floating/stacking with Wayland
 	touchpad gest support
 	workspaces as in gnome
@@ -11,8 +11,8 @@ Bar: waybar
 	network icon
 	volume icon
 	batery level
-App launcher: rofi
-Lock screen:
+App launcher: wofi
+Lock screen: swaylock
 System monitor: bottom
 File managers: yazi
 Shell: bash
@@ -24,3 +24,5 @@ Font: Hack Nerd Mono
 Icons:
 Browser: chromebased
 IDE: vscodium
+Screenshot: grim
+Image viewer: imv | nsxiv
