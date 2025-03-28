@@ -8,13 +8,13 @@ cd ~/.backup
 
 ### 2. Install Applications
 ```bash
-./scripts/install_apps.sh
+./install_apps.sh
 ```
 *Installs all declared packages for your distro*
 
 ### 3. Link Configurations
 ```bash
-./scripts/linker.sh
+./linker.sh
 ```
 - Creates symlinks from `dotfiles/` to your `$HOME`
 - Preserves git tracking in `.backup/`
@@ -31,7 +31,7 @@ cd ~/.backup
 ## 🎨 Theme Management
 1. Add themes to `themes/` folder:
    ```bash
-   cp ~/Downloads/catppuccin-frappe.xml ~/.backup/dotfiles/themes/
+   cp ~/Downloads/catppuccin-frappe.xml ~/.backup/themes/
    ```
 
 2. Create relative symlink to config:
@@ -69,6 +69,6 @@ dconf dump / > gnome_settings.dconf
 
 ### Updating All Systems
 ```bash
-./scripts/linker.sh  # Recreate symlinks
+./linker.sh  # Recreate symlinks
 dconf load / < gnome_settings.dconf  # Reload GNOME settings
 ```

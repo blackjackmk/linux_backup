@@ -18,11 +18,11 @@ File managers: yazi
 Shell: bash
 Promts: Starship
 Text editor: micro
-Terminal: blackbox | allacritty | kitty
+Terminal: kitty
 Color scheme: catppuccin | kanagawa
 Font: Hack Nerd Mono
 Icons:
 Browser: chromebased
 IDE: vscodium
 Screenshot: grim
-Image viewer: imv | nsxiv
+Image viewer: qimgv

@@ -30,7 +30,6 @@ FLATPAK_APPS=(
     "io.github.wivrn.wivrn"
     "org.onlyoffice.desktopeditors"
     "com.valvesoftware.Steam"
-    "com.raggesilver.BlackBox"
     "com.unity.UnityHub"
     "com.google.Chrome"
 )
@@ -42,6 +41,7 @@ done
 
 # Install Native Packages
 NATIVE_APPS=(
+	"kitty"
     "bleachbit"
     "gnome-tweaks"
     "fastfetch"
@@ -52,6 +52,7 @@ NATIVE_APPS=(
     "hstr"
     "micro"
 	"fd-find"
+	"qimgv"
 )
 
 echo "🔹 Installing native packages..."
