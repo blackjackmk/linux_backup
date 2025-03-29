@@ -1,8 +1,8 @@
 Base system: Debian Trixie
-WM: Labwc | Wayfire | Sway | Hyprland
+WM: Labwc | Wayfire |  Hyprland
 	floating/stacking with Wayland
 	touchpad gest support
-	workspaces as in gnome
+	workspaces as in gnome (hycov)
 Bar: waybar
 	active workspace
 	date and time

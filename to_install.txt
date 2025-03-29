@@ -1,0 +1,42 @@
+FLATPAK_APPS=(
+    "org.telegram.desktop"
+    "com.github.flxzt.rnote"
+    "com.usebottles.bottles"
+    "com.github.tchx84.Flatseal"
+    "io.github.wivrn.wivrn"
+    "org.onlyoffice.desktopeditors"
+    "com.valvesoftware.Steam"
+    "com.unity.UnityHub"
+    "com.google.Chrome"
+)
+
+
+NATIVE_APPS=(
+	"kitty"
+    "bleachbit"
+    "gnome-tweaks"
+    "fastfetch"
+    "tldr"
+    "bat"
+    "eza"
+    "bash-completion"
+    "hstr"
+    "micro"
+	"fd-find"
+	"qimgv"
+)
+
+# Zoxide
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+
+# Starship
+curl -sS https://starship.rs/install.sh | sh
+
+# Yazi
+https://yazi-rs.github.io/docs/installation
+
+# VS Code || vscodium
+https://code.visualstudio.com/Download
+
+#Immersed
+https://immersed.com/

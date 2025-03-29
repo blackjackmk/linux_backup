@@ -6,20 +6,14 @@ git clone https://github.com/blackjackmk/linux_backup.git ~/.backup
 cd ~/.backup
 ```
 
-### 2. Install Applications
-```bash
-./install_apps.sh
-```
-*Installs all declared packages for your distro*
-
-### 3. Link Configurations
+### 2. Link Configurations
 ```bash
 ./linker.sh
 ```
 - Creates symlinks from `dotfiles/` to your `$HOME`
 - Preserves git tracking in `.backup/`
 
-### 4. Apply Distro-Specific Tweaks
+### 3. Apply Distro-Specific Tweaks
 ```bash
 # For Debian-based:
 ./debian_tweaks.sh

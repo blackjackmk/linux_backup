@@ -27,6 +27,11 @@ echo "Updating APT sources..."
 sed -i 's/^deb http.*/& contrib non-free non-free-firmware/' /etc/apt/sources.list
 apt update
 
+echo "Enabling Flathub"
+apt update
+apt install -y flatpak gnome-software-plugin-flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 echo "Removing bloat (LibreOffice and Firefox)..."
 apt remove -y --purge libreoffice* firefox-esr
 apt autoremove -y
