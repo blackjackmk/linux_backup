@@ -1,3 +1,4 @@
 {
-    "colorscheme": "geany"
+    "autoreload": true,
+    "colorscheme": "catppuccin-macchiato"
 }

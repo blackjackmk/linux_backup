@@ -1,5 +1,5 @@
 Base system: Debian Trixie
-WM: Labwc
+WM: Labwc | Wayfire | Sway | Hyprland
 	floating/stacking with Wayland
 	touchpad gest support
 	workspaces as in gnome
@@ -13,16 +13,18 @@ Bar: waybar
 	batery level
 App launcher: wofi
 Lock screen: swaylock
+Wallpaper: swaybg
 System monitor: bottom
-File managers: yazi
+File managers: yazi + nautilus
 Shell: bash
 Promts: Starship
 Text editor: micro
 Terminal: kitty
-Color scheme: catppuccin | kanagawa
+Color scheme: catppuccin | kanagawa | everforest
 Font: Hack Nerd Mono
-Icons:
+Cursor: Adwaita
 Browser: chromebased
 IDE: vscodium
 Screenshot: grim
 Image viewer: qimgv
+Video player: mpv

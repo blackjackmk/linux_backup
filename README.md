@@ -28,22 +28,6 @@ cd ~/.backup
 ./fedora_tweaks.sh
 ```
 
-## 🎨 Theme Management
-1. Add themes to `themes/` folder:
-   ```bash
-   cp ~/Downloads/catppuccin-frappe.xml ~/.backup/themes/
-   ```
-
-2. Create relative symlink to config:
-   ```bash
-   ln -srf themes/catppuccin-frappe.xml dotfiles/.config/gtk-4.0/gtk.css
-   ```
-
-3. Re-run linker:
-   ```bash
-   ./scripts/linker.sh
-   ```
-
 ## ⚙️ GNOME Settings
 To apply saved GNOME configurations:
 ```bash

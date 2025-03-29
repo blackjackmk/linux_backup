@@ -14,7 +14,7 @@ reveal = [
 	{ run = '''exiftool "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF", for = "unix" },
 ]
 extract = [
-	{ run = 'ya pub extract --list "$@"', desc = "Extract here", for = "unix" },
+	{ run = '7z e "$@"', desc = "Extract here", for = "unix" },
 ]
 play = [
 	{ run = 'mpv --force-window "$@"', orphan = true, for = "unix" },

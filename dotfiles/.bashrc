@@ -63,3 +63,5 @@ export HSTR_TIOCSTI=n
 
 #Zoxide
 eval "$(zoxide init --cmd cd bash)"
+
+export MICRO_TRUECOLOR=1
