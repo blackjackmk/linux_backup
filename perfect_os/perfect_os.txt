@@ -11,8 +11,7 @@ Bar: waybar
 	batery level
 App launcher: wofi
 Notifications: swaync
-Lock screen: swaylock
-Logout(power menu):
+Lock screen: swaylock + swayidle
 Wallpaper: swaybg
 Shell: bash
 Terminal: kitty
