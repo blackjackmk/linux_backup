@@ -19,6 +19,7 @@ NATIVE_APPS=(
     "tldr"
     "bat"
     "eza"
+    "bottom"
     "bash-completion"
     "hstr"
     "micro"

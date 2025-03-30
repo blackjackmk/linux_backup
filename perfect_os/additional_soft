@@ -1,0 +1,12 @@
+mesa-intel
+qt5-wayland
+qt6-wayland
+wl-clipboard
+networkmanager
+pipewire
+wireplumber
+xdg-desktop-portal-hyprland
+xorg-xwayland
+polkit-gnome
+cliphist
+udiskie
