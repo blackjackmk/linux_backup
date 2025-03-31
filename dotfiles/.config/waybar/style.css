@@ -1,92 +1,129 @@
-@import "macchiato.css";
-
-* {
-  font-family: Hack Nerd Font;
-  font-size: 17px;
-  min-height: 0;
+window#waybar{
+    all:unset;
 }
-
-#waybar {
-  background: transparent;
-  color: @text;
-  margin: 5px 5px;
+.modules-left {
+    padding:7px;
+    margin:10px 0px 5px 10px;
+    border-radius:10px;
+    background: alpha(@background,.6);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
 }
-
+.modules-center {
+    padding:7px;
+    margin:10px 0px 5px 0px;
+    border-radius:10px;
+    background: alpha(@background,.6);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+}
+.modules-right {
+    padding:7px;
+    margin: 10px 10px 5px 0px;
+    border-radius:10px;
+    background: alpha(@background,.6);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+}
+tooltip {
+    background:@background;
+    color: @color7;
+}
+#clock:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover{
+    transition: all .3s ease;
+    color:@color9;
+}
+#custom-notification {
+    padding: 0px 5px;
+    transition: all .3s ease;
+    color:@color7;
+}
+#clock{
+    padding: 0px 5px;
+    color:@color7;
+    transition: all .3s ease;
+}
 #workspaces {
-  border-radius: 1rem;
-  margin: 5px;
-  background-color: @surface0;
-  margin-left: 1rem;
+    padding: 0px 5px;
 }
-
 #workspaces button {
-  color: @lavender;
-  border-radius: 1rem;
-  padding: 0.4rem;
+    all:unset;
+    padding: 0px 5px;
+    color: alpha(@color9,.4);
+    transition: all .2s ease;
 }
-
-#workspaces button.active {
-  color: @sky;
-  border-radius: 1rem;
-}
-
 #workspaces button:hover {
-  color: @sapphire;
-  border-radius: 1rem;
+    color:rgba(0,0,0,0);
+    border: none;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
+    transition: all 1s ease;
 }
-
-#custom-music,
-#tray,
-#backlight,
-#clock,
-#battery,
-#pulseaudio,
-#custom-lock,
-#custom-power {
-  background-color: @surface0;
-  padding: 0.5rem 1rem;
-  margin: 5px 0;
+#workspaces button.active {
+    color: @color9;
+    border: none;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
 }
-
-#clock {
-  color: @blue;
-  border-radius: 0px 1rem 1rem 0px;
-  margin-right: 1rem;
+#workspaces button.empty {
+    color: rgba(0,0,0,0);
+    border: none;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
 }
-
-#battery {
-  color: @green;
+#workspaces button.empty:hover {
+    color: rgba(0,0,0,0);
+    border: none;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
+    transition: all 1s ease;
 }
-
+#workspaces button.empty.active {
+    color: @color9;
+    border: none;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+}
+#network{
+    padding: 0px 5px;
+    transition: all .3s ease;
+    color:@color7;
+}
+#battery{
+    padding: 0px 5px;
+    transition: all .3s ease;
+    color:@color7;
+}
 #battery.charging {
-  color: @green;
+    color: #26A65B;
 }
 
 #battery.warning:not(.charging) {
-  color: @red;
+    color: #ffbe61;
 }
 
-#backlight {
-  color: @yellow;
+#battery.critical:not(.charging) {
+    color: #f53c3c;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
-
-#backlight, #battery {
-    border-radius: 0;
+#group-expand{
+    padding: 0px 5px;
+    transition: all .3s ease; 
 }
-
-#pulseaudio {
-  color: @maroon;
-  border-radius: 1rem 0px 0px 1rem;
-  margin-left: 1rem;
+#custom-expand{
+    padding: 0px 5px;
+    color:alpha(@foreground,.2);
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, .7);
+    transition: all .3s ease; 
 }
-
-#custom-power {
-    margin-right: 1rem;
-    border-radius: 0px 1rem 1rem 0px;
-    color: @red;
+#custom-expand:hover{
+    color:rgba(255,255,255,.2);
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, .5);
 }
+#cpu,#memory,#temperature{
+    padding: 0px 5px;
+    transition: all .3s ease; 
+    color:@color7;
 
-#tray {
-  margin-right: 1rem;
-  border-radius: 1rem;
+}
+#custom-endpoint{
+    color:transparent;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 1);
+
 }
