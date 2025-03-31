@@ -29,9 +29,6 @@ bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
 
-alias bat="bat --paging=never"
-export BAT_THEME="ansi"
-
 # Replace `ls` with `eza`
 alias ls="eza --icons --group-directories-first"
 alias la="eza -la --icons --group-directories-first"
@@ -42,7 +39,7 @@ alias lt="eza -T --icons --group-directories-first"
 eval "$(starship init bash)"
 
 #Zoxide
-#eval "$(zoxide init --cmd cd bash)"
+eval "$(zoxide init --cmd cd bash)"
 
 export MICRO_TRUECOLOR=1
 
