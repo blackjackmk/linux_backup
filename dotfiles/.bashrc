@@ -28,11 +28,8 @@ unset rc
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
-# Replace `man` with `tldr`
-alias man="tldr"
 
-# Replace `cat` with `bat`
-alias cat="bat --paging=never"
+alias bat="bat --paging=never"
 export BAT_THEME="ansi"
 
 # Replace `ls` with `eza`
@@ -43,6 +40,12 @@ alias lt="eza -T --icons --group-directories-first"
 
 #Starship
 eval "$(starship init bash)"
+
+#Zoxide
+#eval "$(zoxide init --cmd cd bash)"
+
+export MICRO_TRUECOLOR=1
+
 
 # HSTR configuration - add this to ~/.bashrc
 export HSTR_CONFIG=hicolor,promt-bottom,hide-help
@@ -60,8 +63,3 @@ function hstrnotiocsti {
 # if this is interactive shell, then bind hstr to Ctrl-r (for Vi mode check doc)
 if [[ $- =~ .*i.* ]]; then bind -x '"\C-r": "hstrnotiocsti"'; fi
 export HSTR_TIOCSTI=n
-
-#Zoxide
-eval "$(zoxide init --cmd cd bash)"
-
-export MICRO_TRUECOLOR=1
