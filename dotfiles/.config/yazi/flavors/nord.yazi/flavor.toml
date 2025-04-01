@@ -1,0 +1,170 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
+# : Manager {{{
+
+[manager]
+cwd = { fg = "#88C0D0" }  # Frost 2 - Current directory
+
+# Hovered
+hovered         = { reversed = true }
+preview_hovered = { underline = true }
+
+# Find
+find_keyword  = { fg = "#EBCB8B", bold = true, italic = true, underline = true }  # Aurora 3
+find_position = { fg = "#BF616A", bg = "reset", bold = true, italic = true }  # Aurora 5
+
+# Marker
+marker_copied   = { fg = "#A3BE8C", bg = "#A3BE8C" }  # Aurora 4
+marker_cut      = { fg = "#BF616A", bg = "#BF616A" }  # Aurora 5
+marker_marked   = { fg = "#88C0D0", bg = "#88C0D0" }  # Frost 2
+marker_selected = { fg = "#EBCB8B", bg = "#EBCB8B" }  # Aurora 3
+
+# Tab
+tab_active   = { reversed = true }
+tab_inactive = {}
+tab_width    = 1
+
+# Count
+count_copied   = { fg = "#2E3440", bg = "#A3BE8C" }  # Polar Night 0 + Aurora 4
+count_cut      = { fg = "#2E3440", bg = "#BF616A" }  # Polar Night 0 + Aurora 5
+count_selected = { fg = "#2E3440", bg = "#EBCB8B" }  # Polar Night 0 + Aurora 3
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#4C566A" }  # Polar Night 3
+
+# : }}}
+
+
+# : Mode {{{
+
+[mode]
+
+normal_main = { fg = "#2E3440", bg = "#88C0D0", bold = true }  # Polar Night 0 + Frost 2
+normal_alt  = { fg = "#88C0D0", bg = "#3B4252" }  # Frost 2 + Polar Night 1
+
+# Select mode
+select_main = { fg = "#2E3440", bg = "#A3BE8C", bold = true }  # Polar Night 0 + Aurora 4
+select_alt  = { fg = "#A3BE8C", bg = "#3B4252" }  # Aurora 4 + Polar Night 1
+
+# Unset mode
+unset_main = { fg = "#2E3440", bg = "#BF616A", bold = true }  # Polar Night 0 + Aurora 5
+unset_alt  = { fg = "#BF616A", bg = "#3B4252" }  # Aurora 5 + Polar Night 1
+
+# : }}}
+
+
+# : Status bar {{{
+
+[status]
+# Permissions
+perm_sep   = { fg = "#4C566A" }  # Polar Night 3
+perm_type  = { fg = "#81A1C1" }  # Frost 3
+perm_read  = { fg = "#EBCB8B" }  # Aurora 3
+perm_write = { fg = "#BF616A" }  # Aurora 5
+perm_exec  = { fg = "#A3BE8C" }  # Aurora 4
+
+# Progress
+progress_label  = { fg = "#ECEFF4", bold = true }  # Snow Storm 3
+progress_normal = { fg = "#81A1C1", bg = "#434C5E" }  # Frost 3 + Polar Night 2
+progress_error  = { fg = "#BF616A", bg = "#434C5E" }  # Aurora 5 + Polar Night 2
+
+# : }}}
+
+
+# : Pick {{{
+
+[pick]
+border   = { fg = "#81A1C1" }  # Frost 3
+active   = { fg = "#D08770", bold = true }  # Aurora 2
+inactive = {}
+
+# : }}}
+
+
+# : Input {{{
+
+[input]
+border   = { fg = "#81A1C1" }  # Frost 3
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+# : }}}
+
+
+# : Completion {{{
+
+[cmp]
+border = { fg = "#81A1C1" }  # Frost 3
+
+# : }}}
+
+
+# : Tasks {{{
+
+[tasks]
+border  = { fg = "#81A1C1" }  # Frost 3
+title   = {}
+hovered = { fg = "#B48EAD", underline = true }  # Aurora 1
+
+# : }}}
+
+
+# : Which {{{
+
+[which]
+mask            = { bg = "#3B4252" }  # Polar Night 1
+cand            = { fg = "#88C0D0" }  # Frost 2
+rest            = { fg = "#D8DEE9" }  # Snow Storm 1
+desc            = { fg = "#B48EAD" }  # Aurora 1
+separator       = "  "
+separator_style = { fg = "#4C566A" }  # Polar Night 3
+
+# : }}}
+
+
+# : Help {{{
+
+[help]
+on      = { fg = "#88C0D0" }  # Frost 2
+run     = { fg = "#B48EAD" }  # Aurora 1
+hovered = { reversed = true, bold = true }
+footer  = { fg = "#3B4252", bg = "#D8DEE9" }  # Polar Night 1 + Snow Storm 1
+
+# : }}}
+
+
+# : Notify {{{
+
+[notify]
+title_info  = { fg = "#A3BE8C" }  # Aurora 4
+title_warn  = { fg = "#EBCB8B" }  # Aurora 3
+title_error = { fg = "#BF616A" }  # Aurora 5
+
+# : }}}
+
+
+# : File-specific styles {{{
+
+[filetype]
+
+rules = [
+	# Images
+	{ mime = "image/*", fg = "#88C0D0" },  # Frost 2
+
+	# Media
+	{ mime = "{audio,video}/*", fg = "#EBCB8B" },  # Aurora 3
+
+	# Archives
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#B48EAD" },  # Aurora 1
+
+	# Documents
+	{ mime = "application/{pdf,doc,rtf}", fg = "#A3BE8C" },  # Aurora 4
+
+	# Fallback
+	{ name = "*", fg = "#D8DEE9" },  # Snow Storm 1
+	{ name = "*/", fg = "#81A1C1" }  # Frost 3
+]
+
+# : }}}

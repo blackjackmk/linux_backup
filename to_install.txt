@@ -14,7 +14,6 @@ FLATPAK_APPS=(
 NATIVE_APPS=(
 	"kitty"
     "bleachbit"
-    "gnome-tweaks"
     "fastfetch"
     "tldr"
     "bat"
@@ -26,6 +25,9 @@ NATIVE_APPS=(
 	"fd-find"
 	"qimgv"
 )
+
+#GNOME
+    install gnome-tweaks flatpak gnome-software-plugin-flatpak
 
 # Zoxide
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh

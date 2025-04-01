@@ -28,8 +28,6 @@ sed -i 's/^deb http.*/& contrib non-free non-free-firmware/' /etc/apt/sources.li
 apt update
 
 echo "Enabling Flathub"
-apt update
-apt install -y flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 echo "Removing bloat (LibreOffice and Firefox)..."
