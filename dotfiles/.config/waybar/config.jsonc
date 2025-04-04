@@ -18,12 +18,6 @@
                 "*": [ 1,2,3 ]
             }
         },
-        "custom/notification": {
-            "tooltip": false,
-            "format": "",
-            "on-click": "swaync-client -t -sw",
-            "escape": true
-        },
         "clock": {
             "interval": 60,
             "tooltip": true,
@@ -37,18 +31,19 @@
         },
         "network": {
             "format-wifi": "",
-            "format-ethernet":"",
+            "format-ethernet":"󰈀",
             "format-disconnected": "",
             "tooltip-format-disconnected": "Error",
             "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
             "tooltip-format-ethernet": "{ifname} 🖧 ",
-            //"on-click": "kitty nmtui"
         },
         "wireplumber": {
-            "format": "{volume}%",
-            "format-muted": "",
+            "format": "{icon}",
+            "format-muted": "",
             "max-volume": 100,
-            "scroll-step": 2
+            "format-icons": ["", "", ""],
+            "scroll-step": 2,
+            "tooltip": false
         },
         "battery": {
             "interval":30,
@@ -60,7 +55,6 @@
             "format": "{icon} {capacity}%",
             "format-charging": "󰂄 {capacity}%",
             "format-plugged": "󰂄{capacity}% ",
-            "format-alt": "{time} {icon}",
             "format-icons": [
                 "󰁻",
             "󰁼",

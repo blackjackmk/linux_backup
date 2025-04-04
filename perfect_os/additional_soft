@@ -1,14 +1,4 @@
-waybar
-network-manager
-blueman
-bluez
-sway-notification-center
-swaylock
-swayidle
-swaybg
-wireplumber
-gvfs
-libnotify
+brightnessctl
 #pipewire
 #xdg-desktop-portal-hyprland
 #xorg-xwayland
