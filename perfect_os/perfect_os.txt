@@ -27,5 +27,5 @@ IDE: vscodium
 Screenshot: grim + slurp 
 Image viewer: qimgv
 Video player: mpv
-Screen brightness: gammastep
+Screen brightness: wlsunset
 Clipboard: 

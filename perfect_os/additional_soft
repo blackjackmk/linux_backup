@@ -1,4 +1,6 @@
 brightnessctl
+libnotify-bin
+wlsunset
 #pipewire
 #xdg-desktop-portal-hyprland
 #xorg-xwayland
