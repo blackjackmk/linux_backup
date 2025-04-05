@@ -19,13 +19,11 @@ System monitor: bottom
 File managers: yazi + nautilus
 Promts: Starship
 Text editor: micro
-Color scheme: catppuccin | kanagawa | everforest
+Color scheme: catppuccin | nord
 Font: Hack Nerd Mono
 Cursor: Adwaita
-Browser: chromebased
 IDE: vscodium
-Screenshot: grim + slurp 
 Image viewer: qimgv
 Video player: mpv
+Screenshot: grim + slurp 
 Screen brightness: wlsunset
-Clipboard: 
