@@ -1,10 +1,14 @@
-@import url('../waybar/nord.css');
+@define-color background #3B4252;
+@define-color text #ECEFF4;
+@define-color color7 #81A1C1; /* icons color */
+@define-color color4 #5E81AC;  /* btn hover color */
+@define-color mycolor #81A1C1; /* slider color */
+
+
 @define-color mpris-album-art-overlay alpha(@background, 0.55);
 @define-color mpris-button-hover alpha(@background, 0.50);
-@define-color text @color7;
 @define-color bg alpha(@background,.5);
 @define-color bg-hover alpha(@background,.8);
-@define-color mycolor @color9;
 @define-color border-color alpha(@mycolor, 0.15);
 
 @keyframes fadeIn{

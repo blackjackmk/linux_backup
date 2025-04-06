@@ -44,12 +44,15 @@
             "max-volume": 100,
             "format-icons": ["", "", ""],
             "scroll-step": 2,
-            "tooltip": false
+            "tooltip": false,
+            "on-click": "swayosd-client --output-volume mute-toggle",
+            "on-scroll-up": "swayosd-client --output-volume 15",
+            "on-scroll-down": "swayosd-client --output-volume -15",
         },
         "battery": {
-            "interval":30,
+            "interval":10,
             "states": {
-                "good": 95,
+                "good": 80,
                 "warning": 30,
                 "critical": 20
             },

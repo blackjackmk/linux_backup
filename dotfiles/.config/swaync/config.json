@@ -81,17 +81,7 @@
                     "command": "swaync-client -d",
                     "type":"toggle"
                 },
-                 {
-                    "label": "󰝟",
-                    "command": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-                    "type": "toggle"
-                },
-                {
-                    "label": "󰍭",
-                    "command": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
-                    "type": "toggle"
-                },
-                {
+               {
                     "label": "",
                     "command": "swaylock --config ~/.config/swaylock/config.ini"
                 },

@@ -30,9 +30,9 @@ NATIVE_APPS=(
     install gnome-tweaks flatpak gnome-software-plugin-flatpak
 
 #WindowManager
-    install waybar wofi sway-notification-center swaylock swayidle swaybg
-    network-manager bluman bluez gvfs libnotify-bin  wireplumber
-    brightnessctl gammastep
+    install waybar wofi sway-notification-center gtklock swayidle swaybg swayosd
+    network-manager bluman bluez gvfs libnotify-bin  wireplumber 
+    gammastep grim slurp wl-clipboard
 
 # Zoxide
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh

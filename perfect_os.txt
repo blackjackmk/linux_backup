@@ -1,17 +1,9 @@
 Base system: Debian Trixie
 WM: Hyprland | Sway
-	workspaces as in gnome (hycov)
-Bar: waybar | eww
-	active workspace
-	date and time
-	system resource info
-	input method
-	network icon
-	volume icon
-	batery level
+Bar: waybar
 App launcher: wofi
-Notifications: swaync | eww
-Lock screen: swaylock | gtklock + swayidle
+Notifications: swaync 
+Lock screen: gtklock + swayidle
 Wallpaper: swaybg
 Shell: bash
 Terminal: kitty
