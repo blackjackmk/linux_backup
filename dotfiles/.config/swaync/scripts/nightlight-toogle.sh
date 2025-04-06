@@ -1,9 +1,9 @@
 #!/bin/bash
 
-if pgrep -x wlsunset >/dev/null; then
-    pkill wlsunset
+if pgrep -x gammastep >/dev/null; then
+    pkill gammastep
     notify-send "Night Light" "Disabled"
 else
-    wlsunset -t 4500 -T 6500 -g 0.8 &
-    notify-send "Night Light" "Enabled"
+    gammastep -P -O 4500 &
+    notify-send "Night Light" "Enabled (4500K)"
 fi

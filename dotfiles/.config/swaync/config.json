@@ -93,15 +93,15 @@
                 },
                 {
                     "label": "",
-                    "command": "swaylock"
+                    "command": "swaylock --config ~/.config/swaylock/config.ini"
                 },
                 {
                     "label":"",
-                    "command": "reboot"
+                    "command": "sudo reboot"
                 },
                 {
                     "label":"",
-                    "command": "shutdown now"
+                    "command": "sudo shutdown now"
                 }
 
             ]

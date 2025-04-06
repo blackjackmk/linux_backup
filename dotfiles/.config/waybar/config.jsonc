@@ -20,6 +20,7 @@
         },
         "clock": {
             "interval": 60,
+            "timezone": "Europe/Warsaw",
             "tooltip": true,
             "format": "{:%H:%M}",
             "tooltip-format": "{:%d %b}",
