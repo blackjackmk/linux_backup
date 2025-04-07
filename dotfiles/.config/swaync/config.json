@@ -83,7 +83,7 @@
                 },
                {
                     "label": "",
-                    "command": "swaylock --config ~/.config/swaylock/config.ini"
+                    "command": "gtklock -d"
                 },
                 {
                     "label":"",
