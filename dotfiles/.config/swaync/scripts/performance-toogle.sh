@@ -1,11 +1,11 @@
 #!/bin/bash
 
-current=$(cat /sys/firmware/acpi/platform_profile)
+MODE=$(echo -e "Eco\nBalanced\nPerformance" | wofi --dmenu --prompt "Select Power Mode:")
 
-if [[ "$current" == "performance" ]]; then
-  echo "balanced" | sudo tee /sys/firmware/acpi/platform_profile
-  notify-send "Mode: Balanced"
-else
-  echo "performance" | sudo tee /sys/firmware/acpi/platform_profile
-  notify-send "Mode: Performance"
-fi
+case "$MODE" in
+    "Eco") powerprofilesctl set power-saver ;;
+    "Balanced") powerprofilesctl set balanced ;;
+    "Performance") powerprofilesctl set performance ;;
+esac
+
+notify-send "Power Mode" "Set to: $MODE"

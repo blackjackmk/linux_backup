@@ -1,7 +1,7 @@
 {
     "$schema": "/etc/xdg/swaync/configSchema.json",
     "positionX": "right",
-    "positionY": "bottom",
+    "positionY": "top",
     "layer": "overlay",
     "control-center-layer": "top",
     "layer-shell": true,
@@ -28,12 +28,12 @@
     "hide-on-action": true,
     "script-fail-notify": true,
     "widgets": [
-        "mpris",
-        "title",
-        "notifications",
+    	"buttons-grid",
         "volume",
         "backlight",
-        "buttons-grid"
+        "mpris",
+        "title",
+        "notifications"
     ],
     "widget-config": {
         "title": {
@@ -72,13 +72,8 @@
                     "type": "toggle"
                 },
                 {
-                    "label": "󰌪",
-                    "command": "/home/user/.config/swaync/scripts/performance-toogle.sh",
-                    "type": "toggle"
-                },
-               {
-                    "label": "",
-                    "command": "gtklock -d"
+                    "label": "󰾅",
+                    "command": "/home/user/.config/swaync/scripts/performance-toogle.sh"
                 },
                 {
                     "label":"󰤄",

@@ -90,7 +90,7 @@
             "tooltip": true
         },
         "memory": {
-            "format": ""
+            "format": "󰍛"
         },
         "temperature": {
             "critical-threshold": 80,
