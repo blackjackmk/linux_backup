@@ -76,22 +76,21 @@
                     "command": "/home/user/.config/swaync/scripts/performance-toogle.sh",
                     "type": "toggle"
                 },
-                {
-                    "label":"󰤄",
-                    "command": "swaync-client -d",
-                    "type":"toggle"
-                },
                {
                     "label": "",
                     "command": "gtklock -d"
                 },
                 {
+                    "label":"󰤄",
+                    "command": "/home/user/.config/swaync/scripts/suspend.sh"
+                },
+                {
                     "label":"",
-                    "command": "sudo reboot"
+                    "command": "/home/user/.config/swaync/scripts/reboot.sh"
                 },
                 {
                     "label":"",
-                    "command": "sudo shutdown now"
+                    "command": "/home/user/.config/swaync/scripts/poweroff.sh"
                 }
 
             ]

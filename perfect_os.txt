@@ -19,3 +19,10 @@ Image viewer: qimgv
 Video player: mpv
 Screenshot: grim + slurp 
 Screen brightness: gammastep
+
+
+Display Manager: sddm | greetd
+For suspend on lid close - 
+sudo nano /etc/systemd/logind.conf
+HandleLidSwitch=suspend
+HandleLidSwitchDocked=suspend
