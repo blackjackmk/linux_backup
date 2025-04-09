@@ -1,13 +1,14 @@
 FLATPAK_APPS=(
     "org.telegram.desktop"
-    "com.github.flxzt.rnote"
+    "org.kde.krita"
     "com.usebottles.bottles"
     "com.github.tchx84.Flatseal"
     "io.github.wivrn.wivrn"
     "org.onlyoffice.desktopeditors"
     "com.valvesoftware.Steam"
     "com.unity.UnityHub"
-    "com.google.Chrome"
+    "io.gitlab.librewolf-community"
+    "me.proton.Pass"
 )
 
 
