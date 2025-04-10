@@ -4,10 +4,12 @@
 
 [opener]
 edit = [
-	{ run = 'micro "$@"', desc = "$EDITOR", block = true, for = "unix" },
+	{ run = 'micro "$@"', desc = "Micro", block = true, for = "unix" },
+	{ run = 'zed "$@"', desc = "Zed", block = true, for = "unix" },
+	{ run = 'code "$@"', desc = "VS Code", block = true, for = "unix" },
 ]
 open = [
-	{ run = 'qimgv "$1"',                desc = "Open", for = "linux" },
+	{ run = 'qimgv "$1"',      desc = "Open", for = "linux" },
 ]
 reveal = [
 	{ run = 'qimgv "$(dirname "$1")"',           desc = "Reveal", for = "linux" },

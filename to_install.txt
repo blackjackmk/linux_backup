@@ -7,7 +7,7 @@ FLATPAK_APPS=(
     "org.onlyoffice.desktopeditors"
     "com.valvesoftware.Steam"
     "com.unity.UnityHub"
-    "io.gitlab.librewolf-community"
+	"com.brave.Browser"
     "me.proton.Pass"
 )
 
@@ -32,7 +32,7 @@ NATIVE_APPS=(
 
 #WindowManager
     install waybar wofi sway-notification-center gtklock swayidle swaybg swayosd
-    network-manager bluman bluez gvfs libnotify-bin  wireplumber 
+    network-manager bluman bluez gvfs libnotify-bin  wireplumber
     gammastep grim slurp wl-clipboard policykit-1-gnome zenity power-profiles-daemon
 
 # Zoxide
@@ -44,8 +44,11 @@ curl -sS https://starship.rs/install.sh | sh
 # Yazi
 https://yazi-rs.github.io/docs/installation
 
-# VS Code || vscodium
-https://code.visualstudio.com/Download
+# Zed
+curl -f https://zed.dev/install.sh | sh
+
+# UV (Python)
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
 #Immersed
 https://immersed.com/

@@ -1,0 +1,15 @@
+[
+	{
+		"context": "Editor",
+		"bindings": {
+			"ctrl-d": "editor::DuplicateLineDown"
+		}
+	},
+	{
+		"context": "Pane",
+		"bindings": {
+			"alt-,": "pane::ActivatePreviousItem",
+			"alt-.": "pane::ActivateNextItem"
+		}
+	}
+]
