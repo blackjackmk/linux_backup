@@ -7,16 +7,8 @@ FLATPAK_APPS=(
     "org.onlyoffice.desktopeditors"
     "com.valvesoftware.Steam"
     "com.unity.UnityHub"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 	"com.brave.Browser"
     "me.proton.Pass"
-=======
-    "io.gitlab.librewolf-community"
->>>>>>> Stashed changes
-=======
-    "io.gitlab.librewolf-community"
->>>>>>> Stashed changes
 )
 
 
@@ -40,13 +32,8 @@ NATIVE_APPS=(
 
 #WindowManager
     install waybar wofi sway-notification-center gtklock swayidle swaybg swayosd
-<<<<<<< Updated upstream
     network-manager bluman bluez gvfs libnotify-bin  wireplumber
     gammastep grim slurp wl-clipboard policykit-1-gnome zenity power-profiles-daemon
-=======
-    network-manager bluman bluez libnotify-bin wireplumber 
-    gammastep grim slurp wl-clipboard
->>>>>>> Stashed changes
 
 # Zoxide
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
