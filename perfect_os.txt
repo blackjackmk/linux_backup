@@ -14,7 +14,6 @@ Text editor: micro
 Color scheme: catppuccin | nord
 Font: Hack Nerd Mono
 Cursor: Adwaita
-IDE: vscodium
 Image viewer: qimgv
 Video player: mpv
 Screenshot: grim + slurp 
