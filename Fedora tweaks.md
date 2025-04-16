@@ -1,0 +1,1 @@
+/home/maksym/Documents/MyMind/3 Resources/Fedora tweaks.md

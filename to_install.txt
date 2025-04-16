@@ -1,6 +1,6 @@
 FLATPAK_APPS=(
     "org.telegram.desktop"
-    "org.kde.krita"
+    "com.github.PintaProject.Pinta"
     "com.usebottles.bottles"
     "com.github.tchx84.Flatseal"
     "io.github.wivrn.wivrn"
@@ -9,30 +9,37 @@ FLATPAK_APPS=(
     "com.unity.UnityHub"
 	"com.brave.Browser"
     "me.proton.Pass"
+    "md.obsidian.Obsidian"
+    "app.zen_browser.zen"
 )
 
 
-NATIVE_APPS=(
+CLI_APPS=(
 	"kitty"
-    "bleachbit"
+	"git"
     "fastfetch"
+    "bleachbit"
+    "bash-completion"
+	"fd-find"
+    "hstr"
     "tldr"
     "bat"
     "eza"
     "btm"
-    "bash-completion"
-    "hstr"
     "micro"
-	"fd-find"
 	"qimgv"
 )
 
-#GNOME
-    install gnome-tweaks flatpak gnome-software-plugin-flatpak
+GNOME_APPS=(
+	gnome-tweaks 
+	flatpak
+	gnome-software-plugin-flatpak
+)
+    
 
 #WindowManager
-    install waybar wofi sway-notification-center gtklock swayidle swaybg swayosd
-    network-manager bluman bluez gvfs libnotify-bin  wireplumber
+    waybar wofi sway-notification-center gtklock swayidle swaybg swayosd
+    network-manager bluman bluez libnotify-bin wireplumber
     gammastep grim slurp wl-clipboard policykit-1-gnome zenity power-profiles-daemon
 
 # Zoxide

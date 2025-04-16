@@ -7,10 +7,13 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-	"assistant": {
+	"notification_panel": {
+  "dock": "right"
+ },
+ "assistant": {
   "default_model": {
-   "provider": "deepseek",
-   "model": "deepseek-chat"
+   "provider": "copilot_chat",
+   "model": "claude-3-7-sonnet"
   },
   "version": "2"
  },
