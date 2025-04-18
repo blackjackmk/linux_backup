@@ -8,16 +8,16 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
 	"notification_panel": {
-  "dock": "right"
- },
- "assistant": {
-  "default_model": {
-   "provider": "copilot_chat",
-   "model": "claude-3-7-sonnet"
-  },
-  "version": "2"
- },
- "ui_font_size": 22,
+		"dock": "right"
+	},
+	"assistant": {
+		"default_model": {
+			"provider": "copilot_chat",
+			"model": "claude-3-7-sonnet"
+		},
+		"version": "2"
+	},
+	"ui_font_size": 22,
 	"buffer_font_size": 22.0,
 	"buffer_font_family": "Hack Nerd Font Propo",
 	"theme": {
@@ -32,7 +32,7 @@
 	"tab_bar": {
 		"show": true,
 		"show_nav_history_buttons": false,
-		"show_tab_bar_buttons": true
+		"show_tab_bar_buttons": false
 	},
 	"tabs": {
 		"close_position": "right",
@@ -53,5 +53,8 @@
 		"toolbar": {
 			"breadcrumbs": true
 		}
+	},
+	"outline_panel": {
+		"button": false
 	}
 }

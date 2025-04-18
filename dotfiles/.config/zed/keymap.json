@@ -1,8 +1,28 @@
 [
 	{
+		"context": "Workspace",
+		"bindings": {
+			"ctrl-`": "workspace::ToggleBottomDock",
+			"ctrl-shift-b": "workspace::ToggleLeftDock"
+		}
+	},
+	{
 		"context": "Editor",
 		"bindings": {
-			"ctrl-d": "editor::DuplicateLineDown"
+			"ctrl-d": "editor::DuplicateLineDown",
+			"alt-shift-right": [
+				"editor::SelectToEndOfLine",
+				{ "stop_at_soft_wraps": true }
+			],
+			"alt-shift-left": [
+				"editor::SelectToBeginningOfLine",
+				{ "stop_at_soft_wraps": true, "stop_at_indent": true }
+			],
+			"alt-right": ["editor::MoveToEndOfLine", { "stop_at_soft_wraps": true }],
+			"alt-left": [
+				"editor::MoveToBeginningOfLine",
+				{ "stop_at_soft_wraps": true, "stop_at_indent": true }
+			]
 		}
 	},
 	{
