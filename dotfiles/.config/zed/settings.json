@@ -25,6 +25,7 @@
 		"light": "One Light",
 		"dark": "Catppuccin Macchiato"
 	},
+	"base_keymap": "None",
 	"auto_install_extensions": {
 		//"html": true,
 		//"dockerfile": true,
