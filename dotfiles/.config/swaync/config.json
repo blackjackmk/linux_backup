@@ -6,7 +6,7 @@
     "control-center-layer": "top",
     "layer-shell": true,
     "cssPriority": "application",
-    "control-center-width": 350,
+    "control-center-width": 300,
     "control-center-margin-top": 8,
     "control-center-margin-bottom": 8,
     "control-center-margin-right": 0,
@@ -21,7 +21,7 @@
     "timeout-low": 6,
     "timeout-critical": 1,
     "fit-to-screen": true,
-    "keyboard-shortcuts": true,
+    "keyboard-shortcuts": false,
     "image-visibility": "when available",
     "transition-time": 200,
     "hide-on-clear": false,
@@ -54,7 +54,8 @@
         },
         "backlight": {
             "label": "󰃟 ",
-            "init": "brightnessctl g"
+            "init": "brightnessctl g", 
+            "update-command": "brightnessctl g"
         },
         "buttons-grid": {
             "actions": [
@@ -68,6 +69,7 @@
                 },
                 {
                     "label": "",
+      				 "active": true,
                     "command": "/home/user/.config/swaync/scripts/nightlight-toogle.sh",
                     "type": "toggle"
                 },

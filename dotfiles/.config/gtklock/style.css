@@ -24,12 +24,6 @@
   border-color:#434C5E;
 }
 
-#input-field:focus {
-  border-color:#434C5E;
-}
-
 #unlock-button {
-  border-radius: 20px;
-  background-color: #4C566A;
-  color: #ECEFF4;
+	opacity: 0;
 }

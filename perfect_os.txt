@@ -30,3 +30,6 @@ HandleLidSwitchDocked=suspend
 
 #For power profiles:
 systemctl --user enable --now power-profiles-daemon
+
+#Set timezone
+sudo timedatectl set-timezone Europe/Warsaw
