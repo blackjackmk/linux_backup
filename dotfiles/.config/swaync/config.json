@@ -69,7 +69,7 @@
                 },
                 {
                     "label": "",
-      				 "active": true,
+      				"active": true,
                     "command": "/home/user/.config/swaync/scripts/nightlight-toogle.sh",
                     "type": "toggle"
                 },
