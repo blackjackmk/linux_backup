@@ -28,6 +28,7 @@ CLI_APPS=(
     "btm"
     "micro"
 	"qimgv"
+	"qlitebrowser"
 )
 
 GNOME_APPS=(

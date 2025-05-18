@@ -320,11 +320,11 @@ window-size=(360, 788)
 word-size=8
 
 [org/gnome/control-center]
-last-panel='applications'
+last-panel='power'
 window-state=(980, 640, false)
 
 [org/gnome/desktop/a11y/magnifier]
-mag-factor=2.0
+mag-factor=1.0
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST', 'Pardus', '7aae52c2-4869-4eff-bd9b-fcfa09bfc2e6', '9ea8a709-9263-4010-8b26-14e6fe3a4fff', 'a1806311-712c-4d8b-a1bd-e8c2f418a51d', '2695229b-01e1-4fe7-88e5-95b30644f841']
@@ -335,12 +335,12 @@ name='Media'
 translate=false
 
 [org/gnome/desktop/app-folders/folders/7aae52c2-4869-4eff-bd9b-fcfa09bfc2e6]
-apps=['org.bleachbit.BleachBit.desktop', 'com.github.tchx84.Flatseal.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.tweaks.desktop', 'yelp.desktop', 'remote-viewer.desktop', 'bottom.desktop', 'org.gnome.Nautilus.desktop']
+apps=['org.bleachbit.BleachBit.desktop', 'com.github.tchx84.Flatseal.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.tweaks.desktop', 'yelp.desktop', 'remote-viewer.desktop', 'bottom.desktop', 'org.gnome.Nautilus.desktop', 'yad-icon-browser.desktop', 'com.adobe.Reader.desktop', 'org.gnome.Boxes.desktop']
 name='Tools'
 translate=false
 
 [org/gnome/desktop/app-folders/folders/9ea8a709-9263-4010-8b26-14e6fe3a4fff]
-apps=['code.desktop', 'dev.zed.Zed.desktop', 'unityhub.desktop', 'com.usebottles.bottles.desktop', 'proton-pass.desktop']
+apps=['code.desktop', 'dev.zed.Zed.desktop', 'unityhub.desktop', 'com.usebottles.bottles.desktop', 'proton-pass.desktop', 'sqlitebrowser.desktop']
 name='Programming'
 
 [org/gnome/desktop/app-folders/folders/Utilities]
@@ -351,7 +351,7 @@ name='X-GNOME-Utilities.directory'
 translate=true
 
 [org/gnome/desktop/app-folders/folders/a1806311-712c-4d8b-a1bd-e8c2f418a51d]
-apps=['steam.desktop', 'io.github.wivrn.wivrn.desktop']
+apps=['steam.desktop', 'io.github.wivrn.wivrn.desktop', 'com.valvesoftware.Steam.desktop', 'com.vysp3r.ProtonPlus.desktop', 'com.ffa.qloader.desktop']
 name='Game'
 translate=false
 
@@ -362,6 +362,17 @@ picture-uri='file:///home/maksym/.config/background'
 picture-uri-dark='file:///home/maksym/.config/background'
 primary-color='#000000000000'
 secondary-color='#000000000000'
+
+[org/gnome/desktop/break-reminders]
+selected-breaks=@as []
+
+[org/gnome/desktop/break-reminders/eyesight]
+play-sound=false
+
+[org/gnome/desktop/break-reminders/movement]
+duration-seconds=uint32 300
+interval-seconds=uint32 1800
+play-sound=false
 
 [org/gnome/desktop/datetime]
 automatic-timezone=false
@@ -374,7 +385,7 @@ mru-sources=[('xkb', 'pl'), ('xkb', 'ua+winkeys')]
 per-window=false
 show-all-sources=false
 sources=[('xkb', 'pl'), ('xkb', 'ua+winkeys')]
-xkb-options=@as []
+xkb-options=['grp:alt_shift_toggle', 'grp:win_space_toggle']
 
 [org/gnome/desktop/interface]
 accent-color='blue'
@@ -388,7 +399,7 @@ text-scaling-factor=1.0
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-software', 'gnome-power-panel', 'org-telegram-desktop', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-boxes', 'com-usebottles-bottles', 'com-brave-browser', 'io-gitlab-librewolf-community', 'dev-zed-zed', 'com-simplenote-simplenote', 'app-zen-browser-zen', 'com-beavernotes-beavernotes']
+application-children=['org-gnome-software', 'gnome-power-panel', 'org-telegram-desktop', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-boxes', 'com-usebottles-bottles', 'com-brave-browser', 'io-gitlab-librewolf-community', 'dev-zed-zed', 'com-simplenote-simplenote', 'app-zen-browser-zen', 'com-beavernotes-beavernotes', 'gnome-wellbeing-panel', 'com-valvesoftware-steam', 'io-github-wivrn-wivrn', 'md-obsidian-obsidian']
 show-banners=true
 
 [org/gnome/desktop/peripherals/touchpad]
@@ -399,6 +410,9 @@ two-finger-scrolling-enabled=true
 old-files-age=uint32 30
 recent-files-max-age=-1
 
+[org/gnome/desktop/screen-time-limits]
+daily-limit-enabled=false
+
 [org/gnome/desktop/screensaver]
 color-shading-type='solid'
 lock-delay=uint32 0
@@ -408,8 +422,8 @@ primary-color='#000000000000'
 secondary-color='#000000000000'
 
 [org/gnome/desktop/search-providers]
-disabled=['org.gnome.Contacts.desktop', 'org.gnome.clocks.desktop']
-sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.gnome.clocks.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.Photos.desktop']
+disabled=['org.gnome.Contacts.desktop', 'org.gnome.clocks.desktop', 'org.gnome.Calculator.desktop']
+sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'org.gnome.Settings.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Characters.desktop', 'org.gnome.clocks.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.Photos.desktop']
 
 [org/gnome/desktop/session]
 idle-delay=uint32 0
@@ -444,6 +458,8 @@ switch-applications=@as []
 switch-applications-backward=@as []
 switch-group=@as []
 switch-group-backward=@as []
+switch-input-source=@as []
+switch-input-source-backward=@as []
 switch-panels=@as []
 switch-panels-backward=@as []
 switch-to-workspace-1=@as []
@@ -474,7 +490,7 @@ scheme='catppuccin'
 show-tabs-mode='auto'
 
 [org/gnome/gnome-system-monitor]
-current-tab='resources'
+current-tab='processes'
 maximized=true
 show-dependencies=false
 show-whose-processes='all'
@@ -565,7 +581,7 @@ command-history=['whoami', 'terminal', 'ls', 'gnome-control-center', 'gsettings'
 disabled-extensions=['zorin-desktop-icons@zorinos.com', 'zorin-window-move-effect@zorinos.com', 'zorin-magic-lamp-effect@zorinos.com']
 enabled-extensions=['drive-menu@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'x11gestures@joseexposito.github.io', 'zorin-appindicator@zorinos.com', 'zorin-menu@zorinos.com', 'zorin-printers@zorinos.com', 'zorin-taskbar@zorinos.com']
 favorite-apps=['app.zen_browser.zen.desktop', 'md.obsidian.Obsidian.desktop', 'kitty.desktop']
-last-selected-power-profile='power-saver'
+last-selected-power-profile='performance'
 welcome-dialog-last-shown-version='46.3.1'
 
 [org/gnome/shell/app-switcher]
@@ -626,12 +642,12 @@ toggle-message-tray=@as []
 toggle-overview=@as []
 
 [org/gnome/software]
-check-timestamp=int64 1745746592
+check-timestamp=int64 1747555088
 first-run=false
-flatpak-purge-timestamp=int64 1745752430
-install-timestamp=int64 1745708634
-packagekit-historical-updates-timestamp=uint64 1745708634
-update-notification-timestamp=int64 1745742927
+flatpak-purge-timestamp=int64 1747470169
+install-timestamp=int64 1747001340
+packagekit-historical-updates-timestamp=uint64 1747001340
+update-notification-timestamp=int64 1747034403
 upgrade-notification-timestamp=int64 1745427463
 
 [org/gnome/tweaks]
@@ -652,15 +668,15 @@ window-size=(857, 372)
 [org/gtk/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=false
+show-hidden=true
 show-size-column=true
 show-type-column=true
-sidebar-width=170
+sidebar-width=173
 sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'
-window-position=(26, 23)
+window-position=(209, 57)
 window-size=(1231, 902)
 
 [system/locale]

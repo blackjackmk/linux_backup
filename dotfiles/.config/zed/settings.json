@@ -10,10 +10,11 @@
 	"notification_panel": {
 		"dock": "right"
 	},
-	"assistant": {
-		"default_model": {
+	"agent": {
+		"default_profile": "ask",
+  "default_model": {
 			"provider": "copilot_chat",
-			"model": "claude-3-7-sonnet"
+			"model": "claude-3.7-sonnet"
 		},
 		"version": "2"
 	},
@@ -35,6 +36,18 @@
 		"show_nav_history_buttons": false,
 		"show_tab_bar_buttons": false
 	},
+	"file_scan_exclusions": [
+		"**/.git",
+		"**/.svn",
+		"**/.hg",
+		"**/.jj",
+		"**/CVS",
+		"**/.DS_Store",
+		"**/Thumbs.db",
+		"**/.classpath",
+		"**/.settings",
+		"*.meta"
+	],
 	"tabs": {
 		"close_position": "right",
 		"file_icons": true,

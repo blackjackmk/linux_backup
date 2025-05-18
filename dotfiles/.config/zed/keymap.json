@@ -23,6 +23,13 @@
 		}
 	},
 	{
+		"context": "Picker || menu",
+		"bindings": {
+			"up": "menu::SelectPrevious",
+			"down": "menu::SelectNext"
+		}
+	},
+	{
 		"context": "Editor",
 		"bindings": {
 			"escape": "editor::Cancel",
@@ -117,15 +124,9 @@
 		}
 	},
 	{
-		"context": "ContextEditor > Editor",
-		"bindings": {
-			"Enter": "assistant::Assist"
-		}
-	},
-	{
 		"context": "AgentPanel",
 		"bindings": {
-			"ctrl-n": "agent::NewThread"
+			"ctrl-n": "agent::NewTextThread"
 		}
 	},
 	{
@@ -136,10 +137,19 @@
 		}
 	},
 	{
-		"context": "Picker || menu",
+		"context": "Picker > Editor",
 		"bindings": {
+			"escape": "menu::Cancel",
 			"up": "menu::SelectPrevious",
-			"down": "menu::SelectNext"
+			"down": "menu::SelectNext",
+			"enter": "picker::ConfirmCompletion"
+		}
+	},
+	{
+		"context": "Editor && (showing_code_actions || showing_completions)",
+		"bindings": {
+			"up": "editor::ContextMenuPrevious",
+			"down": "editor::ContextMenuNext"
 		}
 	},
 	{
@@ -158,7 +168,7 @@
 	{
 		"context": "Editor && edit_prediction",
 		"bindings": {
-			"tab": "editor::AcceptEditPrediction"
+			"enter": "editor::AcceptEditPrediction"
 		}
 	},
 	{
@@ -167,6 +177,23 @@
 			"enter": "editor::Newline",
 			"ctrl-f": "buffer_search::Deploy",
 			"ctrl-i": "assistant::InlineAssist"
+		}
+	},
+	{
+		"context": "ContextEditor > Editor",
+		"bindings": {
+			"ctrl-enter": "assistant::Assist"
+		}
+	},
+	{
+		"context": "ContextStrip",
+		"bindings": {
+			"up": "agent::FocusUp",
+			"right": "agent::FocusRight",
+			"left": "agent::FocusLeft",
+			"down": "agent::FocusDown",
+			"backspace": "agent::RemoveFocusedContext",
+			"enter": "agent::AcceptSuggestedContext"
 		}
 	},
 	{
