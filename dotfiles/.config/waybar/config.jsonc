@@ -57,15 +57,15 @@
                 "critical": 20
             },
             "format": "{icon} {capacity}%",
-            "format-charging": "󰂄 {capacity}%",
-            "format-plugged": "󰂄{capacity}% ",
+            "format-charging": "󰁹 {capacity}%",
+            "format-plugged": "󰂄 {capacity}%",
             "format-icons": [
                 "󰁻",
-            "󰁼",
-            "󰁾",
-            "󰂀",
-            "󰂂",
-            "󰁹"
+            	"󰁼",
+            	"󰁾",
+            	"󰂀",
+            	"󰂂",
+            	"󰁹"
             ],
         },
         "custom/expand": {
@@ -83,7 +83,7 @@
                 "transition-to-left": true,
                 "click-to-reveal": true
             },
-            "modules": ["custom/expand","cpu","memory","temperature","custom/endpoint"],
+            "modules": ["custom/expand","cpu","memory","temperature","power-profiles-daemon","custom/endpoint"],
         },
         "cpu": {
             "format": "󰻠",
@@ -96,4 +96,15 @@
             "critical-threshold": 80,
             "format": "",
         },
+        "power-profiles-daemon": {
+          "format": "{icon}",
+          "tooltip-format": "Power profile: {profile}",
+          "tooltip": true,
+          "format-icons": {
+            "default": "󰾅",
+            "performance": "",
+            "balanced": "󰾅",
+            "power-saver": ""
+          }
+        }
 } 
