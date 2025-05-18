@@ -9,4 +9,8 @@ zenity --question \
 
 if [ $? -eq 0 ]; then
   systemctl reboot
+elif [ $? -eq 1 ]; then
+  exit 1
+else
+  exit 1
 fi
