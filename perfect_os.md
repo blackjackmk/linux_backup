@@ -19,13 +19,17 @@ Video player: mpv
 Screenshot: grim + slurp 
 Screen brightness: gammastep
 
+# Display Manager: sddm | greetd
 
-#Display Manager: sddm | greetd
-
-#For suspend on lid close: 
+# For suspend on lid close: 
 sudo nano /etc/systemd/logind.conf
 HandleLidSwitch=suspend
 HandleLidSwitchDocked=suspend
 
-#For power profiles:
+# For power profiles:
 systemctl --user enable --now power-profiles-daemon
+
+# Additional soft
+waybar wofi sway-notification-center gtklock swayidle swaybg swayosd
+network-manager bluman bluez libnotify-bin wireplumber
+gammastep grim slurp wl-clipboard policykit-1-gnome zenity power-profiles-daemon
