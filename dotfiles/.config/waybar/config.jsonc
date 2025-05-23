@@ -24,6 +24,7 @@
             "tooltip": true,
             "format": "{:%H:%M}",
             "tooltip-format": "{:%d %b}",
+            "on-click": "zenity --calendar --no-markup"
         },
         "hyprland/language": {
             "format": "{}",
