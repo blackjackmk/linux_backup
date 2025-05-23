@@ -20,8 +20,15 @@ Video player: mpv
 Screenshot: grim + slurp 
 Screen brightness: gammastep
 
+# Autologin on a TTY
+sudo systemctl edit getty@tty1
 
-#Display Manager: sddm | greetd
+[Service]
+ExecStart=
+ExecStart=-/usr/bin/agetty --autologin your_username --noclear %I $TERM
+
+sudo systemctl enable getty@tty1.service
+
 
 #For suspend on lid close: 
 sudo nano /etc/systemd/logind.conf

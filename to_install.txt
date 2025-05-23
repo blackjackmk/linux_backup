@@ -31,7 +31,7 @@ NATIVE_APPS=(
     install gnome-tweaks flatpak gnome-software-plugin-flatpak
 
 #WindowManager
-    install waybar wofi sway-notification-center gtklock swayidle swaybg swayosd
+    install waybar wofi sway-notification-center gtklock swayidle swaybg swayosd 
     network-manager bluman bluez gvfs libnotify-bin  wireplumber pavucontrol
     gammastep grim slurp wl-clipboard policykit-1-gnome zenity power-profiles-daemon
 
