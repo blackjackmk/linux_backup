@@ -282,7 +282,7 @@
 
 .widget-buttons-grid>flowbox>flowboxchild>button label {
     font-size: 20px;
-    color: @color7;
+    color: @text;
     transition: all .7s ease;
 }
 .widget-buttons-grid>flowbox>flowboxchild>button:hover label {
