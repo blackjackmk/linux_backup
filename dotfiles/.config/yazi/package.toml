@@ -2,21 +2,6 @@
 deps = []
 
 [[flavor.deps]]
-use = "dangooddd/kanagawa"
-rev = "31167ed"
-hash = "a04e157148549bacbb2831aab0e6e8cb"
-
-[[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-macchiato"
 rev = "68326b4"
 hash = "3ec21bcfd2735cfcbab61faaf43e59e4"
-
-[[flavor.deps]]
-use = "marcosvnmelo/kanagawa-dragon"
-rev = "2ddff30"
-hash = "c9e9fcf6b11c9fe63d4ac7c9408f628c"
-
-[[flavor.deps]]
-use = "Chromium-3-Oxide/everforest-medium"
-rev = "3d5f847"
-hash = "9b4190e2447f2c843fee23ea5f068f6"

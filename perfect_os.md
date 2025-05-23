@@ -2,7 +2,7 @@ Base system: Debian Trixie
 WM: Hyprland | Sway
 Bar: waybar
 App launcher: wofi
-Notifications: swaync 
+Notifications: swaync
 Lock screen: gtklock + swayidle
 Wallpaper: swaybg
 Shell: bash
@@ -17,7 +17,7 @@ Cursor: Adwaita
 IDE: zed
 Image viewer: qimgv
 Video player: mpv
-Screenshot: grim + slurp 
+Screenshot: grim + slurp
 Screen brightness: gammastep
 
 # Autologin on a TTY
@@ -29,14 +29,18 @@ ExecStart=-/usr/bin/agetty --autologin your_username --noclear %I $TERM
 
 sudo systemctl enable getty@tty1.service
 
-
-#For suspend on lid close: 
+#For suspend on lid close:
 sudo nano /etc/systemd/logind.conf
 HandleLidSwitch=suspend
 HandleLidSwitchDocked=suspend
 
-#For power profiles:
+# For power profiles:
 systemctl --user enable --now power-profiles-daemon
 
-#Set timezone
+# Set timezone
 sudo timedatectl set-timezone Europe/Warsaw
+
+# Additional soft
+waybar wofi sway-notification-center gtklock swayidle swaybg swayosd
+network-manager bluman bluez libnotify-bin wireplumber
+gammastep grim slurp wl-clipboard policykit-1-gnome zenity power-profiles-daemon

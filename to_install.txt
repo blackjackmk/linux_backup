@@ -1,37 +1,43 @@
 FLATPAK_APPS=(
     "org.telegram.desktop"
-    "org.kde.krita"
+    "com.github.PintaProject.Pinta"
     "com.usebottles.bottles"
     "com.github.tchx84.Flatseal"
     "io.github.wivrn.wivrn"
     "org.onlyoffice.desktopeditors"
     "com.valvesoftware.Steam"
     "com.unity.UnityHub"
-    "io.gitlab.librewolf-community"
-    "me.proton.Pass"
+    "md.obsidian.Obsidian"
+    "app.zen_browser.zen"
 )
 
 
-NATIVE_APPS=(
+CLI_APPS=(
 	"kitty"
-    "bleachbit"
+	"git"
     "fastfetch"
+    "bleachbit"
+    "bash-completion"
+	"fd-find"
+    "hstr"
     "tldr"
     "bat"
     "eza"
     "btm"
-    "bash-completion"
-    "hstr"
     "micro"
-	"fd-find"
 	"qimgv"
+	"qlitebrowser"
 )
 
-#GNOME
-    install gnome-tweaks flatpak gnome-software-plugin-flatpak
+GNOME_APPS=(
+	gnome-tweaks
+	flatpak
+	gnome-software-plugin-flatpak
+)
+
 
 #WindowManager
-    install waybar wofi sway-notification-center gtklock swayidle swaybg swayosd 
+    install waybar wofi sway-notification-center gtklock swayidle swaybg swayosd
     network-manager bluman bluez gvfs libnotify-bin  wireplumber pavucontrol
     gammastep grim slurp wl-clipboard policykit-1-gnome zenity power-profiles-daemon
 
@@ -44,8 +50,11 @@ curl -sS https://starship.rs/install.sh | sh
 # Yazi
 https://yazi-rs.github.io/docs/installation
 
-# VS Code || vscodium
-https://code.visualstudio.com/Download
+# Zed
+curl -f https://zed.dev/install.sh | sh
+
+# UV (Python)
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
 #Immersed
 https://immersed.com/

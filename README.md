@@ -11,16 +11,10 @@ cd ~/.backup
 ./linker.sh
 ```
 - Creates symlinks from `dotfiles/` to your `$HOME`
+- `dotfiles/` mirror /home structure
 - Preserves git tracking in `.backup/`
 
-### 3. Apply Distro-Specific Tweaks
-```bash
-# For Debian-based:
-./debian_tweaks.sh
 
-# For Fedora-based:
-./fedora_tweaks.sh
-```
 
 ## ⚙️ GNOME Settings
 To apply saved GNOME configurations:
@@ -39,14 +33,12 @@ dconf dump / > gnome_settings.dconf
    ```bash
    cp ~/.config/alacritty/alacritty.yml ~/.backup/dotfiles/.config/alacritty/
    ```
+2. Recreate simlinks
+	```bash
+	./linker.sh
+	```
 2. Commit changes:
    ```bash
    git add dotfiles/.config/alacritty/
    git commit -m "Add alacritty config"
    ```
-
-### Updating All Systems
-```bash
-./linker.sh  # Recreate symlinks
-dconf load / < gnome_settings.dconf  # Reload GNOME settings
-```
