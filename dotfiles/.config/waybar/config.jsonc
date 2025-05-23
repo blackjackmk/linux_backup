@@ -46,7 +46,7 @@
             "format-icons": ["", "", ""],
             "scroll-step": 2,
             "tooltip": false,
-            "on-click": "swayosd-client --output-volume mute-toggle",
+            "on-click": "pavucontrol",
             "on-scroll-up": "swayosd-client --output-volume 15",
             "on-scroll-down": "swayosd-client --output-volume -15",
         },
