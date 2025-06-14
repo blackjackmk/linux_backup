@@ -10,10 +10,12 @@
 		"sway/workspaces": {
     		"format": "{icon}",
     		"format-icons": {
-        		"default": "",   // filled dot
+        		"default": "",   // filled dot
         		"empty": "",  // hollow circle
         		"focused":  ""    
     		},
+    		"disable-scroll": true,
+    		"all-outputs": true,
     		"persistent-workspaces": { "*": ["1","2","3"] }
 		},
         "clock": {
