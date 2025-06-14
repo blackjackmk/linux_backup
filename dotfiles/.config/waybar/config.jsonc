@@ -2,22 +2,20 @@
         "layer": "top",
         "position": "top",
         "reload_style_on_change": true,
-        "modules-left": ["hyprland/workspaces"],
+        "modules-left": ["sway/workspaces"],
         "modules-center": ["clock"],
-        "modules-right": ["group/expand","hyprland/language", "network","wireplumber","battery","custom/notification"],
+        "modules-right": ["group/expand","sway/language", "network","wireplumber","battery","custom/notification"],
 
 
-        "hyprland/workspaces": {
-            "format": "{icon}",
-            "format-icons": {
-                "active": "",
-                "default": "",
-                "empty": ""
-            },
-            "persistent-workspaces": {
-                "*": [ 1,2,3 ]
-            }
-        },
+		"sway/workspaces": {
+    		"format": "{icon}",
+    		"format-icons": {
+        		"default": "",   // filled dot
+        		"empty": "",  // hollow circle
+        		"focused":  ""    
+    		},
+    		"persistent-workspaces": { "*": ["1","2","3"] }
+		},
         "clock": {
             "interval": 60,
             "timezone": "Europe/Warsaw",
@@ -26,7 +24,7 @@
             "tooltip-format": "{:%d %b}",
             "on-click": "zenity --calendar --no-markup"
         },
-        "hyprland/language": {
+        "sway/language": {
             "format": "{}",
             "format-pl": "pl",
             "format-uk": "ua"
