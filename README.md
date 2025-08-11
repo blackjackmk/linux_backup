@@ -15,7 +15,6 @@ cd ~/.backup
 - Preserves git tracking in `.backup/`
 
 
-
 ## ⚙️ GNOME Settings
 To apply saved GNOME configurations:
 ```bash

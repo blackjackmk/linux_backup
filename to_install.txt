@@ -35,12 +35,6 @@ GNOME_APPS=(
 	gnome-software-plugin-flatpak
 )
 
-
-#WindowManager
-    install waybar wofi sway-notification-center gtklock swayidle swaybg swayosd
-    network-manager bluman bluez gvfs libnotify-bin  wireplumber pavucontrol
-    gammastep grim slurp wl-clipboard policykit-1-gnome zenity power-profiles-daemon
-
 # Zoxide
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 

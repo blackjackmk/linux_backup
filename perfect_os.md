@@ -40,7 +40,7 @@ systemctl --user enable --now power-profiles-daemon
 # Set timezone
 sudo timedatectl set-timezone Europe/Warsaw
 
-# Additional soft
-waybar wofi sway-notification-center gtklock swayidle swaybg swayosd
-network-manager bluman bluez libnotify-bin wireplumber
+# Additional soft (to install)
+install waybar wofi sway-notification-center gtklock swayidle swaybg swayosd
+network-manager bluman bluez gvfs libnotify-bin wireplumber pavucontrol
 gammastep grim slurp wl-clipboard policykit-1-gnome zenity power-profiles-daemon
