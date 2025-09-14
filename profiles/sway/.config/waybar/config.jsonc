@@ -1,0 +1,111 @@
+{
+        "layer": "top",
+        "position": "top",
+        "reload_style_on_change": true,
+        "modules-left": ["sway/workspaces"],
+        "modules-center": ["clock"],
+        "modules-right": ["group/expand","sway/language", "network","wireplumber","battery","custom/notification"],
+
+
+		"sway/workspaces": {
+    		"format": "{icon}",
+    		"format-icons": {
+        		"default": "",   // filled dot
+        		"empty": "",  // hollow circle
+        		"focused":  ""    
+    		},
+    		"disable-scroll": true,
+    		"all-outputs": true,
+    		"persistent-workspaces": { "*": ["1","2","3"] }
+		},
+        "clock": {
+            "interval": 60,
+            "timezone": "Europe/Warsaw",
+            "tooltip": true,
+            "format": "{:%H:%M}",
+            "tooltip-format": "{:%d %b}",
+            "on-click": "zenity --calendar --no-markup"
+        },
+        "sway/language": {
+            "format": "{}",
+            "format-pl": "pl",
+            "format-uk": "ua"
+        },
+        "network": {
+            "format-wifi": "",
+            "format-ethernet":"󰈀",
+            "format-disconnected": "",
+            "tooltip-format-disconnected": "Error",
+            "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+            "tooltip-format-ethernet": "{ifname} 🖧 ",
+        },
+        "wireplumber": {
+            "format": "{icon}",
+            "format-muted": "",
+            "max-volume": 100,
+            "format-icons": ["", "", ""],
+            "scroll-step": 2,
+            "tooltip": false,
+            "on-click": "pavucontrol",
+            "on-scroll-up": "swayosd-client --output-volume 15",
+            "on-scroll-down": "swayosd-client --output-volume -15",
+        },
+        "battery": {
+            "interval":10,
+            "states": {
+                "good": 80,
+                "warning": 30,
+                "critical": 20
+            },
+            "format": "{icon} {capacity}%",
+            "format-charging": "󰁹 {capacity}%",
+            "format-plugged": "󰂄 {capacity}%",
+            "format-icons": [
+                "󰁻",
+            	"󰁼",
+            	"󰁾",
+            	"󰂀",
+            	"󰂂",
+            	"󰁹"
+            ],
+        },
+        "custom/expand": {
+            "format": "",
+            "tooltip": false
+        },
+        "custom/endpoint":{
+            "format": "|",
+            "tooltip": false
+        },
+        "group/expand": {
+            "orientation": "horizontal",
+            "drawer": {
+                "transition-duration": 600,
+                "transition-to-left": true,
+                "click-to-reveal": true
+            },
+            "modules": ["custom/expand","cpu","memory","temperature","power-profiles-daemon","custom/endpoint"],
+        },
+        "cpu": {
+            "format": "󰻠",
+            "tooltip": true
+        },
+        "memory": {
+            "format": "󰍛"
+        },
+        "temperature": {
+            "critical-threshold": 80,
+            "format": "",
+        },
+        "power-profiles-daemon": {
+          "format": "{icon}",
+          "tooltip-format": "Power profile: {profile}",
+          "tooltip": true,
+          "format-icons": {
+            "default": "󰾅",
+            "performance": "",
+            "balanced": "󰾅",
+            "power-saver": ""
+          }
+        }
+} 

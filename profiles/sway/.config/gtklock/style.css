@@ -1,0 +1,29 @@
+
+#clock-label {
+  font-size: 72px;
+  color: #E5E9F0;
+}
+
+#date-label {
+  font-size: 24px;
+  color: #D8DEE9;
+}
+
+#input-label {
+  font-size: 0;
+}
+
+#error-label{
+  color: #BF616A;
+}
+
+#input-field {
+  background: rgba(76, 86, 106, 0.7);
+  border-radius: 20px;
+  color: #cdd6f4;
+  border-color:#434C5E;
+}
+
+#unlock-button {
+	opacity: 0;
+}

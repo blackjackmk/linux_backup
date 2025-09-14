@@ -1,0 +1,159 @@
+#--- Monitors --------------------------------------------------------------
+
+	output * scale 2
+
+#--- Programs -----------------------------------------------------------------------
+
+	set $term kitty
+	#set $fileManager yazi  
+	set $menu wofi --show drun
+	set $lock gtklock -d
+	
+#--- Autostart -------------------------------------------------------------
+
+	exec $lock
+	exec waybar
+	exec swaync
+	exec swaync-client -df
+	exec swayosd-server
+	exec gammastep -c ~/.config/gammastep/config.ini
+	exec swayidle -w \ timeout 600 'if [ "$(~/.config/gtklock/on_battery_lock.sh)" = "on_battery" ]; then gtklock -d; fi' \before-sleep 'gtklock' \
+
+
+#--- Gaps and borders -------------------------------------------------------------------
+	# Гапсы
+	gaps inner 5
+	gaps outer 5
+	smart_gaps off
+
+	# Толщина рамок для обычных и плавающих окон
+	default_border pixel 2
+	default_floating_border none
+	
+	# Размер рамок окон
+	for_window [tiling] border pixel 2
+	for_window [floating] border none
+
+	# Отключение рамки если открыто одно окно
+	smart_borders on
+
+#--- Decorations -------------------------------------------------------------------
+	# Обои
+	output * bg ~/Pictures/nord.jpg fill
+
+	# Цвета рамок
+	client.focused			#d8dee8 #d8dee8 #d8dee8 #d8dee8
+	client.focused_inactive		#272a34 #272a34 #272a34 #272a34
+	client.unfocused		#272a34 #272a34 #272a34 #272a34
+	client.urgent			#272a34 #272a34 #272a34 #272a34
+	client.placeholder		#272a34 #272a34 #272a34 #272a34
+
+#--- Touchpad ----------------------------------------------------------------
+	input "type:touchpad" {
+		dwt enabled
+		tap enabled
+		natural_scroll enabled
+	}
+
+
+#--- Keyboard -------------------------------------------------------------
+	input * {
+	    xkb_layout pl,ua
+	    xkb_options grp:alt_shift_toggle
+	}
+
+
+#--- Shortcuts ---------------------------------------------------------------------------
+
+	set $mod Mod4
+
+    # Apps
+    bindsym $mod+Return exec $term
+    bindsym --to-code $mod+q kill
+    #bindsym --to-code $mod+e exec $fileManager
+    bindsym --to-code $mod+a exec killall wofi || $menu
+    bindsym --to-code $mod+s exec swaync-client -t -sw
+	bindsym --to-code $mod+l exec $lock
+
+    # Скриншоты
+	# Screenshot (grim + slurp – unchanged)
+	bindsym $mod+Shift+s exec sh -c 'IMG=~/Pictures/Screenshots/$(date +%F-%H%M%S).png && grim -g "$(slurp)" "$IMG" && wl-copy < "$IMG" && notify-send -i "$IMG" "Screenshot" "Saved and copied to clipboard!"'
+
+    # Перезагрузить sway
+    bindsym --to-code $mod+Shift+r reload
+
+    # Выход из sway
+    bindsym --to-code $mod+Shift+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+    # Переключение фокуса через переменные
+    bindsym $mod+Tab focus right
+
+
+    # Переход по воркспейсам
+    bindsym $mod+Right workspace next
+    bindsym $mod+button4 workspace next
+    bindsym $mod+Left workspace prev
+    bindsym $mod+button5 workspace prev
+    
+
+    # Перемещение окон на другой воркспейс
+    bindsym $mod+Shift+Right move container to workspace next
+    bindsym $mod+Shift+Left move container to workspace prev
+    
+    # Фуллскрин
+    bindsym --to-code $mod+Up fullscreen
+
+    # Управление окном с зажатой клавишей mod
+    floating_modifier $mod normal
+
+    # Сделать окно плавающим
+    bindsym --to-code $mod+f floating toggle
+
+	# Media / brightness (use --locked so they work on lock screen too)
+	bindsym --locked XF86AudioRaiseVolume exec swayosd-client --output-volume 15
+	bindsym --locked XF86AudioLowerVolume exec swayosd-client --output-volume -15
+	bindsym --locked XF86AudioMute        exec swayosd-client --output-volume mute-toggle
+	bindsym --locked XF86AudioMicMute     exec swayosd-client --input-volume mute-toggle
+	bindsym --locked XF86MonBrightnessUp   exec swayosd-client --brightness +10
+	bindsym --locked XF86MonBrightnessDown exec swayosd-client --brightness -10
+	
+
+
+#--- Windows rules -----------------------------------------
+
+	# Запуск на определенном воркспейсе
+	# assign [app_id="falkon"] workspace 1
+	
+
+	# Запуск в фокусе
+	# for_window [app_id="blender"] focus
+	
+	# Запуск в плавающем режиме
+	# for_window [app_id="firefox"] floating enable
+
+	# Suppress apps that request maximize:
+	for_window [class=".*"] inhibit_fullscreen  smart
+
+	# Disable automatic workspace cleanup
+	for_window [all] move container to workspace current
+
+#--- Workspaces --------------------------------------------
+
+	bindsym $mod+1 workspace number 1
+	bindsym $mod+2 workspace number 2
+	bindsym $mod+3 workspace number 3
+	
+
+#--- БАР ------------------------------------------------------------------------------
+bar {
+
+	swaybar_command waybar -c ~/.config/waybar/config -s ~/.config/sway/waybar/style.css
+
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+}
+
+
+#--- ПОДКЛЮЧЕНИЕ ВСЕХ ФАЙЛОВ ИЗ ДИРЕКТОРИИ С ДЕФОЛТНЫМ КОНФИГОМ -----------------------
+include /etc/sway/config.d/*
