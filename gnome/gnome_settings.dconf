@@ -339,11 +339,11 @@ panel-id='world'
 size=(0, 0)
 
 [org/gnome/control-center]
-last-panel='keyboard'
+last-panel='power'
 window-state=(980, 640, false)
 
 [org/gnome/desktop/a11y/magnifier]
-mag-factor=1.0
+mag-factor=2.0
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST', 'Pardus', '7aae52c2-4869-4eff-bd9b-fcfa09bfc2e6', '9ea8a709-9263-4010-8b26-14e6fe3a4fff', 'a1806311-712c-4d8b-a1bd-e8c2f418a51d', '2695229b-01e1-4fe7-88e5-95b30644f841']
@@ -418,7 +418,7 @@ text-scaling-factor=1.0
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-software', 'gnome-power-panel', 'org-telegram-desktop', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-boxes', 'com-usebottles-bottles', 'com-brave-browser', 'io-gitlab-librewolf-community', 'dev-zed-zed', 'com-simplenote-simplenote', 'app-zen-browser-zen', 'com-beavernotes-beavernotes', 'gnome-wellbeing-panel', 'com-valvesoftware-steam', 'io-github-wivrn-wivrn', 'md-obsidian-obsidian', 'kitty', 'com-heroicgameslauncher-hgl', 'install4j-17q23mf-burpsuitecommunity', 'org-onlyoffice-desktopeditors', 'net-lutris-lutris']
+application-children=['org-gnome-software', 'gnome-power-panel', 'org-telegram-desktop', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-boxes', 'com-usebottles-bottles', 'com-brave-browser', 'io-gitlab-librewolf-community', 'dev-zed-zed', 'com-simplenote-simplenote', 'app-zen-browser-zen', 'com-beavernotes-beavernotes', 'gnome-wellbeing-panel', 'com-valvesoftware-steam', 'io-github-wivrn-wivrn', 'md-obsidian-obsidian', 'kitty', 'com-heroicgameslauncher-hgl', 'install4j-17q23mf-burpsuitecommunity', 'org-onlyoffice-desktopeditors', 'net-lutris-lutris', 'org-signal-signal']
 show-banners=true
 
 [org/gnome/desktop/peripherals/touchpad]
@@ -461,7 +461,6 @@ cycle-panels=@as []
 cycle-panels-backward=@as []
 cycle-windows=['<Super>Tab']
 cycle-windows-backward=['<Shift><Super>Tab']
-maximize=@as []
 minimize=@as []
 move-to-monitor-down=@as []
 move-to-monitor-left=@as []
@@ -494,7 +493,7 @@ unmaximize=@as []
 auto-raise=false
 button-layout='appmenu:close'
 focus-mode='click'
-num-workspaces=2
+num-workspaces=3
 
 [org/gnome/gedit/plugins]
 active-plugins=['docinfo', 'sort', 'spell', 'openlinks', 'filebrowser', 'modelines']
@@ -606,7 +605,7 @@ sleep-inactive-ac-type='nothing'
 sleep-inactive-battery-type='suspend'
 
 [org/gnome/shell]
-app-picker-layout=[{'org.telegram.desktop.desktop': <{'position': <0>}>, 'org.gnome.Calculator.desktop': <{'position': <1>}>, 'org.gnome.TextEditor.desktop': <{'position': <2>}>, 'org.gnome.Software.desktop': <{'position': <3>}>, 'org.gnome.clocks.desktop': <{'position': <4>}>, 'kitty.desktop': <{'position': <5>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <6>}>, 'org.gnome.Settings.desktop': <{'position': <7>}>, '7aae52c2-4869-4eff-bd9b-fcfa09bfc2e6': <{'position': <8>}>, '2695229b-01e1-4fe7-88e5-95b30644f841': <{'position': <9>}>, 'a1806311-712c-4d8b-a1bd-e8c2f418a51d': <{'position': <10>}>, '9ea8a709-9263-4010-8b26-14e6fe3a4fff': <{'position': <11>}>, 'com.google.Chrome.desktop': <{'position': <12>}>, 'org.onlyoffice.desktopeditors.desktop': <{'position': <13>}>}]
+app-picker-layout=[{'org.telegram.desktop.desktop': <{'position': <0>}>, 'org.signal.Signal.desktop': <{'position': <1>}>, 'org.gnome.Calculator.desktop': <{'position': <2>}>, 'org.gnome.TextEditor.desktop': <{'position': <3>}>, 'org.gnome.Software.desktop': <{'position': <4>}>, 'org.gnome.clocks.desktop': <{'position': <5>}>, 'kitty.desktop': <{'position': <6>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <7>}>, 'org.gnome.Settings.desktop': <{'position': <8>}>, '7aae52c2-4869-4eff-bd9b-fcfa09bfc2e6': <{'position': <9>}>, '2695229b-01e1-4fe7-88e5-95b30644f841': <{'position': <10>}>, 'a1806311-712c-4d8b-a1bd-e8c2f418a51d': <{'position': <11>}>, '9ea8a709-9263-4010-8b26-14e6fe3a4fff': <{'position': <12>}>, 'com.google.Chrome.desktop': <{'position': <13>}>, 'org.onlyoffice.desktopeditors.desktop': <{'position': <14>}>}]
 command-history=['whoami', 'terminal', 'ls', 'gnome-control-center', 'gsettings', 'kitty']
 disabled-extensions=['zorin-desktop-icons@zorinos.com', 'zorin-window-move-effect@zorinos.com', 'zorin-magic-lamp-effect@zorinos.com']
 enabled-extensions=['drive-menu@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'x11gestures@joseexposito.github.io', 'zorin-appindicator@zorinos.com', 'zorin-menu@zorinos.com', 'zorin-printers@zorinos.com', 'zorin-taskbar@zorinos.com']
@@ -668,19 +667,19 @@ show-screen-recording-ui=['<Shift><Super>r']
 show-screenshot-ui=['<Shift><Super>s']
 switch-to-application-1=@as []
 switch-to-application-2=@as []
-toggle-message-tray=@as []
+toggle-message-tray=['<Super>v']
 toggle-overview=@as []
 
 [org/gnome/shell/world-clocks]
 locations=[<(uint32 2, <('Warsaw', 'EPWA', true, [(0.91048009894147275, 0.36593737231924195)], [(0.91193453416703718, 0.36651914291880922)])>)>, <(uint32 2, <('Kyiv', 'UKKK', true, [(0.87967503764377286, 0.53148185187090402)], [(0.88022771360470919, 0.53261631588470038)])>)>, <(uint32 2, <('Chicago', 'KMDW', true, [(0.72927128935316143, -1.5316185371029443)], [(0.73042086791828009, -1.529781996944241)])>)>]
 
 [org/gnome/software]
-check-timestamp=int64 1754982279
+check-timestamp=int64 1757836393
 first-run=false
-flatpak-purge-timestamp=int64 1755012108
-install-timestamp=int64 1754945144
-packagekit-historical-updates-timestamp=uint64 1754945144
-update-notification-timestamp=int64 1754982219
+flatpak-purge-timestamp=int64 1757792602
+install-timestamp=int64 1757676820
+packagekit-historical-updates-timestamp=uint64 1757676820
+update-notification-timestamp=int64 1757695771
 upgrade-notification-timestamp=int64 1745427463
 
 [org/gnome/tweaks]
@@ -689,7 +688,7 @@ show-extensions-notice=false
 [org/gtk/gtk4/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=true
+show-hidden=false
 sidebar-width=140
 sort-column='name'
 sort-directories-first=true

@@ -1,5 +1,6 @@
 FLATPAK_APPS=(
     "org.telegram.desktop"
+    "org.signal.Signal"
     "com.github.PintaProject.Pinta"
     "com.usebottles.bottles"
     "com.github.tchx84.Flatseal"
@@ -9,6 +10,8 @@ FLATPAK_APPS=(
     "com.unity.UnityHub"
     "md.obsidian.Obsidian"
     "app.zen_browser.zen"
+    "com.google.Chrome"
+    "com.vysp3r.ProtonPlus"
 )
 
 
@@ -27,6 +30,7 @@ CLI_APPS=(
     "micro"
 	"qimgv"
 	"qlitebrowser"
+	"docker"
 )
 
 GNOME_APPS=(
@@ -52,3 +56,6 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 #Immersed
 https://immersed.com/
+
+#Qloader
+/bin/bash -c "$(curl -fsSL https://cloud.dipvr.ru/onlineinstall/)"
