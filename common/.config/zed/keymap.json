@@ -31,6 +31,7 @@
 	},
 	{
 		"context": "Editor",
+		"use_key_equivalents": true,
 		"bindings": {
 			"escape": "editor::Cancel",
 			"backspace": "editor::Backspace",
@@ -90,6 +91,7 @@
 	},
 	{
 		"context": "Workspace",
+		"use_key_equivalents": true,
 		"bindings": {
 			"ctrl-`": "workspace::ToggleBottomDock",
 			"ctrl-shift-b": "workspace::ToggleLeftDock",
@@ -142,7 +144,7 @@
 			"escape": "menu::Cancel",
 			"up": "menu::SelectPrevious",
 			"down": "menu::SelectNext",
-			"enter": "picker::ConfirmCompletion"
+			"tab": "picker::ConfirmCompletion"
 		}
 	},
 	{
@@ -162,13 +164,14 @@
 		"context": "Editor && showing_completions",
 		"bindings": {
 			"enter": "editor::ConfirmCompletion",
+			"shift-enter": "editor::ConfirmCompletionReplace",
 			"tab": "editor::ComposeCompletion"
 		}
 	},
 	{
 		"context": "Editor && edit_prediction",
 		"bindings": {
-			"enter": "editor::AcceptEditPrediction"
+			"tab": "editor::AcceptEditPrediction"
 		}
 	},
 	{
@@ -182,7 +185,8 @@
 	{
 		"context": "ContextEditor > Editor",
 		"bindings": {
-			"ctrl-enter": "assistant::Assist"
+			"ctrl-enter": "assistant::Assist",
+			"enter": "assistant::ConfirmCommand"
 		}
 	},
 	{
