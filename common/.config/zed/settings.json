@@ -69,12 +69,5 @@
 	},
 	"outline_panel": {
 		"button": false
-	},
-	"languages": {
-		"Python": {
-			"tab_size": 4,
-			"format_on_save": "on",
-			"hard_tabs": true
-		}
 	}
 }
