@@ -103,19 +103,3 @@ Commit changes:
 git add profiles/hyprland/.config/hypr/scripts/
 git commit -m "feat(hyprland): add custom scripts"
 ```
-# 🎯 Usage Examples
-```bash
-
-# Setup a new GNOME workstation
-./linker.sh common
-
-# Setup a Hyprland gaming rig
-./linker.sh hyprland
-
-# Update after adding new fonts
-./linker.sh common
-fc-cache -fv
-
-# Switch from Hyprland back to GNOME
-./linker.sh common
-```
