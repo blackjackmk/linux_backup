@@ -11,7 +11,11 @@
 		"dock": "right"
 	},
 	"agent": {
-		"default_profile": "ask",
+		"inline_assistant_model": {
+   "provider": "copilot_chat",
+   "model": "gpt-4o"
+  },
+  "default_profile": "ask",
 		"default_model": {
 			"provider": "copilot_chat",
 			"model": "gpt-5-mini"
