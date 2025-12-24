@@ -51,6 +51,9 @@ https://yazi-rs.github.io/docs/installation
 # Zed
 curl -f https://zed.dev/install.sh | sh
 
+# Ollama
+curl -fsSL https://ollama.com/install.sh | sh
+
 # UV (Python)
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
