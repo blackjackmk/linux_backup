@@ -1,209 +1,210 @@
 [
-	// Standard Linux bindings
-	{
-		"bindings": {
-			"tab": "menu::SelectNext",
-			"shift-tab": "menu::SelectPrevious",
-			"enter": "menu::Confirm",
-			"ctrl-c": "menu::Cancel",
-			"escape": "menu::Cancel",
-			"open": "workspace::Open",
-			"ctrl-o": "workspace::Open",
-			"ctrl-=": ["zed::IncreaseBufferFontSize", { "persist": false }],
-			"ctrl-+": ["zed::IncreaseBufferFontSize", { "persist": false }],
-			"ctrl--": ["zed::DecreaseBufferFontSize", { "persist": false }],
-			"ctrl-0": ["zed::ResetBufferFontSize", { "persist": false }],
-			"ctrl-,": "zed::OpenSettings",
-			"f4": "debugger::Start",
-			"f5": "debugger::Continue",
-			"shift-f5": "debugger::Stop",
-			"f6": "debugger::Pause",
-			"f7": "debugger::StepOver",
-			"f11": "zed::ToggleFullScreen"
-		}
-	},
-	{
-		"context": "Picker || menu",
-		"bindings": {
-			"up": "menu::SelectPrevious",
-			"down": "menu::SelectNext"
-		}
-	},
-	{
-		"context": "Editor",
-		"use_key_equivalents": true,
-		"bindings": {
-			"escape": "editor::Cancel",
-			"backspace": "editor::Backspace",
-			"delete": "editor::Delete",
-			"tab": "editor::Tab",
-			"shift-tab": "editor::Backtab",
-			"ctrl-backspace": "editor::DeleteToPreviousWordStart",
-			"ctrl-delete": "editor::DeleteToNextWordEnd",
-			"cut": "editor::Cut",
-			"ctrl-x": "editor::Cut",
-			"copy": "editor::Copy",
-			"ctrl-c": "editor::Copy",
-			"paste": "editor::Paste",
-			"ctrl-v": "editor::Paste",
-			"undo": "editor::Undo",
-			"ctrl-z": "editor::Undo",
-			"redo": "editor::Redo",
-			"ctrl-y": "editor::Redo",
-			"up": "editor::MoveUp",
-			"ctrl-up": "editor::LineUp",
-			"ctrl-down": "editor::LineDown",
-			"down": "editor::MoveDown",
-			"left": "editor::MoveLeft",
-			"right": "editor::MoveRight",
-			"ctrl-left": "editor::MoveToPreviousWordStart",
-			"ctrl-right": "editor::MoveToNextWordEnd",
-			"shift-up": "editor::SelectUp",
-			"shift-down": "editor::SelectDown",
-			"shift-left": "editor::SelectLeft",
-			"shift-right": "editor::SelectRight",
-			"ctrl-shift-left": "editor::SelectToPreviousWordStart", // cursorWordLeftSelect
-			"ctrl-shift-right": "editor::SelectToNextWordEnd", // cursorWordRightSelect
-			"ctrl-shift-home": "editor::SelectToBeginning",
-			"ctrl-shift-end": "editor::SelectToEnd",
-			"ctrl-a": "editor::SelectAll",
-			"menu": "editor::OpenContextMenu",
-			"f9": "editor::ToggleBreakpoint",
-			"f2": "editor::Rename",
-			"alt-d": "editor::DuplicateLineDown",
-			"alt-up": "editor::MoveLineUp",
-			"alt-down": "editor::MoveLineDown",
-			"ctrl-/": ["editor::ToggleComments", { "advance_downwards": false }],
-			"alt-shift-right": [
-				"editor::SelectToEndOfLine",
-				{ "stop_at_soft_wraps": true }
-			],
-			"alt-shift-left": [
-				"editor::SelectToBeginningOfLine",
-				{ "stop_at_soft_wraps": true, "stop_at_indent": true }
-			],
-			"alt-right": ["editor::MoveToEndOfLine", { "stop_at_soft_wraps": true }],
-			"alt-left": [
-				"editor::MoveToBeginningOfLine",
-				{ "stop_at_soft_wraps": true, "stop_at_indent": true }
-			]
-		}
-	},
-	{
-		"context": "Workspace",
-		"use_key_equivalents": true,
-		"bindings": {
-			"ctrl-`": "workspace::ToggleBottomDock",
-			"ctrl-shift-b": "workspace::ToggleLeftDock",
-			"ctrl-?": "workspace::ToggleRightDock",
-			"ctrl-s": "workspace::Save",
-			"ctrl-shift-s": "workspace::SaveAs",
-			"new": "workspace::NewFile",
-			"ctrl-n": "workspace::NewFile",
-			"ctrl-shift-p": "command_palette::Toggle"
-		}
-	},
-	{
-		"context": "Pane",
-		"bindings": {
-			"alt-,": "pane::ActivatePreviousItem",
-			"alt-.": "pane::ActivateNextItem",
-			"ctrl-d": ["pane::CloseActiveItem", { "close_pinned": false }]
-		}
-	},
-	{
-		"context": "Terminal",
-		"bindings": {
-			"ctrl-shift-c": "terminal::Copy",
-			"ctrl-shift-v": "terminal::Paste",
-			"ctrl-enter": "assistant::InlineAssist",
-			"ctrl-c": ["terminal::SendKeystroke", "ctrl-c"],
-			"ctrl-shift-a": "editor::SelectAll",
-			"up": ["terminal::SendKeystroke", "up"],
-			"down": ["terminal::SendKeystroke", "down"],
-			"escape": ["terminal::SendKeystroke", "escape"],
-			"enter": ["terminal::SendKeystroke", "enter"]
-		}
-	},
-	{
-		"context": "AgentPanel",
-		"bindings": {
-			"ctrl-n": "agent::NewTextThread"
-		}
-	},
-	{
-		"context": "AgentPanel > Markdown",
-		"bindings": {
-			"copy": "markdown::CopyAsMarkdown",
-			"ctrl-c": "markdown::CopyAsMarkdown"
-		}
-	},
-	{
-		"context": "Picker > Editor",
-		"bindings": {
-			"escape": "menu::Cancel",
-			"up": "menu::SelectPrevious",
-			"down": "menu::SelectNext",
-			"tab": "picker::ConfirmCompletion"
-		}
-	},
-	{
-		"context": "Editor && (showing_code_actions || showing_completions)",
-		"bindings": {
-			"up": "editor::ContextMenuPrevious",
-			"down": "editor::ContextMenuNext"
-		}
-	},
-	{
-		"context": "Editor && renaming",
-		"bindings": {
-			"enter": "editor::ConfirmRename"
-		}
-	},
-	{
-		"context": "Editor && showing_completions",
-		"bindings": {
-			"enter": "editor::ConfirmCompletion",
-			"shift-enter": "editor::ConfirmCompletionReplace",
-			"tab": "editor::ComposeCompletion"
-		}
-	},
-	{
-		"context": "Editor && edit_prediction",
-		"bindings": {
-			"tab": "editor::AcceptEditPrediction"
-		}
-	},
-	{
-		"context": "Editor && mode == full",
-		"bindings": {
-			"enter": "editor::Newline",
-			"ctrl-f": "buffer_search::Deploy",
-			"ctrl-i": "assistant::InlineAssist"
-		}
-	},
-	{
-		"context": "ContextEditor > Editor",
-		"bindings": {
-			"ctrl-enter": "assistant::Assist",
-			"enter": "assistant::ConfirmCommand"
-		}
-	},
-	{
-		"context": "ContextStrip",
-		"bindings": {
-			"up": "agent::FocusUp",
-			"right": "agent::FocusRight",
-			"left": "agent::FocusLeft",
-			"down": "agent::FocusDown",
-			"backspace": "agent::RemoveFocusedContext",
-			"enter": "agent::AcceptSuggestedContext"
-		}
-	},
-	{
-		"context": "Markdown",
-		"bindings": {
-			"ctrl-c": "markdown::Copy"
-		}
-	}
+  // Standard Linux bindings
+  {
+    "bindings": {
+      "tab": "menu::SelectNext",
+      "shift-tab": "menu::SelectPrevious",
+      "enter": "menu::Confirm",
+      "ctrl-c": "menu::Cancel",
+      "escape": "menu::Cancel",
+      "open": "workspace::Open",
+      "ctrl-o": "workspace::Open",
+      "ctrl-=": ["zed::IncreaseBufferFontSize", { "persist": false }],
+      "ctrl-+": ["zed::IncreaseBufferFontSize", { "persist": false }],
+      "ctrl--": ["zed::DecreaseBufferFontSize", { "persist": false }],
+      "ctrl-0": ["zed::ResetBufferFontSize", { "persist": false }],
+      "ctrl-,": "zed::OpenSettings",
+      "f4": "debugger::Start",
+      "f5": "debugger::Continue",
+      "shift-f5": "debugger::Stop",
+      "f6": "debugger::Pause",
+      "f7": "debugger::StepOver",
+      "f11": "zed::ToggleFullScreen"
+    }
+  },
+  {
+    "context": "Picker || menu",
+    "bindings": {
+      "up": "menu::SelectPrevious",
+      "down": "menu::SelectNext"
+    }
+  },
+  {
+    "context": "Editor",
+    "use_key_equivalents": true,
+    "bindings": {
+      "escape": "editor::Cancel",
+      "backspace": "editor::Backspace",
+      "delete": "editor::Delete",
+      "tab": "editor::Tab",
+      "shift-tab": "editor::Backtab",
+      "ctrl-backspace": "editor::DeleteToPreviousWordStart",
+      "ctrl-delete": "editor::DeleteToNextWordEnd",
+      "cut": "editor::Cut",
+      "ctrl-x": "editor::Cut",
+      "copy": "editor::Copy",
+      "ctrl-c": "editor::Copy",
+      "paste": "editor::Paste",
+      "ctrl-v": "editor::Paste",
+      "undo": "editor::Undo",
+      "ctrl-z": "editor::Undo",
+      "redo": "editor::Redo",
+      "ctrl-y": "editor::Redo",
+      "up": "editor::MoveUp",
+      "down": "editor::MoveDown",
+      "left": "editor::MoveLeft",
+      "right": "editor::MoveRight",
+      "ctrl-left": "editor::MoveToPreviousWordStart",
+      "ctrl-right": "editor::MoveToNextWordEnd",
+      "shift-up": "editor::SelectUp",
+      "shift-down": "editor::SelectDown",
+      "shift-left": "editor::SelectLeft",
+      "shift-right": "editor::SelectRight",
+      "ctrl-shift-left": "editor::SelectToPreviousWordStart", // cursorWordLeftSelect
+      "ctrl-shift-right": "editor::SelectToNextWordEnd", // cursorWordRightSelect
+      "ctrl-a": "editor::SelectAll",
+      "menu": "editor::OpenContextMenu",
+      "f9": "editor::ToggleBreakpoint",
+      "f2": "editor::Rename",
+      "alt-d": "editor::DuplicateLineDown",
+      "alt-up": "editor::MoveLineUp",
+      "alt-down": "editor::MoveLineDown",
+      "ctrl-/": ["editor::ToggleComments", { "advance_downwards": false }],
+      "alt-right": ["editor::MoveToEndOfLine", { "stop_at_soft_wraps": true }],
+      "alt-left": [
+        "editor::MoveToBeginningOfLine",
+        { "stop_at_soft_wraps": true, "stop_at_indent": true }
+      ],
+      "shift-end": [
+        "editor::SelectToEndOfLine",
+        { "stop_at_soft_wraps": true }
+      ],
+      "shift-home": [
+        "editor::SelectToBeginningOfLine",
+        { "stop_at_soft_wraps": true, "stop_at_indent": true }
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "use_key_equivalents": true,
+    "bindings": {
+      "ctrl-`": "workspace::ToggleBottomDock",
+      "ctrl-shift-b": "workspace::ToggleLeftDock",
+      "ctrl-?": "workspace::ToggleRightDock",
+      "ctrl-s": "workspace::Save",
+      "ctrl-shift-s": "workspace::SaveAs",
+      "new": "workspace::NewFile",
+      "ctrl-n": "workspace::NewFile",
+      "ctrl-shift-p": "command_palette::Toggle"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "alt-,": "pane::ActivatePreviousItem",
+      "alt-.": "pane::ActivateNextItem",
+      "ctrl-w": ["pane::CloseActiveItem", { "close_pinned": false }],
+      "ctrl-pagedown": "pane::ActivateNextItem",
+      "ctrl-pageup": "pane::ActivatePreviousItem",
+      "ctrl-tab": "pane::ActivateNextItem",
+      "ctrl-shift-tab": "pane::ActivatePreviousItem"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-shift-c": "terminal::Copy",
+      "ctrl-shift-v": "terminal::Paste",
+      "ctrl-enter": "assistant::InlineAssist",
+      "ctrl-c": ["terminal::SendKeystroke", "ctrl-c"],
+      "ctrl-shift-a": "editor::SelectAll",
+      "up": ["terminal::SendKeystroke", "up"],
+      "down": ["terminal::SendKeystroke", "down"],
+      "escape": ["terminal::SendKeystroke", "escape"],
+      "enter": ["terminal::SendKeystroke", "enter"]
+    }
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "ctrl-n": "agent::NewTextThread"
+    }
+  },
+  {
+    "context": "AgentPanel > Markdown",
+    "bindings": {
+      "copy": "markdown::CopyAsMarkdown",
+      "ctrl-c": "markdown::CopyAsMarkdown"
+    }
+  },
+  {
+    "context": "Picker > Editor",
+    "bindings": {
+      "escape": "menu::Cancel",
+      "up": "menu::SelectPrevious",
+      "down": "menu::SelectNext",
+      "tab": "picker::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "enter": "editor::ConfirmCompletion",
+      "tab": "editor::ConfirmCompletion",
+      "up": "editor::ContextMenuPrevious",
+      "down": "editor::ContextMenuNext"
+    }
+  },
+  {
+    "context": "Editor && renaming",
+    "bindings": {
+      "enter": "editor::ConfirmRename"
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "enter": "editor::ConfirmCompletion",
+      "tab": "editor::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "Editor && edit_prediction",
+    "bindings": {
+      "tab": "editor::AcceptEditPrediction"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "enter": "editor::Newline",
+      "ctrl-f": "buffer_search::Deploy",
+      "ctrl-i": "assistant::InlineAssist"
+    }
+  },
+  {
+    "context": "ContextEditor > Editor",
+    "bindings": {
+      "enter": "assistant::Assist", // Send to AI
+      "shift-enter": "editor::Newline" // Allow multi-line questions
+    }
+  },
+  {
+    "context": "ContextStrip",
+    "bindings": {
+      "up": "agent::FocusUp",
+      "right": "agent::FocusRight",
+      "left": "agent::FocusLeft",
+      "down": "agent::FocusDown",
+      "backspace": "agent::RemoveFocusedContext",
+      "enter": "agent::AcceptSuggestedContext"
+    }
+  },
+  {
+    "context": "Markdown",
+    "bindings": {
+      "ctrl-c": "markdown::Copy"
+    }
+  }
 ]
