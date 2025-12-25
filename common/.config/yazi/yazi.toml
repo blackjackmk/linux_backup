@@ -9,10 +9,10 @@ edit = [
 	{ run = 'code "$@"', desc = "VS Code", block = true, for = "unix" },
 ]
 open = [
-	{ run = 'qimgv "$1"',      desc = "Open", for = "linux" },
+	{ run = 'qimgv "$1"', desc = "Open", for = "linux" },
 ]
 extract = [
-	{ run = '7z e "$@" -o\*', desc = "Extract here", for = "unix" },
+	{ run = '7z e "$@" -o\*', block = true,  desc = "Extract here", for = "unix" },
 ]
 play = [
 	{ run = 'mpv --force-window "$@"', orphan = true, for = "unix" },
