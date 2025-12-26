@@ -17,12 +17,12 @@
   },
   "agent": {
     "use_modifier_to_send": false,
-    "default_view": "text_thread", // or 'thread'
+    "default_view": "thread", // 'text_thread' or 'thread'
     "inline_assistant_model": {
       "provider": "copilot_chat",
       "model": "gpt-4o"
     },
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
       "model": "gpt-4o"
@@ -89,34 +89,15 @@
       "tab_size": 4,
       "hard_tabs": false,
       "format_on_save": "on",
-      "formatter": {
-        "language_server": {
-          "name": "ruff"
-        }
-      },
+      "language_servers": ["pyright", "ruff"],
       "show_completions_on_input": true
     }
   },
-  "lsp": {
-    "basedpyright": {
-      "settings": {
-        "python": {
-          // 1. Tell it where to find your venv
-          // (Adjust ".venv" if your folder is named "env" or "venv")
-          "venvPath": ".",
-          "venv": ".venv"
-        },
-        "basedpyright": {
-          "analysis": {
-            // 2. Stop it from complaining about things it "doesn't see"
-            // "basic" is standard, "off" disables type checking entirely (like VS Code default)
-            "typeCheckingMode": "basic",
-
-            // 3. If it still can't find your local folders/modules, add them here
-            "extraPaths": ["./src", "./app"],
-
-            // 4. Force it to look at all files to resolve imports correctly
-            "diagnosticMode": "workspace"
+    "lsp": {
+      "pyright": {
+        "settings": {
+          "python": {
+            "pythonPath": ".venv/bin/python"
           }
         }
       }

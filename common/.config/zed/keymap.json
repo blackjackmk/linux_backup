@@ -128,7 +128,8 @@
   {
     "context": "AgentPanel",
     "bindings": {
-      "ctrl-n": "agent::NewTextThread"
+      "ctrl-n": "agent::NewTextThread",
+      "enter": "agent::Chat"
     }
   },
   {
