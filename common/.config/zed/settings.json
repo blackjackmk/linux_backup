@@ -58,8 +58,10 @@
     "**/.settings",
     "*.meta",
     "**/__pycache__",
-    "**/.venv",
-    "**/node_modules"
+    "**/node_modules",
+    "**/.ropeproject",
+    "**/.ruff_cache",
+    "**/.zed"
   ],
   "tabs": {
     "close_position": "right",
@@ -89,17 +91,24 @@
       "tab_size": 4,
       "hard_tabs": false,
       "format_on_save": "on",
-      "language_servers": ["pyright", "ruff"],
-      "show_completions_on_input": true
+      "show_completions_on_input": true,
+      "language_servers": ["ty", "!basedpyright", "!pyright", "!pylsp"],
+      "linting": {
+        "enabled": true,
+        "ruff": {
+          "enabled": true
+        }
+      },
+      "formatting": {
+        "provider": "ruff"
+      }
     }
   },
-    "lsp": {
-      "pyright": {
-        "settings": {
-          "python": {
-            "pythonPath": ".venv/bin/python"
-          }
-        }
+  "lsp": {
+    "ty": {
+      "binary": {
+        "path": "/home/user/.local/bin/ty",
+        "arguments": ["server"]
       }
     }
   }

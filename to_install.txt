@@ -57,6 +57,10 @@ curl -fsSL https://ollama.com/install.sh | sh
 
 # UV (Python)
 curl -LsSf https://astral.sh/uv/install.sh | sh
+#+ ty (Python language server)
+uv tool install ty@latest
+#+ ruff (Python linter and code formatter)
+uv tool install ruff@latest
 
 #Immersed
 https://immersed.com/
