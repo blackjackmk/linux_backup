@@ -25,7 +25,7 @@
     "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4o"
+      "model": "gpt-5-mini"
     }
   },
   "ui_font_size": 22,
@@ -92,22 +92,19 @@
       "hard_tabs": false,
       "format_on_save": "on",
       "show_completions_on_input": true,
-      "language_servers": ["ty", "!basedpyright", "!pyright", "!pylsp"],
-      "linting": {
-        "enabled": true,
-        "ruff": {
-          "enabled": true
+      "language_servers": ["ty", "ruff"],
+      "formatter": {
+        "external": {
+          "command": "ruff",
+          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
         }
-      },
-      "formatting": {
-        "provider": "ruff"
       }
     }
   },
   "lsp": {
     "ty": {
       "binary": {
-        "path": "/home/user/.local/bin/ty",
+        "path": "/home/maksym/.local/bin/ty",
         "arguments": ["server"]
       }
     }
