@@ -1,6 +1,6 @@
 #--- Monitors --------------------------------------------------------------
 
-	output * scale 2
+	output * scale 1
 
 #--- Programs -----------------------------------------------------------------------
 
@@ -11,13 +11,13 @@
 	
 #--- Autostart -------------------------------------------------------------
 
-	exec $lock
+	#exec $lock
 	exec waybar
 	exec swaync
 	exec swaync-client -df
 	exec swayosd-server
 	exec gammastep -c ~/.config/gammastep/config.ini
-	exec swayidle -w \ timeout 600 'if [ "$(~/.config/gtklock/on_battery_lock.sh)" = "on_battery" ]; then gtklock -d; fi' \before-sleep 'gtklock' \
+	exec swayidle -w \ timeout 600 'if [ "$(~/.config/gtklock/on_battery_lock.sh)" = "on_battery" ]; then gtklock -d; fi' \before-sleep 'gtklock'
 
 
 #--- Gaps and borders -------------------------------------------------------------------

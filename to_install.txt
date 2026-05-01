@@ -29,7 +29,7 @@ CLI_APPS=(
     "btm"
     "micro"
 	"qimgv"
-	"qlitebrowser"
+	"sqlitebrowser"
 	"docker"
 	"7zip"
 )
