@@ -1,0 +1,70 @@
+* {
+    all: unset;
+    font-family: "Hack Nerd Font";
+}
+
+.container {
+    background-color: rgba(36, 39, 58, 0.95);
+    border-radius: 12px;
+    padding: 20px;
+    border: 2px solid #8AADF4;
+}
+
+.module {
+    margin-bottom: 15px;
+}
+
+.calendar-box {
+    color: #CAD3F5;
+}
+
+.sys-box {
+    color: #8AADF4;
+    font-size: 24px;
+}
+
+.controls-box scale trough {
+    background-color: #363A4F;
+    border-radius: 10px;
+    min-height: 10px;
+    min-width: 250px;
+    margin-left: 15px;
+}
+
+.controls-box scale highlight {
+    background-color: #8AADF4;
+    border-radius: 10px;
+}
+
+.controls-box label {
+    color: #CAD3F5;
+    font-size: 20px;
+}
+
+.quick-settings-box button {
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 24px;
+}
+
+.quick-settings-box .active {
+    background-color: #8AADF4;
+    color: #24273A;
+}
+
+.quick-settings-box .inactive {
+    background-color: #363A4F;
+    color: #CAD3F5;
+}
+
+.power-box button {
+    padding: 10px;
+    background-color: #ED8796;
+    color: #24273A;
+    border-radius: 10px;
+    font-size: 28px;
+}
+
+.power-box button:hover {
+    background-color: #F5A97F;
+}

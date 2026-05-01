@@ -1,0 +1,56 @@
+(defwindow dashboard
+    :monitor 0
+    :geometry (geometry :x "-20px" :y "20px" :width "350px" :anchor "top right")
+    :stacking "fg"
+    :exclusive false
+    (box :orientation "v" :space-evenly false :class "container"
+        (calendar_module)
+        (sys_monitor)
+        (controls)
+        (quick_settings)
+        (power_buttons)
+    )
+)
+
+(defwidget calendar_module []
+    (box :class "module calendar-box"
+        (calendar)
+    )
+)
+
+(defwidget sys_monitor []
+    (box :orientation "h" :space-evenly true :class "module sys-box"
+        (circular-progress :value {EWW_CPU.avg} :thickness 6 (label :text ""))
+        (circular-progress :value {EWW_RAM.used_mem_perc} :thickness 6 (label :text ""))
+    )
+)
+
+(defwidget controls []
+    (box :orientation "v" :space-evenly false :class "module controls-box"
+        (box :orientation "h" :space-evenly false
+            (label :text " ")
+            (scale :min 0 :max 101 :value 50 :onchange "swayosd-client --output-volume {}")
+        )
+        (box :orientation "h" :space-evenly false
+            (label :text "󰃠 ")
+            (scale :min 0 :max 101 :value 50 :onchange "swayosd-client --brightness {}")
+        )
+    )
+)
+
+(defwidget quick_settings []
+    (box :orientation "h" :space-evenly true :class "module quick-settings-box"
+        (button :class "active" "󰖩") ;; Placeholder for WiFi script
+        (button :class "inactive" "󰂲") ;; Placeholder for Bluetooth script
+        (button :class "inactive" "󰃝") ;; Placeholder for Nightlight script
+        (button :class "active" "󰾆") ;; Placeholder for Powermode script
+    )
+)
+
+(defwidget power_buttons []
+    (box :orientation "h" :space-evenly true :class "module power-box"
+        (button :onclick "systemctl suspend" "󰤄")
+        (button :onclick "systemctl reboot" "󰜉")
+        (button :onclick "systemctl poweroff" "󰐥")
+    )
+)
