@@ -16,16 +16,17 @@
     "button": false
   },
   "agent": {
+    "always_allow_tool_actions": false,
     "use_modifier_to_send": false,
     "default_view": "thread", // 'text_thread' or 'thread'
     "inline_assistant_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4o"
+      "model": "claude-opus-4.5"
     },
     "default_profile": "write",
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-5-mini"
+      "provider": "ollama",
+      "model": "llama3.1:8b"
     }
   },
   "ui_font_size": 22,
@@ -90,7 +91,7 @@
     "Python": {
       "tab_size": 4,
       "hard_tabs": false,
-      "format_on_save": "on",
+      "format_on_save": "off",
       "show_completions_on_input": true,
       "language_servers": ["ty", "ruff"],
       "formatter": {
