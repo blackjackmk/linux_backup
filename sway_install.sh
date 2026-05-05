@@ -8,7 +8,7 @@ apt install sudo curl git network-manager bluman bluez gvfs libnotify-bin wirepl
 # Display 
 apt install gammastep grim slurp wl-clipboard policykit-1-gnome zenity power-profiles-daemon
 #CLI apps
-apt install kitty hstr fd-find bash-completion tldr bat eza micro qutebrowser 
+apt install kitty hstr fd-find bash-completion tldr bat eza micro 
 
 # Extra stuff
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh

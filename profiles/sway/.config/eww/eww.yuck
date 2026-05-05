@@ -1,56 +1,29 @@
 (defwindow dashboard
     :monitor 0
-    :geometry (geometry :x "-20px" :y "20px" :width "350px" :anchor "top right")
-    :stacking "fg"
-    :exclusive false
-    (box :orientation "v" :space-evenly false :class "container"
-        (calendar_module)
-        (sys_monitor)
-        (controls)
-        (quick_settings)
-        (power_buttons)
-    )
-)
-
-(defwidget calendar_module []
-    (box :class "module calendar-box"
-        (calendar)
-    )
-)
-
-(defwidget sys_monitor []
-    (box :orientation "h" :space-evenly true :class "module sys-box"
-        (circular-progress :value {EWW_CPU.avg} :thickness 6 (label :text ""))
-        (circular-progress :value {EWW_RAM.used_mem_perc} :thickness 6 (label :text ""))
-    )
-)
-
-(defwidget controls []
-    (box :orientation "v" :space-evenly false :class "module controls-box"
-        (box :orientation "h" :space-evenly false
-            (label :text " ")
-            (scale :min 0 :max 101 :value 50 :onchange "swayosd-client --output-volume {}")
+    :geometry (geometry :x "0" :y "0" :width "100%" :height "100%" :anchor "center")
+    :stacking "overlay"
+    :namespace "eww-dashboard"
+    :focusable true
+    (eventbox :onclick "eww close dashboard"
+        (box :class "bg-overlay" :halign "fill" :valign "fill" :hexpand true :vexpand true
+            (box :class "layout-box" :space-evenly false :orientation "h" :spacing 20 :halign "center" :valign "center"
+                
+                ;; Left Column (Time & Calendar)
+                (box :orientation "v" :space-evenly false :spacing 20 :class "left-col"
+                    (box :class "module time-box"
+                        (label :text "Tokyo Dashboard" :class "title-text")
+                    )
+                    (calendar_module)
+                )
+                
+                ;; Right Column (System, Controls, Power)
+                (box :orientation "v" :space-evenly false :spacing 20 :class "right-col" :hexpand true
+                    (quick_settings)
+                    (sys_monitor)
+                    (controls)
+                    (power_buttons)
+                )
+            )
         )
-        (box :orientation "h" :space-evenly false
-            (label :text "󰃠 ")
-            (scale :min 0 :max 101 :value 50 :onchange "swayosd-client --brightness {}")
-        )
-    )
-)
-
-(defwidget quick_settings []
-    (box :orientation "h" :space-evenly true :class "module quick-settings-box"
-        (button :class "active" "󰖩") ;; Placeholder for WiFi script
-        (button :class "inactive" "󰂲") ;; Placeholder for Bluetooth script
-        (button :class "inactive" "󰃝") ;; Placeholder for Nightlight script
-        (button :class "active" "󰾆") ;; Placeholder for Powermode script
-    )
-)
-
-(defwidget power_buttons []
-    (box :orientation "h" :space-evenly true :class "module power-box"
-        (button :onclick "systemctl suspend" "󰤄")
-        (button :onclick "systemctl reboot" "󰜉")
-        (button :onclick "systemctl poweroff" "󰐥")
     )
 )

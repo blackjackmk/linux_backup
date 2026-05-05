@@ -1,70 +1,110 @@
 * {
-    all: unset;
-    font-family: "Hack Nerd Font";
+    font-family: "Hack Nerd Font", monospace;
+    text-shadow: none;
+    box-shadow: none;
 }
 
-.container {
-    background-color: rgba(36, 39, 58, 0.95);
+.bg-overlay {
+    background-color: rgba(26, 27, 38, 0.7); /* TokyoNight Dimmed */
+}
+
+window {
+    background-color: transparent;
+}
+
+/* Main wrapper to give the dashboard a unified background */
+.layout-box {
+    background-color: #1a1b26; /* TokyoNight Background */
+    border-radius: 20px;
+    padding: 25px;
+    border: 2px solid #7aa2f7; /* TokyoNight Blue */
+}
+
+/* Individual Tile Styling */
+.module {
+    background-color: #24283b; /* TokyoNight Widget Bg */
     border-radius: 12px;
     padding: 20px;
-    border: 2px solid #8AADF4;
 }
 
-.module {
-    margin-bottom: 15px;
+button {
+    background-image: none;
+    border: none;
+    outline: none;
+}
+
+/* Left Column */
+.time-box {
+    min-height: 50px;
+}
+
+.title-text {
+    color: #bb9af7; /* TokyoNight Purple */
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .calendar-box {
-    color: #CAD3F5;
+    color: #c0caf5; /* TokyoNight Fg */
+    font-size: 16px;
+    min-height: 250px;
 }
 
+/* Right Column */
 .sys-box {
-    color: #8AADF4;
-    font-size: 24px;
+    color: #7dcfff; /* TokyoNight Cyan */
+    font-size: 16px;
 }
 
 .controls-box scale trough {
-    background-color: #363A4F;
+    background-color: #414868;
     border-radius: 10px;
-    min-height: 10px;
-    min-width: 250px;
+    min-height: 8px;
+    min-width: 200px;
     margin-left: 15px;
 }
 
 .controls-box scale highlight {
-    background-color: #8AADF4;
+    background-color: #7aa2f7;
     border-radius: 10px;
 }
 
 .controls-box label {
-    color: #CAD3F5;
+    color: #c0caf5;
     font-size: 20px;
 }
 
+/* Quick Settings Buttons */
 .quick-settings-box button {
-    padding: 15px;
+    padding: 12px;
     border-radius: 10px;
     font-size: 24px;
 }
 
 .quick-settings-box .active {
-    background-color: #8AADF4;
-    color: #24273A;
+    background-color: #7aa2f7;
+    color: #1a1b26;
 }
 
 .quick-settings-box .inactive {
-    background-color: #363A4F;
-    color: #CAD3F5;
+    background-color: #414868;
+    color: #c0caf5;
 }
 
+.quick-settings-box button:hover {
+    background-color: #bb9af7;
+    color: #1a1b26;
+}
+
+/* Power Buttons */
 .power-box button {
-    padding: 10px;
-    background-color: #ED8796;
-    color: #24273A;
+    padding: 12px;
+    background-color: #f7768e; /* TokyoNight Red */
+    color: #1a1b26;
     border-radius: 10px;
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .power-box button:hover {
-    background-color: #F5A97F;
+    background-color: #ff9e64; /* TokyoNight Orange */
 }

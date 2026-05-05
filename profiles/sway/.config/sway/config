@@ -74,6 +74,7 @@
     bindsym --to-code $mod+a exec killall wofi || $menu
     bindsym --to-code $mod+s exec swaync-client -t -sw
 	bindsym --to-code $mod+l exec $lock
+	bindsym --to-code $mod+v exec eww open --toggle dashboard
 
     # Скриншоты
 	# Screenshot (grim + slurp – unchanged)
