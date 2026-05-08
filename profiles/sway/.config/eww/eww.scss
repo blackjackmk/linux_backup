@@ -4,107 +4,69 @@
     box-shadow: none;
 }
 
-.bg-overlay {
-    background-color: rgba(26, 27, 38, 0.7); /* TokyoNight Dimmed */
-}
+window { background-color: transparent; }
 
-window {
-    background-color: transparent;
-}
+.bg-overlay { background-color: rgba(26, 27, 38, 0.85); }
 
-/* Main wrapper to give the dashboard a unified background */
 .layout-box {
-    background-color: #1a1b26; /* TokyoNight Background */
+    background-color: #1a1b26;
     border-radius: 20px;
-    padding: 25px;
-    border: 2px solid #7aa2f7; /* TokyoNight Blue */
+    padding: 30px;
+    border: 2px solid #7aa2f7;
 }
 
-/* Individual Tile Styling */
 .module {
-    background-color: #24283b; /* TokyoNight Widget Bg */
+    background-color: #24283b;
     border-radius: 12px;
-    padding: 20px;
+    padding: 15px;
 }
 
 button {
     background-image: none;
+    background-color: #414868;
+    color: #c0caf5;
     border: none;
-    outline: none;
 }
 
-/* Left Column */
-.time-box {
-    min-height: 50px;
-}
+.quick-settings-box button { font-size: 28px; border-radius: 10px; }
+.quick-settings-box .active { background-color: #7aa2f7; color: #1a1b26; }
 
-.title-text {
-    color: #bb9af7; /* TokyoNight Purple */
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.calendar-box {
-    color: #c0caf5; /* TokyoNight Fg */
-    font-size: 16px;
-    min-height: 250px;
-}
-
-/* Right Column */
-.sys-box {
-    color: #7dcfff; /* TokyoNight Cyan */
-    font-size: 16px;
-}
-
-.controls-box scale trough {
-    background-color: #414868;
-    border-radius: 10px;
-    min-height: 8px;
-    min-width: 200px;
-    margin-left: 15px;
-}
-
-.controls-box scale highlight {
-    background-color: #7aa2f7;
-    border-radius: 10px;
-}
-
-.controls-box label {
-    color: #c0caf5;
-    font-size: 20px;
-}
-
-/* Quick Settings Buttons */
-.quick-settings-box button {
-    padding: 12px;
-    border-radius: 10px;
-    font-size: 24px;
-}
-
-.quick-settings-box .active {
-    background-color: #7aa2f7;
-    color: #1a1b26;
-}
-
-.quick-settings-box .inactive {
-    background-color: #414868;
-    color: #c0caf5;
-}
-
-.quick-settings-box button:hover {
-    background-color: #bb9af7;
-    color: #1a1b26;
-}
-
-/* Power Buttons */
 .power-box button {
-    padding: 12px;
-    background-color: #f7768e; /* TokyoNight Red */
+    font-size: 34px;
+    background-color: #f7768e;
     color: #1a1b26;
-    border-radius: 10px;
-    font-size: 24px;
+    border-radius: 12px;
+    min-width: 125px;
+    min-height: 75px;
 }
 
-.power-box button:hover {
-    background-color: #ff9e64; /* TokyoNight Orange */
+/* Simplified Progress/Scale Selectors */
+trough {
+    background-color: #414868;
+    border-radius: 10px;
 }
+
+highlight, progress {
+    background-color: #7aa2f7;
+    border-radius: 10px;
+}
+
+progress { min-height: 14px; }
+scale trough { min-height: 10px; min-width: 220px; }
+
+.bar-label { color: #7aa2f7; font-size: 18px; font-weight: bold; }
+.bar-perc { color: #7dcfff; font-size: 16px; }
+.slider-icon { color: #7aa2f7; font-size: 22px; margin-right: 15px; }
+
+.powermode-btn {
+    background-color: #9ece6a;
+    color: #1a1b26;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.calendar-box { color: #c0caf5; }
+.music-player { color: #bb9af7; font-size: 20px; }
