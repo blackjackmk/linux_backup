@@ -47,7 +47,7 @@ export MICRO_TRUECOLOR=1
 # HSTR configuration - add this to ~/.bashrc
 export HSTR_CONFIG=hicolor,promt-bottom,hide-help
 shopt -s histappend              # append new history items to .bash_history
-export HISTCONTROL=ignoreboth:erasedups:ignorespace # ignore duplicates 
+export HISTCONTROL=ignoreboth:erasedups:ignorespace # ignore duplicates
 HISTIGNORE="ls:la:ll:lt:cd:clear:history:exit:*failed*:*error*:*not found*:*command not found*"
 export HISTFILESIZE=10000        # increase history file size (default is 500)
 export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
@@ -60,4 +60,3 @@ function hstrnotiocsti {
 # if this is interactive shell, then bind hstr to Ctrl-r (for Vi mode check doc)
 if [[ $- =~ .*i.* ]]; then bind -x '"\C-r": "hstrnotiocsti"'; fi
 export HSTR_TIOCSTI=n
-. "$HOME/.cargo/env"
