@@ -15,7 +15,7 @@
     "notification-inline-replies": true,
     "notification-window-width": 350,
     "notification-icon-size": 60,
-    "notification-body-image-height":  180,
+    "notification-body-image-height": 180,
     "notification-body-image-width": 180,
     "timeout": 12,
     "timeout-low": 6,
@@ -28,7 +28,8 @@
     "hide-on-action": true,
     "script-fail-notify": true,
     "widgets": [
-    	"buttons-grid",
+        "buttons-grid#settings",
+        "buttons-grid#power",
         "volume",
         "backlight",
         "mpris",
@@ -41,10 +42,6 @@
             "clear-all-button": true,
             "button-text": "󰆴"
         },
-        "label": {
-            "max-lines":1,
-            "text": "Notification Center!"
-        },
         "mpris": {
             "image-size": 80,
             "image-radius": 0
@@ -54,14 +51,14 @@
         },
         "backlight": {
             "label": "󰃟 ",
-            "init": "brightnessctl g", 
+            "init": "brightnessctl g",
             "update-command": "brightnessctl g"
         },
-        "buttons-grid": {
+        "buttons-grid#settings": {
             "actions": [
                 {
                     "label": "",
-                    "command": "/home/user/.config/swaync/scripts/wifi.sh"
+                    "command": "~/.config/swaync/scripts/wifi.sh"
                 },
                 {
                     "label": "",
@@ -69,27 +66,26 @@
                 },
                 {
                     "label": "",
-      				"active": true,
-                    "command": "/home/user/.config/swaync/scripts/nightlight-toogle.sh",
+                    "active": true,
+                    "command": "~/.config/swaync/scripts/nightlight-toogle.sh",
                     "type": "toggle"
-                },
-                {
-                    "label": "󰾅",
-                    "command": "/home/user/.config/swaync/scripts/performance-toogle.sh"
-                },
-                {
-                    "label":"󰤄",
-                    "command": "/home/user/.config/swaync/scripts/suspend.sh"
-                },
-                {
-                    "label":"",
-                    "command": "/home/user/.config/swaync/scripts/reboot.sh"
-                },
-                {
-                    "label":"",
-                    "command": "/home/user/.config/swaync/scripts/poweroff.sh"
                 }
-
+            ]
+        },
+        "buttons-grid#power": {
+            "actions": [
+                {
+                    "label": "󰤄",
+                    "command": "~/.config/swaync/scripts/suspend.sh"
+                },
+                {
+                    "label": "",
+                    "command": "~/.config/swaync/scripts/reboot.sh"
+                },
+                {
+                    "label": "",
+                    "command": "~/.config/swaync/scripts/poweroff.sh"
+                }
             ]
         }
     }
