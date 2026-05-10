@@ -118,6 +118,30 @@ Commit changes:
 git add profiles/hyprland/.config/hypr/scripts/
 git commit -m "feat(hyprland): add custom scripts"
 ```
+# ⌨️ Keybindings
+
+The primary modifier key (`$mod` / `$mainMod`) is set to the **Super** (Windows) key. Most keybindings are shared across all environments, but some are specific to Hyprland/Sway or GNOME.
+
+| Keybinding | Action | Environment |
+| --- | --- | --- |
+| `Super + Return` | Open Terminal (Kitty) | All |
+| `Super + E` | Open File Explorer (Nautilus/Yazi) | All |
+| `Super + Q` | Kill Active Window | All |
+| `Super + A` | Open App Launcher (Wofi) | All |
+| `Super + S` | Toggle Notification Center (Swaync) | Hyprland / Sway |
+| `Super + S` | Open Quick Settings | GNOME |
+| `Super + V` | Open Notifications | GNOME |
+| `Super + L` | Lock Screen (gtklock) | All |
+| `Super + F` | Toggle Floating Mode | Hyprland / Sway |
+| `Super + Up` | Maximize / Fullscreen | All |
+| `Super + Left/Right` | Move to Previous/Next Workspace | All |
+| `Super + Shift + Left/Right` | Move Active Window to Workspace | All |
+| `Super + Shift + S` | Take Screenshot (Grim + Slurp) | All |
+| `Super + Shift + R` | Reload Configuration | Hyprland / Sway |
+| `Super + Shift + Q` | Exit Window Manager | Hyprland / Sway |
+| `Super + Tab` | Move Focus | All |
+| `Media Keys` | Adjust Volume, Brightness & Mic | All |
+
 # 🙌 Special Thanks
 
 A huge thank you to the developers behind the tools that make up this environment. Special shoutouts to:
