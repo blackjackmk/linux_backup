@@ -72,21 +72,21 @@
                 }
             ]
         },
-        "buttons-grid#power": {
+		"buttons-grid#power": {
             "actions": [
                 {
                     "label": "󰤄",
-                    "command": "~/.config/swaync/scripts/suspend.sh"
+                    "command": "~/.config/swaync/scripts/power-buttons.sh suspend"
                 },
                 {
                     "label": "",
-                    "command": "~/.config/swaync/scripts/reboot.sh"
+                    "command": "~/.config/swaync/scripts/power-buttons.sh reboot"
                 },
                 {
                     "label": "",
-                    "command": "~/.config/swaync/scripts/poweroff.sh"
+                    "command": "~/.config/swaync/scripts/power-buttons.sh poweroff"
                 }
             ]
-        }
-    }
+		 }
+     }
 }

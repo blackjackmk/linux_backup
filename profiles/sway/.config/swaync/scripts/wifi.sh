@@ -14,12 +14,9 @@ fi
 	
 
 # List available Wi-Fi networks  
-LIST=$(nmcli --fields "SSID,BARS" device wifi list | awk '!seen[$1]++'| awk 'NR>1') 
+LIST=$(nmcli -f SSID,SECURITY,BARS device wifi list | awk -F'  +' '!seen[$1]++' | awk 'NR>1')
 
-LIST=$(echo -e "$LIST\n[Disable Wi-Fi]")
-
-
-##add option to disable wifi
+LIST=$(echo -e "$LIST\n[Disable Wi-Fi]") # add option to disable wifi
 
 # Select network via wofi  
 SELECTED=$(echo "$LIST" | wofi --dmenu --prompt "Select Wi-Fi:")  
@@ -37,7 +34,7 @@ else
 	if [ -n "$SSID" ]; then  
 	    # Check if network requires a password  
 	    PASSWORD=""  
-	    if nmcli device wifi list | grep -q "$SSID.*WPA2"; then  
+	    if nmcli device wifi list | grep "$SSID" | grep -qv "--"; then  
 	        PASSWORD=$(wofi --dmenu --password --prompt "Password for $SSID:")  
 	    fi  
 
