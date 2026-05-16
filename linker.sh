@@ -16,7 +16,6 @@ FLATPAK_APPS=(
     "com.github.PintaProject.Pinta"
     "com.usebottles.bottles"
     "com.github.tchx84.Flatseal"
-    "io.github.wivrn.wivrn"
     "org.onlyoffice.desktopeditors"
     "com.valvesoftware.Steam"
     "com.unity.UnityHub"
@@ -226,14 +225,8 @@ install_apps() {
         fi
     fi
 
-    # Qloader
-    if confirm "Install Qloader (VR tools)?"; then
-        /bin/bash -c "$(curl -fsSL https://cloud.dipvr.ru/onlineinstall/)"
-    fi
-
     echo "Note: Some apps (Yazi, Immersed) might require manual installation steps."
     echo "Yazi: https://yazi-rs.github.io/docs/installation"
-    echo "Immersed: https://immersed.com/"
 }
 
 # --- Main Logic ---
