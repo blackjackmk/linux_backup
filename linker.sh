@@ -31,6 +31,7 @@ CLI_APPS=(
     "fastfetch"
     "bash-completion"
     "fd-find"
+    "cronie"
     "hstr"
     "tldr"
     "bat"

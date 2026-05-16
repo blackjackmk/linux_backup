@@ -292,7 +292,7 @@ window-width=800
 custom-font='Hack Nerd Font Mono 12'
 highlight-current-line=false
 indent-style='tab'
-last-save-directory='file:///home/maksym/Documents/CV_pl'
+last-save-directory='file:///home/maksym/Code/backup/Testament'
 restore-session=false
 right-margin-position=uint32 85
 show-grid=false
@@ -325,13 +325,13 @@ source-units=['degree']
 target-currency='DZD'
 target-units=['radian']
 unit-category='angle'
-window-maximized=false
+window-maximized=true
 window-position=(47, 37)
 window-size=(360, 788)
 word-size=8
 
 [org/gnome/clocks]
-timers=[{'duration': <120>, 'name': <''>}]
+timers=@aa{sv} []
 world-clocks=[{'location': <(uint32 2, <('Warsaw', 'EPWA', true, [(0.91048009894147275, 0.36593737231924195)], [(0.91193453416703718, 0.36651914291880922)])>)>}, {'location': <(uint32 2, <('Kyiv', 'UKKK', true, [(0.87967503764377286, 0.53148185187090402)], [(0.88022771360470919, 0.53261631588470038)])>)>}, {'location': <(uint32 2, <('Chicago', 'KMDW', true, [(0.72927128935316143, -1.5316185371029443)], [(0.73042086791828009, -1.529781996944241)])>)>}]
 
 [org/gnome/clocks/state/window]
@@ -340,7 +340,7 @@ panel-id='world'
 size=(0, 0)
 
 [org/gnome/control-center]
-last-panel='power'
+last-panel='system'
 window-state=(980, 640, true)
 
 [org/gnome/desktop/a11y/magnifier]
@@ -371,7 +371,7 @@ name='X-GNOME-Utilities.directory'
 translate=true
 
 [org/gnome/desktop/app-folders/folders/a1806311-712c-4d8b-a1bd-e8c2f418a51d]
-apps=['io.github.wivrn.wivrn.desktop', 'com.valvesoftware.Steam.desktop', 'com.heroicgameslauncher.hgl.desktop', 'com.vysp3r.ProtonPlus.desktop', 'com.ffa.qloader.desktop', 'com.discordapp.Discord.desktop']
+apps=['com.valvesoftware.Steam.desktop', 'com.discordapp.Discord.desktop', 'com.heroicgameslauncher.hgl.desktop', 'io.github.wivrn.wivrn.desktop', 'com.vysp3r.ProtonPlus.desktop', 'com.ffa.qloader.desktop', 'org.qbittorrent.qBittorrent.desktop']
 name='Game'
 translate=false
 
@@ -419,7 +419,7 @@ text-scaling-factor=1.0
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-software', 'gnome-power-panel', 'org-telegram-desktop', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-boxes', 'com-usebottles-bottles', 'com-brave-browser', 'io-gitlab-librewolf-community', 'dev-zed-zed', 'com-simplenote-simplenote', 'app-zen-browser-zen', 'com-beavernotes-beavernotes', 'gnome-wellbeing-panel', 'com-valvesoftware-steam', 'io-github-wivrn-wivrn', 'md-obsidian-obsidian', 'kitty', 'com-heroicgameslauncher-hgl', 'install4j-17q23mf-burpsuitecommunity', 'org-onlyoffice-desktopeditors', 'net-lutris-lutris', 'org-signal-signal', 'com-discordapp-discord', 'gnome-about-panel']
+application-children=['org-gnome-software', 'gnome-power-panel', 'org-telegram-desktop', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-boxes', 'com-usebottles-bottles', 'com-brave-browser', 'io-gitlab-librewolf-community', 'dev-zed-zed', 'com-simplenote-simplenote', 'app-zen-browser-zen', 'com-beavernotes-beavernotes', 'gnome-wellbeing-panel', 'com-valvesoftware-steam', 'io-github-wivrn-wivrn', 'md-obsidian-obsidian', 'kitty', 'com-heroicgameslauncher-hgl', 'install4j-17q23mf-burpsuitecommunity', 'org-onlyoffice-desktopeditors', 'net-lutris-lutris', 'org-signal-signal', 'com-discordapp-discord', 'gnome-about-panel', 'org-gnome-totem']
 show-banners=true
 
 [org/gnome/desktop/peripherals/touchpad]
@@ -511,7 +511,7 @@ scheme='catppuccin'
 show-tabs-mode='auto'
 
 [org/gnome/gnome-system-monitor]
-current-tab='resources'
+current-tab='processes'
 maximized=true
 show-dependencies=false
 show-whose-processes='all'
@@ -534,7 +534,7 @@ center-new-windows=true
 dynamic-workspaces=false
 experimental-features=['scale-monitor-framebuffer']
 overlay-key='SUPER_L'
-workspaces-only-on-primary=true
+workspaces-only-on-primary=false
 
 [org/gnome/mutter/keybindings]
 toggle-tiled-left=@as []
@@ -570,6 +570,10 @@ ignore-phase2-ca-cert=false
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
+[org/gnome/nm-applet/eap/bd86b570-2d1e-4907-b878-ef8c07a62c5c]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
 [org/gnome/power-manager]
 info-history-type='charge'
 info-last-device='/org/freedesktop/UPower/devices/battery_BAT0'
@@ -579,8 +583,8 @@ info-stats-type='charge-data'
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=true
 night-light-schedule-automatic=false
-night-light-schedule-from=16.0
-night-light-schedule-to=9.0
+night-light-schedule-from=7.0
+night-light-schedule-to=22.0
 night-light-temperature=uint32 2930
 
 [org/gnome/settings-daemon/plugins/housekeeping]
@@ -619,11 +623,11 @@ command-history=['whoami', 'terminal', 'ls', 'gnome-control-center', 'gsettings'
 disabled-extensions=['zorin-desktop-icons@zorinos.com', 'zorin-window-move-effect@zorinos.com', 'zorin-magic-lamp-effect@zorinos.com']
 enabled-extensions=['drive-menu@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'x11gestures@joseexposito.github.io', 'zorin-appindicator@zorinos.com', 'zorin-menu@zorinos.com', 'zorin-printers@zorinos.com', 'zorin-taskbar@zorinos.com']
 favorite-apps=['app.zen_browser.zen.desktop', 'md.obsidian.Obsidian.desktop', 'anythingllmdesktop.desktop']
-last-selected-power-profile='power-saver'
+last-selected-power-profile='performance'
 welcome-dialog-last-shown-version='46.3.1'
 
 [org/gnome/shell/app-switcher]
-current-workspace-only=false
+current-workspace-only=true
 
 [org/gnome/shell/extensions/user-theme]
 name='ZorinBlue-Dark'
@@ -683,13 +687,13 @@ toggle-overview=@as []
 locations=[<(uint32 2, <('Warsaw', 'EPWA', true, [(0.91048009894147275, 0.36593737231924195)], [(0.91193453416703718, 0.36651914291880922)])>)>, <(uint32 2, <('Kyiv', 'UKKK', true, [(0.87967503764377286, 0.53148185187090402)], [(0.88022771360470919, 0.53261631588470038)])>)>, <(uint32 2, <('Chicago', 'KMDW', true, [(0.72927128935316143, -1.5316185371029443)], [(0.73042086791828009, -1.529781996944241)])>)>]
 
 [org/gnome/software]
-check-timestamp=int64 1766648800
+check-timestamp=int64 1778921374
 first-run=false
-flatpak-purge-timestamp=int64 1766651961
-install-timestamp=int64 1765748584
-packagekit-historical-updates-timestamp=uint64 1765748584
-update-notification-timestamp=int64 1765302629
-upgrade-notification-timestamp=int64 1762521196
+flatpak-purge-timestamp=int64 1778914103
+install-timestamp=int64 1777963979
+packagekit-historical-updates-timestamp=uint64 1777963979
+update-notification-timestamp=int64 1777910501
+upgrade-notification-timestamp=int64 1778353615
 
 [org/gnome/tweaks]
 show-extensions-notice=false
