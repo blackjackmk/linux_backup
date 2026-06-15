@@ -60,3 +60,7 @@ function hstrnotiocsti {
 # if this is interactive shell, then bind hstr to Ctrl-r (for Vi mode check doc)
 if [[ $- =~ .*i.* ]]; then bind -x '"\C-r": "hstrnotiocsti"'; fi
 export HSTR_TIOCSTI=n
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/maksym/.local/bin:$PATH"

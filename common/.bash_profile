@@ -4,3 +4,7 @@
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/maksym/.local/bin:$PATH"
