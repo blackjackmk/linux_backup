@@ -335,9 +335,9 @@ timers=@aa{sv} []
 world-clocks=[{'location': <(uint32 2, <('Warsaw', 'EPWA', true, [(0.91048009894147275, 0.36593737231924195)], [(0.91193453416703718, 0.36651914291880922)])>)>}, {'location': <(uint32 2, <('Kyiv', 'UKKK', true, [(0.87967503764377286, 0.53148185187090402)], [(0.88022771360470919, 0.53261631588470038)])>)>}, {'location': <(uint32 2, <('Chicago', 'KMDW', true, [(0.72927128935316143, -1.5316185371029443)], [(0.73042086791828009, -1.529781996944241)])>)>}]
 
 [org/gnome/clocks/state/window]
-maximized=true
+maximized=false
 panel-id='world'
-size=(673, 326)
+size=(402, 294)
 
 [org/gnome/control-center]
 last-panel='display'
@@ -623,7 +623,7 @@ command-history=['whoami', 'terminal', 'ls', 'gnome-control-center', 'gsettings'
 disabled-extensions=['zorin-desktop-icons@zorinos.com', 'zorin-window-move-effect@zorinos.com', 'zorin-magic-lamp-effect@zorinos.com']
 enabled-extensions=['drive-menu@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'x11gestures@joseexposito.github.io', 'zorin-appindicator@zorinos.com', 'zorin-menu@zorinos.com', 'zorin-printers@zorinos.com', 'zorin-taskbar@zorinos.com']
 favorite-apps=['app.zen_browser.zen.desktop', 'md.obsidian.Obsidian.desktop', 'anythingllmdesktop.desktop']
-last-selected-power-profile='performance'
+last-selected-power-profile='power-saver'
 welcome-dialog-last-shown-version='46.3.1'
 
 [org/gnome/shell/app-switcher]
@@ -687,14 +687,14 @@ toggle-overview=@as []
 locations=[<(uint32 2, <('Warsaw', 'EPWA', true, [(0.91048009894147275, 0.36593737231924195)], [(0.91193453416703718, 0.36651914291880922)])>)>, <(uint32 2, <('Kyiv', 'UKKK', true, [(0.87967503764377286, 0.53148185187090402)], [(0.88022771360470919, 0.53261631588470038)])>)>, <(uint32 2, <('Chicago', 'KMDW', true, [(0.72927128935316143, -1.5316185371029443)], [(0.73042086791828009, -1.529781996944241)])>)>]
 
 [org/gnome/software]
-check-timestamp=int64 1781502103
+check-timestamp=int64 1784009618
 first-run=false
-flatpak-purge-timestamp=int64 1781425373
-install-timestamp=int64 1780469993
-packagekit-historical-updates-timestamp=uint64 1780469993
+flatpak-purge-timestamp=int64 1784051138
+install-timestamp=int64 1783060339
+packagekit-historical-updates-timestamp=uint64 1783060339
 security-timestamp=int64 1779120909771847
-update-notification-timestamp=int64 1780463729
-upgrade-notification-timestamp=int64 1781502103
+update-notification-timestamp=int64 1783353761
+upgrade-notification-timestamp=int64 1783615249
 
 [org/gnome/tweaks]
 show-extensions-notice=false
