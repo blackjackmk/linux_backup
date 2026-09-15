@@ -18,11 +18,13 @@ FLATPAK_APPS=(
     "com.github.tchx84.Flatseal"
     "org.onlyoffice.desktopeditors"
     "com.valvesoftware.Steam"
-    "com.unity.UnityHub"
+    "com.vysp3r.ProtonPlus"
+	"com.discordapp.Discord"
+	"com.heroicgameslauncher.hgl"
     "md.obsidian.Obsidian"
     "app.zen_browser.zen"
     "com.google.Chrome"
-    "com.vysp3r.ProtonPlus"
+    "org.mozilla.thunderbird"
 )
 
 CLI_APPS=(

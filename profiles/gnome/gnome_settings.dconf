@@ -325,7 +325,7 @@ source-units=['degree']
 target-currency='DZD'
 target-units=['radian']
 unit-category='angle'
-window-maximized=true
+window-maximized=false
 window-position=(47, 37)
 window-size=(360, 788)
 word-size=8
@@ -335,12 +335,12 @@ timers=@aa{sv} []
 world-clocks=[{'location': <(uint32 2, <('Warsaw', 'EPWA', true, [(0.91048009894147275, 0.36593737231924195)], [(0.91193453416703718, 0.36651914291880922)])>)>}, {'location': <(uint32 2, <('Kyiv', 'UKKK', true, [(0.87967503764377286, 0.53148185187090402)], [(0.88022771360470919, 0.53261631588470038)])>)>}, {'location': <(uint32 2, <('Chicago', 'KMDW', true, [(0.72927128935316143, -1.5316185371029443)], [(0.73042086791828009, -1.529781996944241)])>)>}]
 
 [org/gnome/clocks/state/window]
-maximized=false
+maximized=true
 panel-id='world'
 size=(402, 294)
 
 [org/gnome/control-center]
-last-panel='display'
+last-panel='power'
 window-state=(980, 640, true)
 
 [org/gnome/desktop/a11y/magnifier]
@@ -360,7 +360,7 @@ name='Tools'
 translate=false
 
 [org/gnome/desktop/app-folders/folders/9ea8a709-9263-4010-8b26-14e6fe3a4fff]
-apps=['code.desktop', 'dev.zed.Zed.desktop', 'unityhub.desktop', 'com.usebottles.bottles.desktop', 'proton-pass.desktop', 'sqlitebrowser.desktop', 'install4j_17q23mf-BurpSuiteCommunity.desktop', 'virt-manager.desktop']
+apps=['code.desktop', 'dev.zed.Zed.desktop', 'unityhub.desktop', 'com.usebottles.bottles.desktop', 'proton-pass.desktop', 'sqlitebrowser.desktop', 'install4j_17q23mf-BurpSuiteCommunity.desktop', 'virt-manager.desktop', 'org.mozilla.thunderbird.desktop']
 name='Programming'
 
 [org/gnome/desktop/app-folders/folders/Utilities]
@@ -419,7 +419,7 @@ text-scaling-factor=1.0
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-software', 'gnome-power-panel', 'org-telegram-desktop', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-boxes', 'com-usebottles-bottles', 'com-brave-browser', 'io-gitlab-librewolf-community', 'dev-zed-zed', 'com-simplenote-simplenote', 'app-zen-browser-zen', 'com-beavernotes-beavernotes', 'gnome-wellbeing-panel', 'com-valvesoftware-steam', 'io-github-wivrn-wivrn', 'md-obsidian-obsidian', 'kitty', 'com-heroicgameslauncher-hgl', 'install4j-17q23mf-burpsuitecommunity', 'org-onlyoffice-desktopeditors', 'net-lutris-lutris', 'org-signal-signal', 'com-discordapp-discord', 'gnome-about-panel', 'org-gnome-totem']
+application-children=['org-gnome-software', 'gnome-power-panel', 'org-telegram-desktop', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-boxes', 'com-usebottles-bottles', 'com-brave-browser', 'io-gitlab-librewolf-community', 'dev-zed-zed', 'com-simplenote-simplenote', 'app-zen-browser-zen', 'com-beavernotes-beavernotes', 'gnome-wellbeing-panel', 'com-valvesoftware-steam', 'io-github-wivrn-wivrn', 'md-obsidian-obsidian', 'kitty', 'com-heroicgameslauncher-hgl', 'install4j-17q23mf-burpsuitecommunity', 'org-onlyoffice-desktopeditors', 'net-lutris-lutris', 'org-signal-signal', 'com-discordapp-discord', 'gnome-about-panel', 'org-gnome-totem', 'org-mozilla-thunderbird']
 show-banners=true
 
 [org/gnome/desktop/peripherals/touchpad]
@@ -511,8 +511,9 @@ scheme='catppuccin'
 show-tabs-mode='auto'
 
 [org/gnome/gnome-system-monitor]
-current-tab='processes'
+current-tab='resources'
 maximized=false
+resources-net-expanded=true
 show-dependencies=false
 show-whose-processes='all'
 window-height=720
@@ -528,6 +529,7 @@ sort-order=0
 [org/gnome/login-screen]
 enable-fingerprint-authentication=true
 enable-smartcard-authentication=false
+enable-switchable-authentication=false
 
 [org/gnome/mutter]
 center-new-windows=true
@@ -561,6 +563,10 @@ show-image-thumbnails='always'
 initial-size=(890, 583)
 initial-size-file-chooser=(890, 550)
 maximized=true
+
+[org/gnome/nm-applet/eap/087f63b0-65cf-4279-9ced-6feade397b45]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
 
 [org/gnome/nm-applet/eap/3f54d906-f31c-469e-b9e9-1a7c3ab3b02c]
 ignore-ca-cert=false
@@ -610,7 +616,7 @@ command='kitty'
 name='Run terminal'
 
 [org/gnome/settings-daemon/plugins/power]
-ambient-enabled=true
+ambient-enabled=false
 idle-dim=false
 power-button-action='interactive'
 sleep-inactive-ac-timeout=3600
@@ -623,7 +629,7 @@ command-history=['whoami', 'terminal', 'ls', 'gnome-control-center', 'gsettings'
 disabled-extensions=['zorin-desktop-icons@zorinos.com', 'zorin-window-move-effect@zorinos.com', 'zorin-magic-lamp-effect@zorinos.com']
 enabled-extensions=['drive-menu@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'x11gestures@joseexposito.github.io', 'zorin-appindicator@zorinos.com', 'zorin-menu@zorinos.com', 'zorin-printers@zorinos.com', 'zorin-taskbar@zorinos.com']
 favorite-apps=['app.zen_browser.zen.desktop', 'md.obsidian.Obsidian.desktop', 'anythingllmdesktop.desktop']
-last-selected-power-profile='power-saver'
+last-selected-power-profile='performance'
 welcome-dialog-last-shown-version='46.3.1'
 
 [org/gnome/shell/app-switcher]
@@ -687,14 +693,15 @@ toggle-overview=@as []
 locations=[<(uint32 2, <('Warsaw', 'EPWA', true, [(0.91048009894147275, 0.36593737231924195)], [(0.91193453416703718, 0.36651914291880922)])>)>, <(uint32 2, <('Kyiv', 'UKKK', true, [(0.87967503764377286, 0.53148185187090402)], [(0.88022771360470919, 0.53261631588470038)])>)>, <(uint32 2, <('Chicago', 'KMDW', true, [(0.72927128935316143, -1.5316185371029443)], [(0.73042086791828009, -1.529781996944241)])>)>]
 
 [org/gnome/software]
-check-timestamp=int64 1784009618
+check-timestamp=int64 1789452741
+download-updates-notify=false
 first-run=false
-flatpak-purge-timestamp=int64 1784051138
-install-timestamp=int64 1783060339
-packagekit-historical-updates-timestamp=uint64 1783060339
+flatpak-purge-timestamp=int64 1789300610
+install-timestamp=int64 1787518508
+packagekit-historical-updates-timestamp=uint64 1787518508
 security-timestamp=int64 1779120909771847
-update-notification-timestamp=int64 1783353761
-upgrade-notification-timestamp=int64 1783615249
+update-notification-timestamp=int64 1789391676
+upgrade-notification-timestamp=int64 1786868122
 
 [org/gnome/tweaks]
 show-extensions-notice=false
@@ -702,7 +709,7 @@ show-extensions-notice=false
 [org/gtk/gtk4/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=false
+show-hidden=true
 sidebar-width=140
 sort-column='name'
 sort-directories-first=true
