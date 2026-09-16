@@ -693,10 +693,10 @@ toggle-overview=@as []
 locations=[<(uint32 2, <('Warsaw', 'EPWA', true, [(0.91048009894147275, 0.36593737231924195)], [(0.91193453416703718, 0.36651914291880922)])>)>, <(uint32 2, <('Kyiv', 'UKKK', true, [(0.87967503764377286, 0.53148185187090402)], [(0.88022771360470919, 0.53261631588470038)])>)>, <(uint32 2, <('Chicago', 'KMDW', true, [(0.72927128935316143, -1.5316185371029443)], [(0.73042086791828009, -1.529781996944241)])>)>]
 
 [org/gnome/software]
-check-timestamp=int64 1789452741
+check-timestamp=int64 1789581622
 download-updates-notify=false
 first-run=false
-flatpak-purge-timestamp=int64 1789300610
+flatpak-purge-timestamp=int64 1789540013
 install-timestamp=int64 1787518508
 packagekit-historical-updates-timestamp=uint64 1787518508
 security-timestamp=int64 1779120909771847
@@ -709,7 +709,7 @@ show-extensions-notice=false
 [org/gtk/gtk4/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=true
+show-hidden=false
 sidebar-width=140
 sort-column='name'
 sort-directories-first=true
