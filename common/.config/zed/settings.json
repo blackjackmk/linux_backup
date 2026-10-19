@@ -7,27 +7,32 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "disable_ai": true,
+  "proxy": "",
+  "edit_predictions": {
+    "provider": "ollama"
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "collaboration_panel": {
     "dock": "left",
     "button": false
   },
-  "notification_panel": {
-    "dock": "right",
-    "button": false
-  },
   "agent": {
-    "always_allow_tool_actions": false,
-    "use_modifier_to_send": false,
-    "default_view": "thread", // 'text_thread' or 'thread'
-    "inline_assistant_model": {
-      "provider": "copilot_chat",
-      "model": "claude-opus-4.5"
+    "enable_feedback": false,
+    "threads_sidebar": {
+      "auto_open": false,
+      "position": "right"
     },
-    "default_profile": "ask",
-    "default_model": {
-      "provider": "ollama",
-      "model": "qwen3.5:9b"
-    }
+    "dock": "right",
+    "tool_permissions": {
+      "default": "confirm"
+    },
+    "use_modifier_to_send": false,
   },
   "ui_font_size": 22,
   "buffer_font_size": 22.0,
@@ -85,6 +90,7 @@
     }
   },
   "outline_panel": {
+    "dock": "left",
     "button": false
   },
   "languages": {

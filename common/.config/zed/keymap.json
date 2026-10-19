@@ -126,13 +126,6 @@
     }
   },
   {
-    "context": "AgentPanel",
-    "bindings": {
-      "ctrl-n": "agent::NewTextThread",
-      "enter": "agent::Chat"
-    }
-  },
-  {
     "context": "AgentPanel > Markdown",
     "bindings": {
       "copy": "markdown::CopyAsMarkdown",
@@ -164,13 +157,6 @@
     }
   },
   {
-    "context": "Editor && showing_completions",
-    "bindings": {
-      "enter": "editor::ConfirmCompletion",
-      "tab": "editor::ConfirmCompletion"
-    }
-  },
-  {
     "context": "Editor && edit_prediction",
     "bindings": {
       "tab": "editor::AcceptEditPrediction"
@@ -182,24 +168,6 @@
       "enter": "editor::Newline",
       "ctrl-f": "buffer_search::Deploy",
       "ctrl-i": "assistant::InlineAssist"
-    }
-  },
-  {
-    "context": "ContextEditor > Editor",
-    "bindings": {
-      "enter": "assistant::Assist", // Send to AI
-      "shift-enter": "editor::Newline" // Allow multi-line questions
-    }
-  },
-  {
-    "context": "ContextStrip",
-    "bindings": {
-      "up": "agent::FocusUp",
-      "right": "agent::FocusRight",
-      "left": "agent::FocusLeft",
-      "down": "agent::FocusDown",
-      "backspace": "agent::RemoveFocusedContext",
-      "enter": "agent::AcceptSuggestedContext"
     }
   },
   {
